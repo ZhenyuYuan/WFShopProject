@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ship Address SelectVC-->
+        <scene sceneID="jE4-ul-bUb">
+            <objects>
+                <viewController storyboardIdentifier="WFShipAddressSelectVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WSS-LV-glt" customClass="WFShipAddressSelectVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dTf-XW-qpk"/>
+                        <viewControllerLayoutGuide type="bottom" id="08J-CM-fmc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Czg-Gb-tlR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收获地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72l-6v-VkM">
+                                <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbj-PR-bWb">
+                                <rect key="frame" x="8" y="291.5" width="359" height="34"/>
+                                <state key="normal" title="选择新地址">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-IP-pD8">
+                                <rect key="frame" x="324" y="8" width="43" height="34"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtnClicked:" destination="WSS-LV-glt" eventType="touchUpInside" id="l9p-1E-JNh"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9sO-OB-t83">
+                                <rect key="frame" x="8" y="37" width="359" height="246.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="WFShipAddressCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WFShipAddressCell" rowHeight="64" id="uMk-2e-yrc" customClass="WFShipAddressCell">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uMk-2e-yrc" id="m6a-ja-bSa">
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张三" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLM-VL-TzW">
+                                                    <rect key="frame" x="8" y="8" width="35" height="18.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13261626355" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2J-GM-sWz">
+                                                    <rect key="frame" x="244" y="8" width="107" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="北京市海淀区" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWp-yl-QAH">
+                                                    <rect key="frame" x="8" y="34.5" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i2J-GM-sWz" firstAttribute="top" secondItem="m6a-ja-bSa" secondAttribute="top" constant="8" id="2pi-Ub-BNE"/>
+                                                <constraint firstItem="qLM-VL-TzW" firstAttribute="top" secondItem="m6a-ja-bSa" secondAttribute="top" constant="8" id="6uU-Oi-OO2"/>
+                                                <constraint firstItem="fWp-yl-QAH" firstAttribute="leading" secondItem="m6a-ja-bSa" secondAttribute="leading" constant="8" id="9Uc-z9-UdZ"/>
+                                                <constraint firstItem="qLM-VL-TzW" firstAttribute="leading" secondItem="m6a-ja-bSa" secondAttribute="leading" constant="8" id="Geb-Cl-i4q"/>
+                                                <constraint firstAttribute="trailing" secondItem="fWp-yl-QAH" secondAttribute="trailing" constant="8" id="QAw-0T-lEb"/>
+                                                <constraint firstAttribute="trailing" secondItem="i2J-GM-sWz" secondAttribute="trailing" constant="8" id="Qoy-h8-KKH"/>
+                                                <constraint firstItem="i2J-GM-sWz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qLM-VL-TzW" secondAttribute="trailing" id="VMW-ml-ZK7"/>
+                                                <constraint firstAttribute="bottom" secondItem="fWp-yl-QAH" secondAttribute="bottom" constant="8" id="j27-rV-lgb"/>
+                                                <constraint firstItem="fWp-yl-QAH" firstAttribute="top" secondItem="qLM-VL-TzW" secondAttribute="bottom" constant="8" id="tWF-Oo-OSp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="fWp-yl-QAH" id="VTG-vI-X9T"/>
+                                            <outlet property="phoneLabel" destination="i2J-GM-sWz" id="fJJ-Ug-83L"/>
+                                            <outlet property="userNameLabel" destination="qLM-VL-TzW" id="9js-hJ-dyD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9sO-OB-t83" secondAttribute="trailing" constant="8" id="Apc-Sg-Kb6"/>
+                            <constraint firstItem="Gbj-PR-bWb" firstAttribute="leading" secondItem="Czg-Gb-tlR" secondAttribute="leading" constant="8" id="CeB-J9-3rf"/>
+                            <constraint firstAttribute="trailing" secondItem="72l-6v-VkM" secondAttribute="trailing" constant="8" id="NYt-f1-aVd"/>
+                            <constraint firstItem="Gbj-PR-bWb" firstAttribute="top" secondItem="9sO-OB-t83" secondAttribute="bottom" constant="8" id="Xkm-z6-WRE"/>
+                            <constraint firstItem="9sO-OB-t83" firstAttribute="top" secondItem="72l-6v-VkM" secondAttribute="bottom" constant="8" id="aQJ-ag-oj9"/>
+                            <constraint firstAttribute="trailing" secondItem="Gbj-PR-bWb" secondAttribute="trailing" constant="8" id="fcw-fK-pAC"/>
+                            <constraint firstItem="9sO-OB-t83" firstAttribute="leading" secondItem="Czg-Gb-tlR" secondAttribute="leading" constant="8" id="h6X-7H-XHH"/>
+                            <constraint firstAttribute="trailing" secondItem="LcU-IP-pD8" secondAttribute="trailing" constant="8" id="j6D-Sr-j1n"/>
+                            <constraint firstItem="Gbj-PR-bWb" firstAttribute="bottom" secondItem="Czg-Gb-tlR" secondAttribute="bottom" multiplier="0.5" constant="-8" id="lmf-Ls-0MG"/>
+                            <constraint firstItem="72l-6v-VkM" firstAttribute="leading" secondItem="Czg-Gb-tlR" secondAttribute="leading" constant="8" id="tJK-Wp-HC1"/>
+                            <constraint firstItem="LcU-IP-pD8" firstAttribute="top" secondItem="Czg-Gb-tlR" secondAttribute="top" constant="8" id="tZX-Rl-zla"/>
+                            <constraint firstItem="72l-6v-VkM" firstAttribute="top" secondItem="Czg-Gb-tlR" secondAttribute="top" constant="8" id="zmv-eH-Mhr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addNewAddressBtn" destination="Gbj-PR-bWb" id="Ko2-z1-SN0"/>
+                        <outlet property="bottomConstraint" destination="lmf-Ls-0MG" id="htL-6K-fHy"/>
+                        <outlet property="closeBtn" destination="LcU-IP-pD8" id="xB5-ib-qHN"/>
+                        <outlet property="tableView" destination="9sO-OB-t83" id="LJ0-jc-5SX"/>
+                        <outlet property="titleLabel" destination="72l-6v-VkM" id="jkK-dC-Uxh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9F-9s-kuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="377.36131934032989"/>
+        </scene>
+    </scenes>
+</document>

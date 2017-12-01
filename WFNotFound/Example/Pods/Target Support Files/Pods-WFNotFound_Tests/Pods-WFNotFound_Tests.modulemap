@@ -1,0 +1,6 @@
+framework module Pods_WFNotFound_Tests {
+  umbrella header "Pods-WFNotFound_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module WFSearch {
+  umbrella header "WFSearch-umbrella.h"
+
+  export *
+  module * { export * }
+}

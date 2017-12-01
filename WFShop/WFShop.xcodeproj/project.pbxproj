@@ -1,0 +1,838 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D7327AA3F9F37CA02EEB54A /* libPods-WFShop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5845A6DD533E5F99980D289 /* libPods-WFShop.a */; };
+		A10191D71F8E0D82008E9C2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A10191D61F8E0D82008E9C2F /* AppDelegate.m */; };
+		A10191DA1F8E0D82008E9C2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10191D91F8E0D82008E9C2F /* ViewController.m */; };
+		A10191DD1F8E0D82008E9C2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10191DB1F8E0D82008E9C2F /* Main.storyboard */; };
+		A10191DF1F8E0D82008E9C2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10191DE1F8E0D82008E9C2F /* Assets.xcassets */; };
+		A10191E21F8E0D82008E9C2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A10191E01F8E0D82008E9C2F /* LaunchScreen.storyboard */; };
+		A10191E51F8E0D82008E9C2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A10191E41F8E0D82008E9C2F /* main.m */; };
+		A10191EF1F8E0D82008E9C2F /* WFShopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10191EE1F8E0D82008E9C2F /* WFShopTests.m */; };
+		A10191FA1F8E0D83008E9C2F /* WFShopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10191F91F8E0D83008E9C2F /* WFShopUITests.m */; };
+		A10960BA1F9848C500868C46 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = A10960B91F9848C500868C46 /* category.json */; };
+		A12837051F9094380076D4BB /* homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = A12837041F9094380076D4BB /* homepage.json */; };
+		A16306431F9F7EE400662B0D /* search_result.json in Resources */ = {isa = PBXBuildFile; fileRef = A16306421F9F7EE400662B0D /* search_result.json */; };
+		A168D1141F8F625800EA132B /* WFAppLaunchService.m in Sources */ = {isa = PBXBuildFile; fileRef = A168D1131F8F625800EA132B /* WFAppLaunchService.m */; };
+		A1777F251FBB359300512476 /* product_feature.json in Resources */ = {isa = PBXBuildFile; fileRef = A1777F241FBB359300512476 /* product_feature.json */; };
+		A1870BAB1FBC6B0300F86CDF /* user_ship_address.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BAA1FBC6B0300F86CDF /* user_ship_address.json */; };
+		A1870BB11FBD59B100F86CDF /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BB01FBD59B100F86CDF /* product.json */; };
+		A1870BFE1FC42C5300F86CDF /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BFD1FC42C5200F86CDF /* order.json */; };
+		A1B6F4ED1F8FA57C00CC44D0 /* AppLaunchModule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B6F4EC1F8FA57C00CC44D0 /* AppLaunchModule.xcassets */; };
+		A1C970911FC6B1770047718A /* cart.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C970901FC6B1770047718A /* cart.json */; };
+		B0693E9F64D2090AE4FB680C /* libPods-WFShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF26AB2733F015575F80B23 /* libPods-WFShopTests.a */; };
+		E24B32B128A116DA9F831C31 /* libPods-WFShopUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DC5D088C9C651D9BC94A75 /* libPods-WFShopUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A10191EB1F8E0D82008E9C2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10191CA1F8E0D82008E9C2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10191D11F8E0D82008E9C2F;
+			remoteInfo = WFShop;
+		};
+		A10191F61F8E0D83008E9C2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A10191CA1F8E0D82008E9C2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A10191D11F8E0D82008E9C2F;
+			remoteInfo = WFShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		091C97BAB036F70DF508E1C2 /* Pods-WFShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WFShopTests/Pods-WFShopTests.release.xcconfig"; sourceTree = "<group>"; };
+		09DC5D088C9C651D9BC94A75 /* libPods-WFShopUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WFShopUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FF26AB2733F015575F80B23 /* libPods-WFShopTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WFShopTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		154C91E7D13BD9F2B25D784F /* Pods-WFShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-WFShop/Pods-WFShop.release.xcconfig"; sourceTree = "<group>"; };
+		45D2B5FE372D106172AA53F2 /* Pods-WFShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WFShop/Pods-WFShop.debug.xcconfig"; sourceTree = "<group>"; };
+		925C98BA51173599BB1097E4 /* Pods-WFShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WFShopTests/Pods-WFShopTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A10191D21F8E0D82008E9C2F /* WFShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WFShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10191D51F8E0D82008E9C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A10191D61F8E0D82008E9C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A10191D81F8E0D82008E9C2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A10191D91F8E0D82008E9C2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A10191DC1F8E0D82008E9C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A10191DE1F8E0D82008E9C2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10191E11F8E0D82008E9C2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A10191E31F8E0D82008E9C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10191E41F8E0D82008E9C2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A10191EA1F8E0D82008E9C2F /* WFShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WFShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10191EE1F8E0D82008E9C2F /* WFShopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFShopTests.m; sourceTree = "<group>"; };
+		A10191F01F8E0D83008E9C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10191F51F8E0D83008E9C2F /* WFShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WFShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10191F91F8E0D83008E9C2F /* WFShopUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFShopUITests.m; sourceTree = "<group>"; };
+		A10191FB1F8E0D83008E9C2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10960B91F9848C500868C46 /* category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		A12837041F9094380076D4BB /* homepage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = homepage.json; sourceTree = "<group>"; };
+		A16306421F9F7EE400662B0D /* search_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_result.json; sourceTree = "<group>"; };
+		A168D1101F8F61B000EA132B /* WFAppLaunchServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFAppLaunchServiceProtocol.h; sourceTree = "<group>"; };
+		A168D1121F8F625800EA132B /* WFAppLaunchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFAppLaunchService.h; sourceTree = "<group>"; };
+		A168D1131F8F625800EA132B /* WFAppLaunchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFAppLaunchService.m; sourceTree = "<group>"; };
+		A1777F241FBB359300512476 /* product_feature.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product_feature.json; sourceTree = "<group>"; };
+		A1870BAA1FBC6B0300F86CDF /* user_ship_address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_ship_address.json; sourceTree = "<group>"; };
+		A1870BB01FBD59B100F86CDF /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
+		A1870BFD1FC42C5200F86CDF /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
+		A1B6F4EC1F8FA57C00CC44D0 /* AppLaunchModule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppLaunchModule.xcassets; sourceTree = "<group>"; };
+		A1C970901FC6B1770047718A /* cart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cart.json; sourceTree = "<group>"; };
+		E5845A6DD533E5F99980D289 /* libPods-WFShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WFShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F7B27F7737385526C1C4AB /* Pods-WFShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShopUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WFShopUITests/Pods-WFShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F4441C8147D5F538ECBF2366 /* Pods-WFShopUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WFShopUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WFShopUITests/Pods-WFShopUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10191CF1F8E0D82008E9C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7327AA3F9F37CA02EEB54A /* libPods-WFShop.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191E71F8E0D82008E9C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0693E9F64D2090AE4FB680C /* libPods-WFShopTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191F21F8E0D83008E9C2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E24B32B128A116DA9F831C31 /* libPods-WFShopUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		655B3EA0A921CA9437DC5F76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45D2B5FE372D106172AA53F2 /* Pods-WFShop.debug.xcconfig */,
+				154C91E7D13BD9F2B25D784F /* Pods-WFShop.release.xcconfig */,
+				925C98BA51173599BB1097E4 /* Pods-WFShopTests.debug.xcconfig */,
+				091C97BAB036F70DF508E1C2 /* Pods-WFShopTests.release.xcconfig */,
+				E5F7B27F7737385526C1C4AB /* Pods-WFShopUITests.debug.xcconfig */,
+				F4441C8147D5F538ECBF2366 /* Pods-WFShopUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A10191C91F8E0D82008E9C2F = {
+			isa = PBXGroup;
+			children = (
+				A10191D41F8E0D82008E9C2F /* WFShop */,
+				A10191ED1F8E0D82008E9C2F /* WFShopTests */,
+				A10191F81F8E0D83008E9C2F /* WFShopUITests */,
+				A10191D31F8E0D82008E9C2F /* Products */,
+				655B3EA0A921CA9437DC5F76 /* Pods */,
+				C77456B7206448AAD2E9CAE2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A10191D31F8E0D82008E9C2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10191D21F8E0D82008E9C2F /* WFShop.app */,
+				A10191EA1F8E0D82008E9C2F /* WFShopTests.xctest */,
+				A10191F51F8E0D83008E9C2F /* WFShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10191D41F8E0D82008E9C2F /* WFShop */ = {
+			isa = PBXGroup;
+			children = (
+				A1777F231FBB356B00512476 /* mock_data */,
+				A168D10C1F8F60AD00EA132B /* AppLaunchModule */,
+				A10191D51F8E0D82008E9C2F /* AppDelegate.h */,
+				A10191D61F8E0D82008E9C2F /* AppDelegate.m */,
+				A10191D81F8E0D82008E9C2F /* ViewController.h */,
+				A10191D91F8E0D82008E9C2F /* ViewController.m */,
+				A10191DB1F8E0D82008E9C2F /* Main.storyboard */,
+				A10191DE1F8E0D82008E9C2F /* Assets.xcassets */,
+				A10191E01F8E0D82008E9C2F /* LaunchScreen.storyboard */,
+				A10191E31F8E0D82008E9C2F /* Info.plist */,
+				A10191E41F8E0D82008E9C2F /* main.m */,
+			);
+			path = WFShop;
+			sourceTree = "<group>";
+		};
+		A10191ED1F8E0D82008E9C2F /* WFShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				A10191EE1F8E0D82008E9C2F /* WFShopTests.m */,
+				A10191F01F8E0D83008E9C2F /* Info.plist */,
+			);
+			path = WFShopTests;
+			sourceTree = "<group>";
+		};
+		A10191F81F8E0D83008E9C2F /* WFShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A10191F91F8E0D83008E9C2F /* WFShopUITests.m */,
+				A10191FB1F8E0D83008E9C2F /* Info.plist */,
+			);
+			path = WFShopUITests;
+			sourceTree = "<group>";
+		};
+		A168D10C1F8F60AD00EA132B /* AppLaunchModule */ = {
+			isa = PBXGroup;
+			children = (
+				A168D1101F8F61B000EA132B /* WFAppLaunchServiceProtocol.h */,
+				A168D1121F8F625800EA132B /* WFAppLaunchService.h */,
+				A168D1131F8F625800EA132B /* WFAppLaunchService.m */,
+				A1B6F4EC1F8FA57C00CC44D0 /* AppLaunchModule.xcassets */,
+			);
+			path = AppLaunchModule;
+			sourceTree = "<group>";
+		};
+		A1777F231FBB356B00512476 /* mock_data */ = {
+			isa = PBXGroup;
+			children = (
+				A1C970901FC6B1770047718A /* cart.json */,
+				A1870BFD1FC42C5200F86CDF /* order.json */,
+				A1870BB01FBD59B100F86CDF /* product.json */,
+				A1870BAA1FBC6B0300F86CDF /* user_ship_address.json */,
+				A1777F241FBB359300512476 /* product_feature.json */,
+				A12837041F9094380076D4BB /* homepage.json */,
+				A10960B91F9848C500868C46 /* category.json */,
+				A16306421F9F7EE400662B0D /* search_result.json */,
+			);
+			path = mock_data;
+			sourceTree = "<group>";
+		};
+		C77456B7206448AAD2E9CAE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5845A6DD533E5F99980D289 /* libPods-WFShop.a */,
+				0FF26AB2733F015575F80B23 /* libPods-WFShopTests.a */,
+				09DC5D088C9C651D9BC94A75 /* libPods-WFShopUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10191D11F8E0D82008E9C2F /* WFShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10191FE1F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShop" */;
+			buildPhases = (
+				C0C90052FECA8AE4702E49E7 /* [CP] Check Pods Manifest.lock */,
+				A10191CE1F8E0D82008E9C2F /* Sources */,
+				A10191CF1F8E0D82008E9C2F /* Frameworks */,
+				A10191D01F8E0D82008E9C2F /* Resources */,
+				2C3648F3147F5209C670C7EC /* [CP] Embed Pods Frameworks */,
+				A7A0B1B12C596EDC894002E2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WFShop;
+			productName = WFShop;
+			productReference = A10191D21F8E0D82008E9C2F /* WFShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A10191E91F8E0D82008E9C2F /* WFShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10192011F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShopTests" */;
+			buildPhases = (
+				EBAFA903FA1968C9BF7C47A4 /* [CP] Check Pods Manifest.lock */,
+				A10191E61F8E0D82008E9C2F /* Sources */,
+				A10191E71F8E0D82008E9C2F /* Frameworks */,
+				A10191E81F8E0D82008E9C2F /* Resources */,
+				A5E233ABB855C5516CDA95EB /* [CP] Embed Pods Frameworks */,
+				8B94D29ADD51C93EC5C1F01C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10191EC1F8E0D82008E9C2F /* PBXTargetDependency */,
+			);
+			name = WFShopTests;
+			productName = WFShopTests;
+			productReference = A10191EA1F8E0D82008E9C2F /* WFShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A10191F41F8E0D83008E9C2F /* WFShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10192041F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShopUITests" */;
+			buildPhases = (
+				16EFF09311003C06776FED0C /* [CP] Check Pods Manifest.lock */,
+				A10191F11F8E0D83008E9C2F /* Sources */,
+				A10191F21F8E0D83008E9C2F /* Frameworks */,
+				A10191F31F8E0D83008E9C2F /* Resources */,
+				B963F86AB23B15B0D620A04F /* [CP] Embed Pods Frameworks */,
+				DADB27EF574C8BE6D29C12F4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A10191F71F8E0D83008E9C2F /* PBXTargetDependency */,
+			);
+			name = WFShopUITests;
+			productName = WFShopUITests;
+			productReference = A10191F51F8E0D83008E9C2F /* WFShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10191CA1F8E0D82008E9C2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = andy;
+				TargetAttributes = {
+					A10191D11F8E0D82008E9C2F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					A10191E91F8E0D82008E9C2F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A10191D11F8E0D82008E9C2F;
+					};
+					A10191F41F8E0D83008E9C2F = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A10191D11F8E0D82008E9C2F;
+					};
+				};
+			};
+			buildConfigurationList = A10191CD1F8E0D82008E9C2F /* Build configuration list for PBXProject "WFShop" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10191C91F8E0D82008E9C2F;
+			productRefGroup = A10191D31F8E0D82008E9C2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10191D11F8E0D82008E9C2F /* WFShop */,
+				A10191E91F8E0D82008E9C2F /* WFShopTests */,
+				A10191F41F8E0D83008E9C2F /* WFShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10191D01F8E0D82008E9C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1777F251FBB359300512476 /* product_feature.json in Resources */,
+				A10191E21F8E0D82008E9C2F /* LaunchScreen.storyboard in Resources */,
+				A10191DF1F8E0D82008E9C2F /* Assets.xcassets in Resources */,
+				A1870BFE1FC42C5300F86CDF /* order.json in Resources */,
+				A1B6F4ED1F8FA57C00CC44D0 /* AppLaunchModule.xcassets in Resources */,
+				A16306431F9F7EE400662B0D /* search_result.json in Resources */,
+				A10960BA1F9848C500868C46 /* category.json in Resources */,
+				A1C970911FC6B1770047718A /* cart.json in Resources */,
+				A10191DD1F8E0D82008E9C2F /* Main.storyboard in Resources */,
+				A1870BAB1FBC6B0300F86CDF /* user_ship_address.json in Resources */,
+				A12837051F9094380076D4BB /* homepage.json in Resources */,
+				A1870BB11FBD59B100F86CDF /* product.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191E81F8E0D82008E9C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191F31F8E0D83008E9C2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16EFF09311003C06776FED0C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WFShopUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2C3648F3147F5209C670C7EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WFShop/Pods-WFShop-frameworks.sh",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-4/iOS/RevealServer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShop/Pods-WFShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B94D29ADD51C93EC5C1F01C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShopTests/Pods-WFShopTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5E233ABB855C5516CDA95EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShopTests/Pods-WFShopTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7A0B1B12C596EDC894002E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WFShop/Pods-WFShop-resources.sh",
+				"${PODS_ROOT}/BeeHive/BeeHive/BeeHive.bundle",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
+				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Pingpp/lib/Channels/Alipay/AlipaySDK.bundle",
+				"${PODS_ROOT}/Pingpp/lib/Pingpp.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFNotFound/WFNotFound.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFOrder/WFOrder.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFProduct/WFProduct.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFSearch/WFSearch.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFUIComponent/WFUIComponent.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFUser/WFUser.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFWebContainer/WFWebContainer.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShop/Pods-WFShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B963F86AB23B15B0D620A04F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShopUITests/Pods-WFShopUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C90052FECA8AE4702E49E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WFShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DADB27EF574C8BE6D29C12F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WFShopUITests/Pods-WFShopUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBAFA903FA1968C9BF7C47A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WFShopTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10191CE1F8E0D82008E9C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10191DA1F8E0D82008E9C2F /* ViewController.m in Sources */,
+				A10191E51F8E0D82008E9C2F /* main.m in Sources */,
+				A10191D71F8E0D82008E9C2F /* AppDelegate.m in Sources */,
+				A168D1141F8F625800EA132B /* WFAppLaunchService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191E61F8E0D82008E9C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10191EF1F8E0D82008E9C2F /* WFShopTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A10191F11F8E0D83008E9C2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10191FA1F8E0D83008E9C2F /* WFShopUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A10191EC1F8E0D82008E9C2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10191D11F8E0D82008E9C2F /* WFShop */;
+			targetProxy = A10191EB1F8E0D82008E9C2F /* PBXContainerItemProxy */;
+		};
+		A10191F71F8E0D83008E9C2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A10191D11F8E0D82008E9C2F /* WFShop */;
+			targetProxy = A10191F61F8E0D83008E9C2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A10191DB1F8E0D82008E9C2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A10191DC1F8E0D82008E9C2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A10191E01F8E0D82008E9C2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A10191E11F8E0D82008E9C2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A10191FC1F8E0D83008E9C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A10191FD1F8E0D83008E9C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10191FF1F8E0D83008E9C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45D2B5FE372D106172AA53F2 /* Pods-WFShop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10192001F8E0D83008E9C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 154C91E7D13BD9F2B25D784F /* Pods-WFShop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A10192021F8E0D83008E9C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 925C98BA51173599BB1097E4 /* Pods-WFShopTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WFShop.app/WFShop";
+			};
+			name = Debug;
+		};
+		A10192031F8E0D83008E9C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 091C97BAB036F70DF508E1C2 /* Pods-WFShopTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShopTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WFShop.app/WFShop";
+			};
+			name = Release;
+		};
+		A10192051F8E0D83008E9C2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F7B27F7737385526C1C4AB /* Pods-WFShopUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WFShop;
+			};
+			name = Debug;
+		};
+		A10192061F8E0D83008E9C2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4441C8147D5F538ECBF2366 /* Pods-WFShopUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				INFOPLIST_FILE = WFShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WFShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10191CD1F8E0D82008E9C2F /* Build configuration list for PBXProject "WFShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10191FC1F8E0D83008E9C2F /* Debug */,
+				A10191FD1F8E0D83008E9C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10191FE1F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10191FF1F8E0D83008E9C2F /* Debug */,
+				A10192001F8E0D83008E9C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10192011F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10192021F8E0D83008E9C2F /* Debug */,
+				A10192031F8E0D83008E9C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10192041F8E0D83008E9C2F /* Build configuration list for PBXNativeTarget "WFShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10192051F8E0D83008E9C2F /* Debug */,
+				A10192061F8E0D83008E9C2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10191CA1F8E0D82008E9C2F /* Project object */;
+}

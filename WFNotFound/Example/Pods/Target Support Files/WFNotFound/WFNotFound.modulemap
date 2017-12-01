@@ -1,0 +1,6 @@
+framework module WFNotFound {
+  umbrella header "WFNotFound-umbrella.h"
+
+  export *
+  module * { export * }
+}

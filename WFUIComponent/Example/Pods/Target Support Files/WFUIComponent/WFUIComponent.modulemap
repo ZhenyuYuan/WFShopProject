@@ -1,0 +1,6 @@
+framework module WFUIComponent {
+  umbrella header "WFUIComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

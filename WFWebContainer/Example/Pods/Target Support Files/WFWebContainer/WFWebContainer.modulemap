@@ -1,0 +1,6 @@
+framework module WFWebContainer {
+  umbrella header "WFWebContainer-umbrella.h"
+
+  export *
+  module * { export * }
+}

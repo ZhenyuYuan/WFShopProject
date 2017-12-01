@@ -1,0 +1,6 @@
+framework module Pods_WFOrder_Tests {
+  umbrella header "Pods-WFOrder_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

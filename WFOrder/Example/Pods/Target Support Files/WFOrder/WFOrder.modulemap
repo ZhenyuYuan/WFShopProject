@@ -1,0 +1,6 @@
+framework module WFOrder {
+  umbrella header "WFOrder-umbrella.h"
+
+  export *
+  module * { export * }
+}

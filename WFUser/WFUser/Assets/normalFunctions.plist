@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>url</key>
+				<string>wfshop://myWallet</string>
+				<key>title</key>
+				<string>我的钱包</string>
+				<key>icon</key>
+				<string>wallet</string>
+			</dict>
+			<dict>
+				<key>url</key>
+				<string>wfshop://crown</string>
+				<key>title</key>
+				<string>会员福利</string>
+				<key>icon</key>
+				<string>crown</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>functions</key>
+		<array>
+			<dict>
+				<key>url</key>
+				<string>wfhop://more</string>
+				<key>title</key>
+				<string>更多</string>
+				<key>icon</key>
+				<string>more</string>
+			</dict>
+			<dict>
+				<key>url</key>
+				<string>wfshop://setting</string>
+				<key>title</key>
+				<string>设置</string>
+				<key>icon</key>
+				<string>setting</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

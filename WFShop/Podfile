@@ -1,0 +1,65 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'WFShop' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for WFShop
+
+  
+  # WFShop Main Modules
+  
+  pod 'WFServiceProtocols', :path => "/Users/andy/code/WFShopProject/WFServiceProtocols"
+  pod 'WFHomePage', :path => "/Users/andy/code/WFShopProject/WFHomePage"
+  pod 'WFCatagory', :path => "/Users/andy/code/WFShopProject/WFCatagory"
+  pod 'WFCart', :path => "/Users/andy/code/WFShopProject/WFCart"
+  pod 'WFUser', :path => "/Users/andy/code/WFShopProject/WFUser"
+  
+  # WFShop sub Modules
+  pod 'WFOrder', :path => "/Users/andy/code/WFShopProject/WFOrder"
+  pod 'WFProduct', :path => "/Users/andy/code/WFShopProject/WFProduct"
+  pod 'WFQRScanner', :path => "/Users/andy/code/WFShopProject/WFQRScanner"
+  pod 'WFNotFound', :path => "/Users/andy/code/WFShopProject/WFNotFound"
+  pod 'WFSearch', :path => "/Users/andy/code/WFShopProject/WFSearch"
+  pod 'WFWebContainer', :path => "/Users/andy/code/WFShopProject/WFWebContainer"
+  
+  # WFShop basic Modules
+  pod 'WFUIComponent', :path => "/Users/andy/code/WFShopProject/WFUIComponent"
+  pod 'WFNetwork', :path => "/Users/andy/code/WFShopProject/WFNetwork"
+  
+  # third party library
+  pod 'ADSRouter', :path => "/Users/andy/code/ADSRouter"
+  pod 'ASDataDrivenLayout', :path => "/Users/andy/code/ASDataDrivenLayout"
+  pod 'BeeHive', '1.5.1'
+  pod 'Reveal-SDK', '4', :configurations => ['Debug']
+  pod 'MBProgressHUD'
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'SDWebImage/GIF'
+  pod 'Reachability'
+  pod 'WMPageController', '2.3.0'
+  pod 'IDMPhotoBrowser'
+  pod 'FMDB'
+  # pod 'TextFieldEffects'
+  pod 'Masonry'
+  pod 'YYModel', :path => "/Users/andy/code/YYModel"
+  pod 'PPNumberButton'
+  pod 'MJRefresh'
+  pod 'CPDataDrivenFlowLayout', :git => 'git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git'
+  pod 'MJExtension'
+  pod 'Pingpp', '~> 2.2.17'
+  pod 'XXNibBridge', '~> 2.3.0'
+  
+  
+  target 'WFShopTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'WFShopUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

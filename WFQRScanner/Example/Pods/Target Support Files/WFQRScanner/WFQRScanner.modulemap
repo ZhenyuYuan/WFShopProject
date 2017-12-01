@@ -1,0 +1,6 @@
+framework module WFQRScanner {
+  umbrella header "WFQRScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

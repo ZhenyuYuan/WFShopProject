@@ -1,0 +1,6 @@
+framework module WFProduct {
+  umbrella header "WFProduct-umbrella.h"
+
+  export *
+  module * { export * }
+}

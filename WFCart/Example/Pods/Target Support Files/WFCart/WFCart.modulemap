@@ -1,0 +1,6 @@
+framework module WFCart {
+  umbrella header "WFCart-umbrella.h"
+
+  export *
+  module * { export * }
+}

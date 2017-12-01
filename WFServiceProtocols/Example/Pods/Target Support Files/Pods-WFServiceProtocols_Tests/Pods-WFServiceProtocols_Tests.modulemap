@@ -1,0 +1,6 @@
+framework module Pods_WFServiceProtocols_Tests {
+  umbrella header "Pods-WFServiceProtocols_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

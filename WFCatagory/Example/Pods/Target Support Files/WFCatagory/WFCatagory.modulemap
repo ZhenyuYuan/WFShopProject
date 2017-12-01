@@ -1,0 +1,6 @@
+framework module WFCatagory {
+  umbrella header "WFCatagory-umbrella.h"
+
+  export *
+  module * { export * }
+}

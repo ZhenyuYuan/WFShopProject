@@ -1,0 +1,6 @@
+*/pods/
+**/*.hmap
+**/*.ipa
+**/*.dSYM.zip
+**/*.dSYM
+**/xcuserdata/

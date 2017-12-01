@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="WFCartHeaderView" id="iN0-l3-epB" customClass="WFCartHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="29"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-od-MDk">
+                    <rect key="frame" x="46" y="0.0" width="29" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iPc-od-MDk" secondAttribute="height" multiplier="1:1" id="N1c-Ak-s7z"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6M-UM-HhL">
+                    <rect key="frame" x="83" y="4.5" width="330" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvO-NX-cnf">
+                    <rect key="frame" x="8" y="0.0" width="30" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="N7J-IZ-V2X"/>
+                    </constraints>
+                    <state key="normal" image="radio"/>
+                    <connections>
+                        <action selector="checkBtnClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="KVz-sI-O80"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HvO-NX-cnf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="B4t-Vv-Mc1"/>
+                <constraint firstAttribute="bottom" secondItem="HvO-NX-cnf" secondAttribute="bottom" id="COx-fY-Twa"/>
+                <constraint firstItem="iPc-od-MDk" firstAttribute="leading" secondItem="HvO-NX-cnf" secondAttribute="trailing" constant="8" id="GSp-jp-E5b"/>
+                <constraint firstAttribute="trailing" secondItem="E6M-UM-HhL" secondAttribute="trailing" constant="8" id="Zi0-D8-ayR"/>
+                <constraint firstItem="iPc-od-MDk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="eBc-DE-mKL"/>
+                <constraint firstItem="E6M-UM-HhL" firstAttribute="leading" secondItem="iPc-od-MDk" secondAttribute="trailing" constant="8" id="g9b-CZ-PPW"/>
+                <constraint firstItem="E6M-UM-HhL" firstAttribute="centerY" secondItem="HvO-NX-cnf" secondAttribute="centerY" id="lvu-So-RBh"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="iPc-od-MDk" secondAttribute="bottom" id="pYj-k8-Gbv"/>
+                <constraint firstItem="HvO-NX-cnf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x6J-it-PCj"/>
+                <constraint firstItem="iPc-od-MDk" firstAttribute="centerY" secondItem="HvO-NX-cnf" secondAttribute="centerY" id="ylT-cg-uhZ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkBtn" destination="HvO-NX-cnf" id="zba-MM-DYG"/>
+                <outlet property="shopNameLabel" destination="E6M-UM-HhL" id="WLP-FL-xfC"/>
+            </connections>
+            <point key="canvasLocation" x="-2.5" y="132.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="radio" width="20" height="20"/>
+        <image name="shop" width="29" height="29"/>
+    </resources>
+</document>

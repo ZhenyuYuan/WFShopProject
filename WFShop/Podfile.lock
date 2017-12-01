@@ -1,0 +1,249 @@
+PODS:
+  - ADSRouter (0.1.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - ASDataDrivenLayout (0.1.0)
+  - BeeHive (1.5.1)
+  - CPDataDrivenFlowLayout (0.1.0)
+  - DACircularProgress (2.3.1)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - GoAutoSlideView (1.0)
+  - IDMPhotoBrowser (1.10.2):
+    - DACircularProgress
+    - pop
+    - SDWebImage
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.15)
+  - MTBBarcodeScanner (5.0.3)
+  - Pingpp (2.2.17):
+    - Pingpp/Alipay (= 2.2.17)
+    - Pingpp/Core (= 2.2.17)
+    - Pingpp/UnionPay (= 2.2.17)
+  - Pingpp/Alipay (2.2.17):
+    - Pingpp/Core
+  - Pingpp/Core (2.2.17)
+  - Pingpp/UnionPay (2.2.17):
+    - Pingpp/Core
+  - pop (1.0.10)
+  - PPNumberButton (0.7.0)
+  - Reachability (3.2)
+  - Reveal-SDK (4)
+  - SDCycleScrollView (1.74):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - SDWebImage/GIF (4.2.2):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
+  - WFCart (0.1.0):
+    - ADSRouter
+    - BeeHive
+    - WFNetwork
+    - XXNibBridge
+  - WFCatagory (0.1.0):
+    - ADSRouter
+    - BeeHive
+    - Masonry
+    - SDWebImage
+    - WFNetwork
+    - WFServiceProtocols
+    - WFUIComponent
+    - YYModel
+  - WFHomePage (0.1.0):
+    - ADSRouter
+    - AFNetworking
+    - BeeHive
+    - FMDB
+    - GoAutoSlideView
+    - Masonry
+    - SDCycleScrollView
+    - SDWebImage
+    - WFNetwork
+    - WFServiceProtocols
+    - YYModel
+  - WFNetwork (0.1.0)
+  - WFNotFound (0.1.0):
+    - ADSRouter
+    - Masonry
+  - WFOrder (0.1.0):
+    - ADSRouter
+    - Masonry
+    - MBProgressHUD
+    - SDWebImage
+    - WFNetwork
+    - WFUIComponent
+    - YYModel
+  - WFProduct (0.1.0):
+    - ADSRouter
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - PPNumberButton
+    - SDWebImage
+    - WFNetwork
+    - WFUIComponent
+    - YYModel
+  - WFQRScanner (0.1.0):
+    - ADSRouter
+    - MTBBarcodeScanner
+  - WFSearch (0.1.0):
+    - ADSRouter
+    - BeeHive
+    - Masonry
+    - SDWebImage
+    - WFNetwork
+    - WFServiceProtocols
+    - WFUIComponent
+    - YYModel
+  - WFServiceProtocols (0.1.0)
+  - WFUIComponent (0.1.0):
+    - MBProgressHUD
+  - WFUser (0.1.0):
+    - ADSRouter
+    - BeeHive
+    - MJExtension
+    - WFNetwork
+  - WFWebContainer (0.1.0):
+    - ADSRouter
+  - WMPageController (2.3.0)
+  - XXNibBridge (2.3.1)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - ADSRouter (from `/Users/andy/code/ADSRouter`)
+  - AFNetworking
+  - ASDataDrivenLayout (from `/Users/andy/code/ASDataDrivenLayout`)
+  - BeeHive (= 1.5.1)
+  - CPDataDrivenFlowLayout (from `git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git`)
+  - FMDB
+  - IDMPhotoBrowser
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - Pingpp (~> 2.2.17)
+  - PPNumberButton
+  - Reachability
+  - Reveal-SDK (= 4)
+  - SDWebImage
+  - SDWebImage/GIF
+  - WFCart (from `/Users/andy/code/WFShopProject/WFCart`)
+  - WFCatagory (from `/Users/andy/code/WFShopProject/WFCatagory`)
+  - WFHomePage (from `/Users/andy/code/WFShopProject/WFHomePage`)
+  - WFNetwork (from `/Users/andy/code/WFShopProject/WFNetwork`)
+  - WFNotFound (from `/Users/andy/code/WFShopProject/WFNotFound`)
+  - WFOrder (from `/Users/andy/code/WFShopProject/WFOrder`)
+  - WFProduct (from `/Users/andy/code/WFShopProject/WFProduct`)
+  - WFQRScanner (from `/Users/andy/code/WFShopProject/WFQRScanner`)
+  - WFSearch (from `/Users/andy/code/WFShopProject/WFSearch`)
+  - WFServiceProtocols (from `/Users/andy/code/WFShopProject/WFServiceProtocols`)
+  - WFUIComponent (from `/Users/andy/code/WFShopProject/WFUIComponent`)
+  - WFUser (from `/Users/andy/code/WFShopProject/WFUser`)
+  - WFWebContainer (from `/Users/andy/code/WFShopProject/WFWebContainer`)
+  - WMPageController (= 2.3.0)
+  - XXNibBridge (~> 2.3.0)
+  - YYModel (from `/Users/andy/code/YYModel`)
+
+EXTERNAL SOURCES:
+  ADSRouter:
+    :path: /Users/andy/code/ADSRouter
+  ASDataDrivenLayout:
+    :path: /Users/andy/code/ASDataDrivenLayout
+  CPDataDrivenFlowLayout:
+    :git: git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git
+  WFCart:
+    :path: /Users/andy/code/WFShopProject/WFCart
+  WFCatagory:
+    :path: /Users/andy/code/WFShopProject/WFCatagory
+  WFHomePage:
+    :path: /Users/andy/code/WFShopProject/WFHomePage
+  WFNetwork:
+    :path: /Users/andy/code/WFShopProject/WFNetwork
+  WFNotFound:
+    :path: /Users/andy/code/WFShopProject/WFNotFound
+  WFOrder:
+    :path: /Users/andy/code/WFShopProject/WFOrder
+  WFProduct:
+    :path: /Users/andy/code/WFShopProject/WFProduct
+  WFQRScanner:
+    :path: /Users/andy/code/WFShopProject/WFQRScanner
+  WFSearch:
+    :path: /Users/andy/code/WFShopProject/WFSearch
+  WFServiceProtocols:
+    :path: /Users/andy/code/WFShopProject/WFServiceProtocols
+  WFUIComponent:
+    :path: /Users/andy/code/WFShopProject/WFUIComponent
+  WFUser:
+    :path: /Users/andy/code/WFShopProject/WFUser
+  WFWebContainer:
+    :path: /Users/andy/code/WFShopProject/WFWebContainer
+  YYModel:
+    :path: /Users/andy/code/YYModel
+
+CHECKOUT OPTIONS:
+  CPDataDrivenFlowLayout:
+    :commit: a6540ca8a8669376c7a7d0d8fbfe6c55c741a7cb
+    :git: git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git
+
+SPEC CHECKSUMS:
+  ADSRouter: f7b7d7d81a42dbe335948cdd762748a866be3317
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ASDataDrivenLayout: 98e91576390b50c3e698f47c0eb9f093d1625049
+  BeeHive: b135a33b3519814ec5d117318d205e10c997450f
+  CPDataDrivenFlowLayout: 59f046eeec88703f484a4b3eb173f8df783f4792
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  GoAutoSlideView: 349127c6f59f85bacbce8aeabb52274e99c27922
+  IDMPhotoBrowser: 4bb459b1faffc228e92bccdf7c54ad6d6b7e8c37
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  MTBBarcodeScanner: 3ce0f1b0085ef00c726ded663c490a63b29c9aa5
+  Pingpp: 166fc31888e8639c8a9a287330ba49dd5c5a250d
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  PPNumberButton: a053cde152b0e683302ce41a4755bfa02e1b3a83
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
+  SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  WFCart: 0480010a6bd83989ac122c24994b036a9dd53552
+  WFCatagory: 0e26c20b5198e98fae6a8bab2c4d156723a0b161
+  WFHomePage: cc6efa5601118459d6ed1969b5650ddc8c50fe39
+  WFNetwork: df07603a6a167de43721791d309851d5d7b78d38
+  WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
+  WFOrder: 4265a8456d00bdd9496fd15771fb03c8e4ba4e73
+  WFProduct: 20a38461ccbefc5ecd7a6b24d7172cd79b48def5
+  WFQRScanner: a8b1b1533032166995433275b5f54e1a4fbbb197
+  WFSearch: 7763572becfeb60c5b57528b639bf0d7e55eaa70
+  WFServiceProtocols: 32c98c2645a185505193296ce901c7f82f1c3566
+  WFUIComponent: 6a318579675a742bd69705fef2ef7652d6986f63
+  WFUser: d29a2999755abfa4b0202bf9562656a342d8ffa3
+  WFWebContainer: 75eb5ad66209c551d2b29566862b4b1e06c13757
+  WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
+  XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: b5387a21d68025f19d1f181cd48890b419c547a7
+
+COCOAPODS: 1.4.0.beta.1

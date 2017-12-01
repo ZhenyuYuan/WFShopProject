@@ -1,0 +1,6 @@
+framework module WFUser {
+  umbrella header "WFUser-umbrella.h"
+
+  export *
+  module * { export * }
+}

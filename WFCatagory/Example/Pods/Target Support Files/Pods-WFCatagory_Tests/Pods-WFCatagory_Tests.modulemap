@@ -1,0 +1,6 @@
+framework module Pods_WFCatagory_Tests {
+  umbrella header "Pods-WFCatagory_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

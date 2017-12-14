@@ -6,8 +6,19 @@
 //
 
 #import "WFProductCommentVC.h"
+#import "WFProductCommentCell.h"
+#import "WFUIComponent.h"
+#import "WFProductComment.h"
+#import "WFProductDataService.h"
+#import "MJRefresh.h"
 
-@interface WFProductCommentVC ()
+@interface WFProductCommentVC () <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic, assign) NSInteger page;
+@property (nonatomic, strong) WFProductDataService *dataService;
+@property (nonatomic, strong) NSMutableArray<WFProductComment*> *comments;
 
 @end
 
@@ -15,23 +26,58 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    // Do any additional setup after loading the view.
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    __weak typeof(self) weakSelf = self;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
+    
+    _tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [weakSelf loadCommentNextPage];
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)loadData {
+    _page = 1;
+    _dataService = [WFProductDataService new];
+    _comments = [NSMutableArray array];
+    [self loadCommentNextPage];
 }
-*/
 
+- (void)loadCommentNextPage {
+    __weak typeof(self) weakSelf = self;
+    [_dataService getProductCommentWithProductId:_productId page:_page callback:^(NSArray<WFProductComment *> *comments) {
+        ++weakSelf.page;
+        [weakSelf.comments addObjectsFromArray:comments];
+        [weakSelf.tableView.mj_header endRefreshing];
+        [weakSelf.tableView.mj_footer endRefreshing];
+        [weakSelf.tableView reloadData];
+    }];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _comments.count;
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    WFProductCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:[WFProductCommentCell wf_reuseIdentifier] forIndexPath:indexPath];
+    cell.productComment = _comments[indexPath.row];
+    return cell;
+}
+
+- (void)setProductId:(NSString *)productId {
+    _productId = productId;
+    [self loadData];
+}
 @end

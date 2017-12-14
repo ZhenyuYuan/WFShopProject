@@ -47,4 +47,6 @@ TODO: Add long description of the pod here.
   s.dependency "YYModel"
   s.dependency "WFUIComponent"
   s.dependency 'WFNetwork'
+  s.dependency 'Realm'
+  s.dependency 'MJRefresh'
 end

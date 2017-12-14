@@ -9,6 +9,8 @@
 #import "YYModel.h"
 #import "WFHelpers.h"
 #import "WFUserNormalFunctionGroup.h"
+#import "WFNetwork.h"
+#import "WFUser.h"
 
 @implementation WFUserDataService
 
@@ -18,6 +20,13 @@
     if (callback) {
         callback(funcGroups);
     }
+}
+
+- (void)getUser:(void (^)(WFUser *))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"user" objId:nil path:nil];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        callback([WFUser yy_modelWithJSON:obj.data]);
+    }];
 }
 
 @end

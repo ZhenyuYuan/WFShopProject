@@ -49,4 +49,5 @@ TODO: Add long description of the pod here.
   s.dependency 'SDCycleScrollView'
   s.dependency 'FMDB'
   s.dependency 'WFNetwork'
+  s.dependency 'MJRefresh'
 end

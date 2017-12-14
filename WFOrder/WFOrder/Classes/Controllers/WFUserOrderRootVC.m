@@ -9,7 +9,8 @@
 #import "ADSRouter.h"
 #import "WFUIComponent.h"
 #import "WFUserOrderListVC.h"
-
+#import "BeeHive.h"
+#import "WFUserProtocol.h"
 const NSInteger kAllOrderIdx = 0;
 const NSInteger kUnpayOrderIdx = 1;
 const NSInteger kUncheckOrderIdx = 2;
@@ -29,6 +30,15 @@ const CGFloat kMenuHeight = 50.f;
 
 ADS_REQUEST_MAPPING(WFUserOrderRootVC, "wfshop://showOrders")
 ADS_PARAMETER_MAPPING(WFUserOrderRootVC, selectedIdx, "selected_idx")
+ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
+    id<WFUserProtocol> userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
+    if (![userService isLogined]) {
+        *abort = YES;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+        });
+    }
+})
 
 - (instancetype)init {
     self = [super init];

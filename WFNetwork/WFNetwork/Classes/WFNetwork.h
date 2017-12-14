@@ -9,5 +9,7 @@
 #define Header_h
 
 #import "WFNetworkResponse.h"
+#import "WFNetworkExecutor.h"
+#import "WFAPIFactory.h"
 
 #endif /* Header_h */

@@ -10,4 +10,6 @@
 
 @interface WFHomePageVC : UIViewController
 
+@property (nonatomic, copy) NSString *shopId;
+
 @end

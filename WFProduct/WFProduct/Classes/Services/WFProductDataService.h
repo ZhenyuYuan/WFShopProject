@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class WFProduct, WFProductDetailFeature, WFProductShipAddress, WFProductShop, WFProductShareItem;
+@class WFProduct, WFProductDetailFeature, WFProductShipAddress, WFProductShop, WFProductShareItem, WFProductComment;
 @interface WFProductDataService : NSObject
 
 - (void)collectProduct:(NSString*)productId callback:(void(^)(void))callback;
@@ -25,5 +25,7 @@
 - (BOOL)isAllFeaturesSelected:(NSArray<WFProductDetailFeature*>*)features;
 
 - (void)getShareItems:(void(^)(NSArray<WFProductShareItem*> *shareItems)) callback;
+
+- (void)getProductCommentWithProductId:(NSString*)productId page:(NSInteger)page callback:(void(^)(NSArray<WFProductComment*>*))callback;
 
 @end

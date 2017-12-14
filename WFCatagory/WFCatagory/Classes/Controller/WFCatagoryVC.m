@@ -5,7 +5,7 @@
 //  Created by apple on 2017/6/8.
 //  Copyright © 2017年 RocketsChen. All rights reserved.
 //
-
+#import <objc/runtime.h>
 #import "WFCatagoryVC.h"
 
 // Controllers
@@ -204,7 +204,7 @@ const CGFloat kTableViewRatio = 0.3;
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     //if (!_categoryItems || _categoryItems.count == 0 || _categoryItems[_selectedFirstCategory].children.count == 0)
-    return _categoryItems[section].children[section].children.count;
+    return _categoryItems[_selectedFirstCategory].children[section].children.count;
 }
 
 #pragma mark - <UICollectionViewDelegate>

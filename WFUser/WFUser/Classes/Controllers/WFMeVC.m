@@ -12,13 +12,15 @@
 #import "WFUserOrderCell.h"
 #import "WFUserOrderDetailCell.h"
 #import "WFUserNormalFunctionCell.h"
+#import "WFUserCell.h"
 #import "WFUserDataService.h"
 #import "ADSRouter.h"
 #import "WFUserNormalFunctionGroup.h"
 #import "UITableView+ASDataDrivenLayout.h"
+#import "WFUserNormalFunction.h"
+#import "WFUserCenter.h"
 
-
-const CGFloat kCoverHeight = 100.f;
+const CGFloat kCoverHeight = 150.f;
 
 @interface WFMeVC () <UITableViewDelegate>
 
@@ -26,6 +28,9 @@ const CGFloat kCoverHeight = 100.f;
 @property (unsafe_unretained, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) WFUserDataService *userDataService;
 @property (nonatomic, strong) NSArray<WFUserNormalFunctionGroup*> *funcGroups;
+
+@property (nonatomic, strong) WFUser *user;
+
 
 @end
 
@@ -35,13 +40,12 @@ const CGFloat kCoverHeight = 100.f;
     [super viewDidLoad];
     
     [self setUpUI];
-    
-    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self loadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -57,6 +61,14 @@ const CGFloat kCoverHeight = 100.f;
         weakSelf.tableView.sectionInfos = [weakSelf getSectionInfo];
         [weakSelf.tableView reloadData];
     }];
+    
+    if ([[WFUserCenter sharedCenter] isUserLogined]) {
+        [_userDataService getUser:^(WFUser *user) {
+            weakSelf.user = user;
+            weakSelf.tableView.sectionInfos = [weakSelf getSectionInfo];
+            [weakSelf.tableView reloadData];
+        }];
+    }
 }
 
 - (void)setUpUI {
@@ -64,20 +76,38 @@ const CGFloat kCoverHeight = 100.f;
     
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.estimatedRowHeight = 100.f;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.enableDataDrivenLayout = YES;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    _tableView.contentInset = UIEdgeInsetsMake(kCoverHeight, 0, 0, 0);
+    _tableView.contentInset = UIEdgeInsetsMake(kCoverHeight - 100, 0, 0, 0);
     _tableView.sectionInfos = [self getSectionInfo];
+    _tableView.tableFooterView = [UIView new];
     _coverImg = [UIImageView new];
     [self.view insertSubview:_coverImg belowSubview:_tableView];
     _coverImg.frame =CGRectMake(0, 0, self.view.wf_width, kCoverHeight);
     _coverImg.contentMode = UIViewContentModeScaleAspectFill;
-    [_coverImg setImage:[UIImage imageNamed:@"slideshow01"]];
+    [_coverImg setImage:[UIImage imageNamed:@"background" inBundle:WFGetBundle(@"WFUser") compatibleWithTraitCollection:nil]];
 }
 
 - (NSArray<ASSectionInfo*>*)getSectionInfo {
     NSMutableArray<ASSectionInfo*> *sectionInfoArr = [NSMutableArray array];
+    __weak typeof(self) weakSelf = self;
+    ASCellInfo *userCell = [ASCellInfo new];
+    userCell.cellReuseIdentifier = [WFUserCell wf_reuseIdentifier];
+    userCell.cellClass = [WFUserCell class];
+    userCell.fillInData = ^(UITableView *tableView, NSIndexPath *indexPath, __kindof UITableViewCell *cell, id data) {
+        ((WFUserCell*)cell).userAvatarClicked = ^{
+            
+        };
+        ((WFUserCell*)cell).user = weakSelf.user;
+        ((WFUserCell*)cell).doLogin = ^{
+            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+        };
+    };
+    ASSectionInfo *userSection = [ASSectionInfo new];
+    userSection.cellInfos = @[userCell];
+    [sectionInfoArr addObject:userSection];
     
     ASCellInfo *allOrderCell = [ASCellInfo new];
     allOrderCell.cellReuseIdentifier = [WFUserOrderCell wf_reuseIdentifier];
@@ -118,7 +148,8 @@ const CGFloat kCoverHeight = 100.f;
                 ((WFUserNormalFunctionCell*)cell).function = data;
             };
             cellInfo.didSelected = ^(UITableView *tableView, NSIndexPath *indexPath, id data) {
-                
+                NSString *actionUrl = ((WFUserNormalFunction*)data).url;
+                [[ADSRouter sharedRouter] openUrlString:actionUrl];
             };
             [cellInfoArr addObject:cellInfo];
         }
@@ -129,7 +160,7 @@ const CGFloat kCoverHeight = 100.f;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    _coverImg.frame =CGRectMake(0, 0, self.view.wf_width, - _tableView.contentOffset.y);
+    _coverImg.frame =CGRectMake(0, 0, self.view.wf_width, - _tableView.contentOffset.y + 100);
 }
 
 @end

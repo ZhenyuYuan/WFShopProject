@@ -56,7 +56,7 @@
         [_coverImg sd_setImageWithURL:[NSURL URLWithString:_cartItem.product.coverImg]];
         _titleLabel.text = _cartItem.product.name;
         _subTitleLabel.text = _cartItem.product.detail;
-        _priceLabel.text = [NSString stringWithFormat:@"￥%lf", _cartItem.product.price];
+        _priceLabel.text = [NSString stringWithFormat:@"￥%.2f", _cartItem.product.price];
         _amountField.text = @(_cartItem.amount).stringValue;
     }
     [self updateRadioBtn:_cartItem.isSelected];

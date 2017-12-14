@@ -28,6 +28,7 @@
 
 - (void)setUpUI {
     _background = [UIImageView new];
+    _background.contentMode = UIViewContentModeScaleAspectFit;
     _background.userInteractionEnabled = YES;
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked)];
     [_background addGestureRecognizer:recognizer];

@@ -16,6 +16,7 @@
 #import "WFHomePageCellFactory.h"
 #import "UIView+WFReuseIdentifier.h"
 #import "UIColor+WFColor.h"
+#import "MJRefresh.h"
 
 
 #define WFSCREEN_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds)
@@ -31,19 +32,28 @@
 
 @implementation WFHomePageVC
 
+ADS_REQUEST_MAPPING(WFHomePageVC, "wfshop://shop")
+ADS_PARAMETER_MAPPING(WFHomePageVC, shopId, "shopId")
+ADS_HIDE_BOTTOM_BAR
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUpUI];
     
+    [self loadData];
+}
+
+- (void)loadData {
     __weak typeof(self) weakSelf = self;
     [self.homePageDataService getHomePageRows:^(NSArray<WFHomePageRow *> *rows) {
         weakSelf.rows = rows;
+        [weakSelf.tableView.mj_header endRefreshing];
         [weakSelf.tableView reloadData];
     }];
 }
 
 - (void)setUpUI {
-    self.title = @"首页";
+//    self.title = @"首页";
     
     _tableView = [UITableView new];
     [self.view addSubview:_tableView];
@@ -54,6 +64,10 @@
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor = [UIColor wf_mainBackgroundColor];
+    __weak typeof(self) weakSelf = self;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
     label.text = @"到底了";
@@ -66,6 +80,9 @@
 
 - (void)setUpNavi {
 
+    if (_shopId && ![_shopId isEqualToString:@""]) {
+        return;
+    }
     UILabel *searchField = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
     searchField.text = @"搜索";
     searchField.textColor = [UIColor wf_placeHolderColor];
@@ -105,6 +122,7 @@
 }
 
 - (void)qrBtnClicked {
+    NSLog(@"开始跳转:%f", [NSDate date].timeIntervalSince1970);
     [[ADSRouter sharedRouter] openUrlString:@"wfshop://qrscan"];
 }
 

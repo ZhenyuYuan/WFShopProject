@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class WFUserNormalFunctionGroup;
+@class WFUserNormalFunctionGroup, WFUser;
 
 @interface WFUserDataService : NSObject
 
 - (void)getFunctions:(void(^)(NSArray<WFUserNormalFunctionGroup*>* funcGroups)) callback;
+
+- (void)getUser:(void(^)(WFUser *user))callback;
 
 @end

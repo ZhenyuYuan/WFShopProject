@@ -9,4 +9,8 @@
 
 @implementation WFHistorySearchItem
 
++ (nullable NSString *)primaryKey {
+    return @"itemId";
+}
+
 @end

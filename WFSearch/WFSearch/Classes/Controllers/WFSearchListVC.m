@@ -24,6 +24,7 @@
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
 #import "ADSRouter.h"
+#import "MJRefresh.h"
 // Categories
 #import "UIFont+WFFont.h"
 #import "UIColor+WFColor.h"
@@ -49,6 +50,7 @@
 
 
 @property (nonatomic, strong) WFSearchDataService *dataService;
+@property (nonatomic, assign) NSInteger page;
 
 @end
 
@@ -77,7 +79,15 @@ ADS_HIDE_BOTTOM_BAR
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
-        
+        __weak typeof(self) weakSelf = self;
+        _collectionView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+            [_dataService getSearchResultWithQuery:_query category:_catagory orderBy:WFSearchResultOrderByRateDESC page:_page callback:^(NSArray<WFSearchItem *> *items) {
+                [weakSelf.setItem addObjectsFromArray:items];
+                ++weakSelf.page;
+                [weakSelf.collectionView.mj_footer endRefreshing];
+                [weakSelf.collectionView reloadData];
+            }];
+        }];
         [_collectionView registerClass:[WFCustionHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[WFCustionHeadView wf_reuseIdentifier]]; //头部View
         [_collectionView registerClass:[WFSearchGridCell class] forCellWithReuseIdentifier:[WFSearchGridCell wf_reuseIdentifier]];
          [_collectionView registerClass:[WFSearchListCell class] forCellWithReuseIdentifier:[WFSearchListCell wf_reuseIdentifier]];
@@ -90,8 +100,6 @@ ADS_HIDE_BOTTOM_BAR
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    if (self.navigationController.navigationBar.barTintColor == DCBGColor)return;
-//    self.navigationController.navigationBar.barTintColor = DCBGColor;
 }
 
 - (void)viewDidLoad {
@@ -122,20 +130,27 @@ ADS_HIDE_BOTTOM_BAR
 #pragma mark - 加载数据
 - (void)setUpData
 {
+    _page = 1;
     _setItem = [NSMutableArray array];
     _dataService = [WFSearchDataService new];
     __weak typeof(self) weakSelf = self;
-    [_dataService getSearchResult:^(NSArray<WFSearchItem *> *items) {
+    [_dataService getSearchResultWithQuery:_query category:_catagory orderBy:WFSearchResultOrderByRateDESC page:_page callback:^(NSArray<WFSearchItem *> *items) {
         [weakSelf.setItem addObjectsFromArray:items];
+        ++weakSelf.page;
         [weakSelf.collectionView reloadData];
     }];
 }
+
 
 #pragma mark - 导航栏
 - (void)setUpNav {
     self.title = @"";
     WFNavSearchBarView *searchBarVc = [[WFNavSearchBarView alloc] init];
-    searchBarVc.placeholdLabel.text = @"快速查找商品";
+    if (_query && ![_query isEqualToString:@""]) {
+        searchBarVc.placeholdLabel.text = _query;
+    } else {
+        searchBarVc.placeholdLabel.text = @"快速查找商品";
+    }
     searchBarVc.frame = CGRectMake(40, 25, WFGetScreenWidth() * 0.68, 35);
     searchBarVc.voiceImageBtn.hidden = YES;
     searchBarVc.searchViewBlock = ^{
@@ -273,7 +288,6 @@ ADS_HIDE_BOTTOM_BAR
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 
 
 @end

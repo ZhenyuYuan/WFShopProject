@@ -124,4 +124,16 @@
     }
 }
 
+
+- (void)getProductCommentWithProductId:(NSString *)productId page:(NSInteger)page callback:(void (^)(NSArray<WFProductComment *> *))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:@"comment"];
+    NSDictionary *params = @{@"page": @(page)};
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:params option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        NSArray<WFProductComment*> *comments = [NSArray yy_modelArrayWithClass:[WFProductComment class] json:obj.data];
+        callback(comments);
+    }];
+}
+
+
+
 @end

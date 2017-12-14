@@ -20,7 +20,7 @@
 @implementation WFQRScanner
 
 ADS_REQUEST_MAPPING(WFQRScanner, "wfshop://qrscan")
-ADS_SHOWSTYLE_PUSH_WITH_ANIMATION
+ADS_SHOWSTYLE_PUSH_WITHOUT_ANIMATION
 ADS_SUPPORT_FLY
 
 - (void)viewDidLoad {
@@ -52,6 +52,12 @@ ADS_SUPPORT_FLY
             // The user denied access to the camera
         }
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"显示视图:%f", [NSDate date].timeIntervalSince1970);
+    NSLog(@"实例:%p", self);
 }
 
 - (void)didReceiveMemoryWarning {

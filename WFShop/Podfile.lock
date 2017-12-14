@@ -24,6 +24,7 @@ PODS:
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
   - GoAutoSlideView (1.0)
+  - HCSStarRatingView (1.5)
   - IDMPhotoBrowser (1.10.2):
     - DACircularProgress
     - pop
@@ -33,6 +34,7 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15)
   - MTBBarcodeScanner (5.0.3)
+  - OpenShare (0.0.1)
   - Pingpp (2.2.17):
     - Pingpp/Alipay (= 2.2.17)
     - Pingpp/Core (= 2.2.17)
@@ -45,6 +47,9 @@ PODS:
   - pop (1.0.10)
   - PPNumberButton (0.7.0)
   - Reachability (3.2)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
   - Reveal-SDK (4)
   - SDCycleScrollView (1.74):
     - SDWebImage (>= 4.0.0)
@@ -57,6 +62,7 @@ PODS:
   - WFCart (0.1.0):
     - ADSRouter
     - BeeHive
+    - MJRefresh
     - WFNetwork
     - XXNibBridge
   - WFCatagory (0.1.0):
@@ -75,12 +81,15 @@ PODS:
     - FMDB
     - GoAutoSlideView
     - Masonry
+    - MJRefresh
     - SDCycleScrollView
     - SDWebImage
     - WFNetwork
     - WFServiceProtocols
     - YYModel
-  - WFNetwork (0.1.0)
+  - WFNetwork (0.1.0):
+    - AFNetworking
+    - YYModel
   - WFNotFound (0.1.0):
     - ADSRouter
     - Masonry
@@ -88,15 +97,18 @@ PODS:
     - ADSRouter
     - Masonry
     - MBProgressHUD
+    - MJRefresh
     - SDWebImage
     - WFNetwork
     - WFUIComponent
     - YYModel
   - WFProduct (0.1.0):
     - ADSRouter
+    - HCSStarRatingView
     - Masonry
     - MBProgressHUD
     - MJExtension
+    - MJRefresh
     - PPNumberButton
     - SDWebImage
     - WFNetwork
@@ -109,12 +121,15 @@ PODS:
     - ADSRouter
     - BeeHive
     - Masonry
+    - MJRefresh
+    - Realm
     - SDWebImage
     - WFNetwork
     - WFServiceProtocols
     - WFUIComponent
     - YYModel
   - WFServiceProtocols (0.1.0)
+  - WFSetting (0.1.0)
   - WFUIComponent (0.1.0):
     - MBProgressHUD
   - WFUser (0.1.0):
@@ -135,14 +150,17 @@ DEPENDENCIES:
   - BeeHive (= 1.5.1)
   - CPDataDrivenFlowLayout (from `git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git`)
   - FMDB
+  - HCSStarRatingView (~> 1.5)
   - IDMPhotoBrowser
   - Masonry
   - MBProgressHUD
   - MJExtension
   - MJRefresh
+  - OpenShare
   - Pingpp (~> 2.2.17)
   - PPNumberButton
   - Reachability
+  - Realm
   - Reveal-SDK (= 4)
   - SDWebImage
   - SDWebImage/GIF
@@ -156,6 +174,7 @@ DEPENDENCIES:
   - WFQRScanner (from `/Users/andy/code/WFShopProject/WFQRScanner`)
   - WFSearch (from `/Users/andy/code/WFShopProject/WFSearch`)
   - WFServiceProtocols (from `/Users/andy/code/WFShopProject/WFServiceProtocols`)
+  - WFSetting (from `/Users/andy/code/WFShopProject/WFSetting`)
   - WFUIComponent (from `/Users/andy/code/WFShopProject/WFUIComponent`)
   - WFUser (from `/Users/andy/code/WFShopProject/WFUser`)
   - WFWebContainer (from `/Users/andy/code/WFShopProject/WFWebContainer`)
@@ -190,6 +209,8 @@ EXTERNAL SOURCES:
     :path: /Users/andy/code/WFShopProject/WFSearch
   WFServiceProtocols:
     :path: /Users/andy/code/WFShopProject/WFServiceProtocols
+  WFSetting:
+    :path: /Users/andy/code/WFShopProject/WFSetting
   WFUIComponent:
     :path: /Users/andy/code/WFShopProject/WFUIComponent
   WFUser:
@@ -214,29 +235,33 @@ SPEC CHECKSUMS:
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GoAutoSlideView: 349127c6f59f85bacbce8aeabb52274e99c27922
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   IDMPhotoBrowser: 4bb459b1faffc228e92bccdf7c54ad6d6b7e8c37
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
   MTBBarcodeScanner: 3ce0f1b0085ef00c726ded663c490a63b29c9aa5
+  OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   Pingpp: 166fc31888e8639c8a9a287330ba49dd5c5a250d
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNumberButton: a053cde152b0e683302ce41a4755bfa02e1b3a83
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
   SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
-  WFCart: 0480010a6bd83989ac122c24994b036a9dd53552
+  WFCart: 5f7580ac86505c6d963376b5e0b55bfd76a1788e
   WFCatagory: 0e26c20b5198e98fae6a8bab2c4d156723a0b161
-  WFHomePage: cc6efa5601118459d6ed1969b5650ddc8c50fe39
-  WFNetwork: df07603a6a167de43721791d309851d5d7b78d38
+  WFHomePage: 1081523ac6442940cdab5601a59ca2ed74804970
+  WFNetwork: 770fc185c3fb83ed99445c3189341edd1ddd1042
   WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
-  WFOrder: 4265a8456d00bdd9496fd15771fb03c8e4ba4e73
-  WFProduct: 20a38461ccbefc5ecd7a6b24d7172cd79b48def5
+  WFOrder: 454b87c099e72afa2f8190ca76769a2b405e540a
+  WFProduct: 2281a7badf0b90cfe0429354ed8b86360b65eff1
   WFQRScanner: a8b1b1533032166995433275b5f54e1a4fbbb197
-  WFSearch: 7763572becfeb60c5b57528b639bf0d7e55eaa70
+  WFSearch: 82168ab6b505e7f230adbc122eadcd3b4af9edae
   WFServiceProtocols: 32c98c2645a185505193296ce901c7f82f1c3566
+  WFSetting: 733005a16da8f98d5ad299e93efb118fff873c06
   WFUIComponent: 6a318579675a742bd69705fef2ef7652d6986f63
   WFUser: d29a2999755abfa4b0202bf9562656a342d8ffa3
   WFWebContainer: 75eb5ad66209c551d2b29566862b4b1e06c13757
@@ -244,6 +269,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b5387a21d68025f19d1f181cd48890b419c547a7
+PODFILE CHECKSUM: 752dfa76d05f0c62f6759e2e29d5b01ef7f33217
 
 COCOAPODS: 1.4.0.beta.1

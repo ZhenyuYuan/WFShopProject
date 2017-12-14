@@ -42,4 +42,5 @@ TODO: Add long description of the pod here.
   s.dependency "BeeHive"
   s.dependency 'WFNetwork'
   s.dependency 'XXNibBridge'
+  s.dependency 'MJRefresh'
 end

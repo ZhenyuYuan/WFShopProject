@@ -11,3 +11,4 @@
 #import "WFProductShipAddress.h"
 #import "WFProductShop.h"
 #import "WFProductShareItem.h"
+#import "WFProductComment.h"

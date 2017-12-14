@@ -15,6 +15,8 @@
 #import "WFHelpers.h"
 #import "XXNibConvention.h"
 #import <objc/runtime.h>
+#import "BeeHive.h"
+#import "WFUserProtocol.h"
 
 @interface WFCartVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,6 +35,8 @@
 
 @property (nonatomic, assign) CGFloat totalAmount;
 
+@property (nonatomic, strong) id<WFUserProtocol> userService;
+
 @end
 
 @implementation WFCartVC
@@ -45,6 +49,19 @@ ADS_HIDE_BOTTOM_BAR
     [super viewDidLoad];
     [self setUpUI];
     [self loadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setEverthingHidden:![self.userService isLogined]];
+}
+
+- (void)setEverthingHidden:(BOOL)hidden {
+    [_tableView setHidden:hidden];
+    [_checkAllBtn setHidden:hidden];
+    [_hintLabel setHidden:hidden];
+    [_totalAmountLabel setHidden:hidden];
+    [_checkoutBtn setHidden:hidden];
 }
 
 - (void)loadData {
@@ -163,12 +180,18 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)setTotalAmount:(CGFloat)totalAmount {
     _totalAmount = totalAmount;
-    _totalAmountLabel.text = @(_totalAmount).stringValue;
+    _totalAmountLabel.text = [NSString stringWithFormat:@"%.2f", _totalAmount];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)doLogin:(id)sender {
+    [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+}
+
+- (id<WFUserProtocol>)userService {
+    if (!_userService) {
+        _userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
+    }
+    return _userService;
 }
 
 @end

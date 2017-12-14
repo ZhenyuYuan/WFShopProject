@@ -9,6 +9,9 @@
 
 @class UIViewController;
 @protocol WFUserProtocol <NSObject>
+
+- (BOOL)isLogined;
+
 - (UIViewController*)userVC;
 
 

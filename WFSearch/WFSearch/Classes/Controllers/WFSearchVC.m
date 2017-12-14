@@ -11,6 +11,7 @@
 #import "WFHistorySearchItem.h"
 #import "ADSRouter.h"
 #import "WFUIComponent.h"
+#import "WFHistorySearchDataService.h"
 
 @interface WFSearchVC () <UITableViewDataSource, UITableViewDelegate>
 
@@ -19,7 +20,9 @@
 @property (nonatomic, strong) UIBarButtonItem *searchBtn;
 @property (nonatomic, strong) UITextField *searchField;
 
-@property (nonatomic, strong) NSArray *historyItems;
+@property (nonatomic, strong) NSMutableArray *historyItems;
+
+@property (nonatomic, strong) WFHistorySearchDataService *historySearchDataService;
 
 @end
 
@@ -46,31 +49,31 @@ ADS_HIDE_BOTTOM_BAR
 }
 
 - (void)loadData {
-    WFHistorySearchItem *item1 = [WFHistorySearchItem new];
-    item1.query = @"魅族";
-    WFHistorySearchItem *item2 = [WFHistorySearchItem new];
-    item2.query = @"小米";
-    self.historyItems = @[item1, item2];
-    
-    [_tableView reloadData];
+    __weak typeof(self) weakSelf = self;
+    [self.historySearchDataService getHistorySearchItems:^(NSArray<WFHistorySearchItem *> *items) {
+        weakSelf.historyItems = [items mutableCopy];
+        [weakSelf.tableView reloadData];
+    }];
 }
 
 - (void)setUpNavi {
     self.navigationItem.hidesBackButton = YES;
     _searchField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
     _searchField.placeholder = @"搜索";
+    _searchField.keyboardType = UIKeyboardTypeWebSearch;
+    [_searchField addTarget:self action:@selector(goSearch) forControlEvents:UIControlEventEditingDidEndOnExit];
     self.navigationItem.titleView = _searchField;
     
     self.navigationItem.leftBarButtonItem = nil;
     
-    _searchBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(search)];
+    _searchBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(exit)];
     self.navigationItem.rightBarButtonItem = _searchBtn;
     
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [_searchField becomeFirstResponder];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -84,27 +87,47 @@ ADS_HIDE_BOTTOM_BAR
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WFSearchHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:[WFSearchHistoryCell wf_reuseIdentifier] forIndexPath:indexPath];
     cell.item = _historyItems[indexPath.row];
+    __weak typeof(self) weakSelf = self;
+    cell.didClickDelBtn = ^{
+        [weakSelf.historySearchDataService deleteHistorySearchItem:weakSelf.historyItems[indexPath.row]];
+        [weakSelf.historyItems removeObjectAtIndex:indexPath.row];
+        [weakSelf.tableView reloadData];
+    };
     return cell;
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    __weak typeof(self) weakSelf = self;
     WFSearchFooterView *footerView = [[WFSearchFooterView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.wf_width, 36.f)];
     footerView.didClickDelBtn = ^{
-        NSLog(@"clear history");
+        [weakSelf.historySearchDataService deleteAll];
+        weakSelf.historyItems = nil;
+        [weakSelf.tableView reloadData];
     };
     [footerView setNeedsLayout];
     [footerView layoutIfNeeded];
-
     return footerView;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)exit {
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
-- (void)search {
-    [self.navigationController popViewControllerAnimated:NO];
+- (void)goSearch {
+    NSString *query = _searchField.text;
+    if ([query isEqualToString:@""]) {
+        return;
+    }
+    [_searchField resignFirstResponder];
+    [self.historySearchDataService addHistorySearch:query];
+    [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://searchList?query=%@", query]];
+}
+
+- (WFHistorySearchDataService*)historySearchDataService {
+    if (!_historySearchDataService) {
+        _historySearchDataService = [WFHistorySearchDataService new];
+    }
+    return _historySearchDataService;
 }
 
 @end

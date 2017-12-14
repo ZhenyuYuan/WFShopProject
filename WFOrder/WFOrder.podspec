@@ -45,4 +45,5 @@ TODO: Add long description of the pod here.
   s.dependency 'YYModel'
   s.dependency 'WFNetwork'
   s.dependency 'MBProgressHUD'
+  s.dependency 'MJRefresh'
 end

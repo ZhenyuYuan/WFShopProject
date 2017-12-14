@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class WFProduct;
+@class WFProductComment;
 @interface WFProductCommentVC : UIViewController
 
-@property (nonatomic, strong) WFProduct *product;
+@property (nonatomic, copy) NSString *productId;
 
 @end

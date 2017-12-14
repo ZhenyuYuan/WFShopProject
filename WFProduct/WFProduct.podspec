@@ -48,4 +48,6 @@ TODO: Add long description of the pod here.
   s.dependency 'WFNetwork'
   s.dependency 'MBProgressHUD'
   s.dependency 'MJExtension'
+  s.dependency 'HCSStarRatingView'
+  s.dependency 'MJRefresh'
 end

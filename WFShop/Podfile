@@ -23,6 +23,7 @@ target 'WFShop' do
   pod 'WFNotFound', :path => "/Users/andy/code/WFShopProject/WFNotFound"
   pod 'WFSearch', :path => "/Users/andy/code/WFShopProject/WFSearch"
   pod 'WFWebContainer', :path => "/Users/andy/code/WFShopProject/WFWebContainer"
+  pod 'WFSetting', :path => "/Users/andy/code/WFShopProject/WFSetting"
   
   # WFShop basic Modules
   pod 'WFUIComponent', :path => "/Users/andy/code/WFShopProject/WFUIComponent"
@@ -41,6 +42,9 @@ target 'WFShop' do
   pod 'WMPageController', '2.3.0'
   pod 'IDMPhotoBrowser'
   pod 'FMDB'
+  pod 'HCSStarRatingView', '~> 1.5'
+  pod 'OpenShare'
+  pod 'Realm'
   # pod 'TextFieldEffects'
   pod 'Masonry'
   pod 'YYModel', :path => "/Users/andy/code/YYModel"

@@ -120,7 +120,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
     };
     [self addChildViewController:_productDetailVC];
     
-    _productCommentVC = [WFProductCommentVC new];
+    _productCommentVC = [[UIStoryboard storyboardWithName:@"WFProduct" bundle:WFGetBundle(@"WFProduct")] instantiateViewControllerWithIdentifier:@"WFProductCommentVC"];
     [self addChildViewController:_productCommentVC];
 }
 
@@ -254,7 +254,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 - (void)setProduct:(WFProduct *)product {
     _product = product;
     self.productDetailVC.product = product;
-    self.productCommentVC.product = product;
+    self.productCommentVC.productId = product.productId;
 }
 
 - (void)didReceiveMemoryWarning {

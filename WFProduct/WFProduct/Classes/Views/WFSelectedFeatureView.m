@@ -11,7 +11,7 @@
 // Controllers
 
 // Models
-
+#import "WFProduct.h"
 // Views
 
 // Vendors
@@ -118,6 +118,13 @@
     if (_closeHandler) {
         _closeHandler();
     }
+}
+
+- (void)setProduct:(WFProduct *)product {
+    _product = product;
+    [_goodImageView sd_setImageWithURL:[NSURL URLWithString:_product.coverImgs.firstObject]];
+    _chooseAttLabel.text = _product.stringlifyFeatures;
+    _goodPriceLabel.text = [NSString stringWithFormat:@"￥ %.2f", _product.price];
 }
 
 

@@ -8,9 +8,6 @@
 #import "WFOrderCell.h"
 #import "WFUIComponent.h"
 
-const CGFloat kHeaderViewHeight = 50.f;
-const CGFloat kContentViewHeight = 50.f;
-const CGFloat kFooterViewHeight = 50.f;
 
 @implementation WFOrderCell
 
@@ -22,18 +19,6 @@ const CGFloat kFooterViewHeight = 50.f;
 - (void)setUpUI {
     
 }
-
-//- (UIView*)setUpHeaderView {
-//    
-//}
-//
-//- (UIView*)setUpContentView {
-//    
-//}
-//
-//- (UIView*)setUpFooterView {
-//    
-//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

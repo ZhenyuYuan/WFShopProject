@@ -16,14 +16,33 @@
 
 #import "WFUIComponent.h"
 
+#import "WFUserProtocol.h"
+#import "BeeHive.h"
 #import "WFProductDataService.h"
 #import "WFProductConsts.h"
 #import "Masonry.h"
+#import "YYModel.h"
 
 #import "WFProductModels.h"
 
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
+
+
+NSString *WFStringlifyProducts(NSArray<WFProduct*> *products, NSArray *amounts) {
+    NSMutableArray *res = [NSMutableArray array];
+    for (NSInteger idx = 0; idx < products.count; ++idx) {
+        WFProduct *product = products[idx];
+        [res addObject:@{@"id":product.productId,
+                         @"name":product.name,
+                         @"sub_title":product.subTitle,
+                         @"cover_img":product.coverImgs.firstObject,
+                         @"price":@(product.price),
+                         @"amount":amounts[idx]
+                         }];
+    }
+    return [res yy_modelToJSONString];
+}
 
 @interface WFProductRootVC ()
 
@@ -39,6 +58,8 @@
 @property (nonatomic, strong) NSArray<WFProductDetailFeature*> *features;
 
 @property (nonatomic, strong) WFProductDataService *productDataService;
+
+@property (nonatomic, strong) id<WFUserProtocol> userService;
 
 @property (nonatomic, strong) WFProduct *product;
 
@@ -78,6 +99,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 
 - (void)loadData {
     [self hideUIComponents];
+    _amount = 1;
     __weak typeof(self) weakSelf = self;
     _productDataService = [WFProductDataService new];
     [_productDataService getProductWithProductId:_productId callback:^(WFProduct *product) {
@@ -167,12 +189,14 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
     
     _addCartBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_addCartBtn setTitle:@"加入购物车" forState:UIControlStateNormal];
+    [_addCartBtn addTarget:self action:@selector(addCartBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     _addCartBtn.titleLabel.font = [UIFont wf_pfr16];
     _addCartBtn.backgroundColor = [UIColor wf_mainColor];
     [self.view addSubview:_addCartBtn];
     
     _buyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_buyBtn setTitle:@"立即购买" forState:UIControlStateNormal];
+    [_buyBtn addTarget:self action:@selector(buyBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     _buyBtn.titleLabel.font = [UIFont wf_pfr16];
     _buyBtn.backgroundColor = [UIColor wf_redColor];
     [self.view addSubview:_buyBtn];
@@ -226,15 +250,41 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 }
 
 - (void)collectBtnClicked {
-    __weak typeof(self) weakSelf = self;
-    [_productDataService collectProduct:_productId callback:^{
+    if (![self.userService isLogined]) {
+        [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+    } else {
+        __weak typeof(self) weakSelf = self;
+        [_productDataService collectProduct:_productId callback:^(BOOL success) {
+            WFShowHud(success ? @"收藏成功" : @"收藏失败", weakSelf.view, 1);
+            if (success) {
+                
+            }
+        }];
+    }
+}
 
-    }];
+- (void)addCartBtnClicked {
+    if (![self.userService isLogined]) {
+        [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+    } else {
+        __weak typeof(self) weakSelf = self;
+        [_productDataService addProductToCart:_productId amount:_amount callback:^(BOOL success) {
+            WFShowHud(success ? @"加入购物车成功" : @"加入购物车失败", weakSelf.view, 1);
+        }];
+    }
+}
+
+- (void)buyBtnClicked {
+    if (![self.userService isLogined]) {
+        [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+    } else {
+        NSString *itemsStr =WFStringlifyProducts(@[_product], @[@(_amount)]);
+        [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://completeOrder?itemsStr=%@", [[itemsStr dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:kNilOptions]]];
+    }
 }
 
 #pragma 退出界面
-- (void)selfAlterViewback
-{
+- (void)selfAlterViewback {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -251,15 +301,21 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
     return _scrollView;
 }
 
+- (void)setProductId:(NSString *)productId {
+    _productId = productId;
+}
+
 - (void)setProduct:(WFProduct *)product {
     _product = product;
     self.productDetailVC.product = product;
-    self.productCommentVC.productId = product.productId;
+    self.productCommentVC.productId = _product.productId;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id<WFUserProtocol>)userService {
+    if (!_userService) {
+        _userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
+    }
+    return _userService;
 }
 
 @end

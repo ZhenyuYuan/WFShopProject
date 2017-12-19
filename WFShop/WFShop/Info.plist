@@ -13,6 +13,19 @@
 			<string>cn.andysheng</string>
 		</dict>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+	    <string>weixin</string>
+	    <string>wechat</string>
+	    <string>alipay</string>
+	    <string>alipays</string>
+	    <string>mqq</string>
+	    <string>uppaysdk</string>
+	    <string>uppaywallet</string>
+	    <string>uppayx1</string>
+	    <string>uppayx2</string>
+	    <string>uppayx3</string>
+	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>WFShop需要使用您的相机</string>
 	<key>NSAppTransportSecurity</key>

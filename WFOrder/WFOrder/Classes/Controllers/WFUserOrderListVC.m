@@ -8,8 +8,9 @@
 #import "WFUserOrderListVC.h"
 #import "WFUIComponent.h"
 #import "Masonry.h"
-#import "WFOrderDataService.h"
 #import "WFOrder.h"
+#import "WFOrderListCell.h"
+#import "WFOrderListHeader.h"
 //#import "UITableView+ASDataDrivenLayout.h"
 
 
@@ -20,11 +21,9 @@ typedef enum : NSUInteger {
 
 @interface WFUserOrderListVC () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, assign) WFUserOrderListType listType;
-
 @property (nonatomic, copy) NSString *userId;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, assign) WFPageSate pageSate;
 
@@ -35,15 +34,6 @@ typedef enum : NSUInteger {
 @end
 
 @implementation WFUserOrderListVC
-
-- (instancetype)initWithUserId:(NSString *)userId type:(WFUserOrderListType)type {
-    self = [super init];
-    if (self) {
-        _listType = type;
-        _userId = userId;
-    }
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -57,23 +47,17 @@ typedef enum : NSUInteger {
     self.view.backgroundColor = [UIColor wf_mainBackgroundColor];
     
     [self setUpDefaultText];
-    
-    _tableView = [UITableView new];
+
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [self.view addSubview:_tableView];
-    [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
-    }];
-    
 }
 
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
     _orderDataService = [WFOrderDataService new];
-    [_orderDataService getOrdersWithUserId:@"" callback:^(NSArray<WFOrder *> *orders) {
+    [_orderDataService getOrdersWithOrderType:_listType callback:^(NSArray<WFOrder *> *orders) {
         weakSelf.orders = orders;
-        //[weakSelf.tableView reloadData];
+        [weakSelf.tableView reloadData];
     }];
 }
 
@@ -83,7 +67,7 @@ typedef enum : NSUInteger {
     label.textColor = [UIColor wf_placeHolderColor];
     label.font = [UIFont wf_pfr15];
     label.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:label];
+    [self.view insertSubview:label belowSubview:_tableView];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.view.mas_centerY);
         make.left.right.mas_equalTo(self.view);
@@ -94,7 +78,6 @@ typedef enum : NSUInteger {
     _orders = orders;
     if (orders && orders.count != 0) {
         self.tableView.hidden = NO;
-        [self.tableView reloadData];
     } else {
         self.tableView.hidden = YES;
     }
@@ -105,22 +88,27 @@ typedef enum : NSUInteger {
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _orders.count;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _orders[section].products.count;
+}
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"订单%@", _orders[indexPath.row].orderId];
+    WFOrderListCell *cell = [tableView dequeueReusableCellWithIdentifier:[WFOrderListCell wf_reuseIdentifier] forIndexPath:indexPath];
+    cell.product = _orders[indexPath.section].products[indexPath.row];
     return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 100.f;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    WFOrderListHeader *header = [WFGetBundle(@"WFOrder") loadNibNamed:@"WFOrderListHeader" owner:nil options:nil].firstObject;
+    header.order = _orders[section];
+    return header;
 }
 
 @end

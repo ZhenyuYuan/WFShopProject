@@ -23,6 +23,7 @@
 
 // Service
 #import "WFProductDataService.h"
+#import "WFUserCenter.h"
 
 // Model
 #import "WFProductFeatureOption.h"
@@ -40,7 +41,11 @@ const CGFloat kBottomBarHeight = 100.0;
 
 @property (strong , nonatomic) UICollectionView *collectionView;
 
+@property (nonatomic, strong) PPNumberButton *numberButton;
+
 @property (nonatomic, strong) NSArray<WFProductDetailFeature*> *features;
+
+@property (nonatomic, strong)  WFProductDataService *productService;
 
 @end
 
@@ -77,10 +82,10 @@ const CGFloat kBottomBarHeight = 100.0;
 
 - (void)setUpSelectedFeatureView {
     __weak typeof(self) weakSelf = self;
-    
     _selectedFeatureView = [WFSelectedFeatureView new];
+    _selectedFeatureView.product = _product;
     _selectedFeatureView.closeHandler = ^{
-        [weakSelf _wf_doBeforeClose];
+        //[weakSelf _wf_doBeforeClose];
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
     [self.view addSubview:_selectedFeatureView];
@@ -148,16 +153,16 @@ const CGFloat kBottomBarHeight = 100.0;
         make.height.equalTo(@(kBottomBarHeight * 0.5));
     }];
     
-    PPNumberButton *numberButton = [PPNumberButton numberButtonWithFrame:CGRectZero];
-    numberButton.shakeAnimation = YES;
-    numberButton.minValue = 1;
-    numberButton.inputFieldFont = 23;
-    numberButton.increaseTitle = @"＋";
-    numberButton.decreaseTitle = @"－";
-    numberButton.currentNumber = 1;
-    numberButton.delegate = self;
-    [self.view addSubview:numberButton];
-    [numberButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    _numberButton = [PPNumberButton numberButtonWithFrame:CGRectZero];
+    _numberButton.shakeAnimation = YES;
+    _numberButton.minValue = 1;
+    _numberButton.inputFieldFont = 23;
+    _numberButton.increaseTitle = @"＋";
+    _numberButton.decreaseTitle = @"－";
+    _numberButton.currentNumber = 1;
+    _numberButton.delegate = self;
+    [self.view addSubview:_numberButton];
+    [_numberButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.bottom.equalTo(numLabel);
         make.width.equalTo(@(150));
         make.left.equalTo(numLabel.mas_right).offset(WFMargin);
@@ -167,16 +172,37 @@ const CGFloat kBottomBarHeight = 100.0;
 
 #pragma mark - 底部按钮点击
 - (void)addCartBtnClicked {
-    [self _wf_doBeforeClose];
+    if (![[WFUserCenter sharedCenter] isUserLogined]) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+        }];
+        return;
+    }
+    //[self _wf_doBeforeClose];
     if (![self _wf_checkAllFeatureSelected]) {
         WFShowHud(@"请选择全属性", self.view, 0.5);
         return;
+    } else {
+        __weak typeof(self) weakSelf = self;
+        [self.productService addProductToCart:_product.productId amount:_numberButton.currentNumber callback:^(BOOL success) {
+            WFShowHud(success ? @"加入购物车成功" : @"加入购物车失败", weakSelf.view, 1);
+            if (success) {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakSelf dismissViewControllerAnimated:YES completion:nil];
+                });
+            }
+        }];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)buyBtnClicked {
-    [self _wf_doBeforeClose];
+    if (![[WFUserCenter sharedCenter] isUserLogined]) {
+        [self dismissViewControllerAnimated:YES completion:^{
+            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+        }];
+        return;
+    }
+    //[self _wf_doBeforeClose];
     if (![self _wf_checkAllFeatureSelected]) {
         WFShowHud(@"请选择全属性", self.view, 0.5);
     } else {
@@ -247,6 +273,10 @@ const CGFloat kBottomBarHeight = 100.0;
     _features = _product.features;
 }
 
+- (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
+    [self _wf_doBeforeClose];
+    [super dismissViewControllerAnimated:YES completion:completion];
+}
 #pragma mark - <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [_features[indexPath.section].options enumerateObjectsUsingBlock:^(WFProductFeatureOption * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -255,7 +285,22 @@ const CGFloat kBottomBarHeight = 100.0;
         }
     }];
     _features[indexPath.section].options[indexPath.row].isSelected = !_features[indexPath.section].options[indexPath.row].isSelected;
+    if ([self didSelectAllFeature] && _didSelectAllFeature) {
+        __weak typeof(self) weakSelf = self;
+        [self.productService getProductIdWithFeatures:_features productGroupId:_product.productId callback:^(NSString *productId) {
+            [weakSelf.productService getProductWithProductId:productId callback:^(WFProduct *product) {
+                weakSelf.product = product;
+                weakSelf.selectedFeatureView.product = product;
+            }];
+        }];
+    }
     [_collectionView reloadData];
 }
 
+- (WFProductDataService*)productService {
+    if (!_productService) {
+        _productService = [WFProductDataService new];
+    }
+    return _productService;
+}
 @end

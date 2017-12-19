@@ -91,7 +91,7 @@ const CGFloat kTableViewRatio = 0.3;
     
     [self setUpCollectionView];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    //self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - initizlize
@@ -105,7 +105,8 @@ const CGFloat kTableViewRatio = 0.3;
     [_tableView registerClass:[WFCategoryCell class] forCellReuseIdentifier:[WFCategoryCell wf_reuseIdentifier]];
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.top.bottom.equalTo(self.view);
+       // make.top.equalTo(self.topLayoutGuide);
+        make.top.left.bottom.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(kTableViewRatio);
     }];
 }
@@ -128,6 +129,7 @@ const CGFloat kTableViewRatio = 0.3;
     
     [self.view addSubview:_collectionView];
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        ///make.top.equalTo(self.topLayoutGuide);
         make.top.right.bottom.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(1-kTableViewRatio);
     }];

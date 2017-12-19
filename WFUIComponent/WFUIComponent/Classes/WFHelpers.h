@@ -7,10 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class MBProgressHUD;
 extern CGFloat WFGetScreenWidth(void);
 extern CGFloat WFGetScreenHeight(void);
 
 extern void WFShowHud(NSString *msg, UIView *toView, CGFloat duration);
+
+extern MBProgressHUD*  WFShowProgressHud(NSString *msg, UIView *toView, CGFloat duration);
 
 extern NSBundle* WFGetBundle(NSString *bundleName);
 

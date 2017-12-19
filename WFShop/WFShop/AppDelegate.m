@@ -33,9 +33,6 @@
     self.window.rootViewController = rootVC;
     self.window.tintColor = [UIColor wf_mainColor];
     [self.window makeKeyAndVisible];
-    
-    
-    NSLog(@"%@", [NSBundle bundleForClass:[WFNotFoundVC class]].bundlePath);
     return YES;
 }
 

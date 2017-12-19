@@ -10,7 +10,8 @@
 @implementation WFOrderProduct
 
 + (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"productId" : @"id"
+    return @{@"productId" : @"id",
+             @"coverImg":@"cover_img"
              };
 }
 

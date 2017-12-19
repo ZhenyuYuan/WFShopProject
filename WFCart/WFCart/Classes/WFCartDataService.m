@@ -9,19 +9,17 @@
 #import "WFNetwork.h"
 #import "YYModel.h"
 #import "WFCartItem.h"
+#import "WFNetwork.h"
 
 @implementation WFCartDataService
 
 - (void)getCartDataWithUserId:(NSString *)userId callback:(void (^)(NSArray<WFCartItemGroup*>* cartGroups))callback {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"cart" ofType:@"json"];
-    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    WFNetworkResponse *responseEntity = [WFNetworkResponse yy_modelWithJSON:json];
-    NSArray<WFCartItemGroup*> *cartGroups = [NSArray yy_modelArrayWithClass:[WFCartItemGroup class] json:responseEntity.data];
-    dispatch_async(dispatch_get_main_queue(), ^{
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"cart" objId:nil path:nil];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
-            callback(cartGroups);
+            callback([NSArray yy_modelArrayWithClass:[WFCartItemGroup class] json:obj.data]);
         }
-    });
+    }];
 }
 
 - (CGFloat)calculateTotalAmount:(NSArray<WFCartItemGroup *> *)groups {

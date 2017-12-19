@@ -15,5 +15,6 @@
 #import "UIView+WFReuseIdentifier.h"
 #import "WFSwitchButton.h"
 #import "DCSpeedy.h"
+#import "MBProgressHUD.h"
 
 #endif /* WFUIComponent_h */

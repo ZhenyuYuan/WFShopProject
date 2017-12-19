@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class WFProduct;
 @interface WFSelectedFeatureView : UIView
 
 @property (nonatomic, copy) dispatch_block_t closeHandler;
+
+@property (nonatomic, strong) WFProduct *product;
 
 @end

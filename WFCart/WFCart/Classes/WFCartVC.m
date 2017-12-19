@@ -17,6 +17,22 @@
 #import <objc/runtime.h>
 #import "BeeHive.h"
 #import "WFUserProtocol.h"
+#import "YYModel.h"
+
+NSString *WFStringlifyCartProducts(NSArray<WFCartItem*> *items) {
+    NSMutableArray *res = [NSMutableArray array];
+    for (NSInteger idx = 0; idx < items.count; ++idx) {
+        WFCartProduct *product = items[idx].product;
+        [res addObject:@{@"id":product.productId,
+                         @"name":product.name,
+                         @"sub_title":product.detail,
+                         @"cover_img":product.coverImg,
+                         @"price":@(product.price),
+                         @"amount":@(items[idx].amount)
+                         }];
+    }
+    return [res yy_modelToJSONString];
+}
 
 @interface WFCartVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -111,7 +127,16 @@ ADS_HIDE_BOTTOM_BAR
 }
 
 - (IBAction)checkoutBtnClicked:(id)sender {
-    
+    NSMutableArray<WFCartItem*> *cartItems = [NSMutableArray array];
+    [_cartItemGroups enumerateObjectsUsingBlock:^(WFCartItemGroup * _Nonnull group, NSUInteger idx, BOOL * _Nonnull stop) {
+        [group.cartItems enumerateObjectsUsingBlock:^(WFCartItem * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (item.isSelected) {
+                [cartItems addObject:item];
+            }
+        }];
+    }];
+    NSString *itemStr = WFStringlifyCartProducts(cartItems);
+    [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://completeOrder?itemsStr=%@", [[itemStr dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:kNilOptions]]];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

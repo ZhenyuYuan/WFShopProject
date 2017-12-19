@@ -10,7 +10,9 @@
 @interface WFOrderProduct : NSObject
 
 @property (nonatomic, copy) NSString *productId;
+@property (nonatomic, assign) CGFloat price;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *subTitle;
 @property (nonatomic, copy) NSString *coverImg;
 @property (nonatomic, assign) NSInteger amount;
 

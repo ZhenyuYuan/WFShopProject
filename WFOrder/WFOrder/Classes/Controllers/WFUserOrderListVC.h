@@ -6,17 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum : NSUInteger {
-    WFUserOrderListTypeAll,
-    WFUserOrderListTypeUnpay,
-    WFUserOrderListTypeUncheck,
-    WFUserOrderListTypeUncomment,
-    WFUserOrderListTypeRepqair,
-} WFUserOrderListType;
+#import "WFOrderDataService.h"
 
 @interface WFUserOrderListVC : UIViewController
 
-- (instancetype)initWithUserId:(NSString*)userId type:(WFUserOrderListType)type;
+@property (nonatomic, assign) WFUserOrderListType listType;
 
 @end

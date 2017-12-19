@@ -10,7 +10,7 @@
 @class WFProduct, WFProductDetailFeature, WFProductShipAddress, WFProductShop, WFProductShareItem, WFProductComment;
 @interface WFProductDataService : NSObject
 
-- (void)collectProduct:(NSString*)productId callback:(void(^)(void))callback;
+- (void)collectProduct:(NSString*)productId callback:(void(^)(BOOL))callback;
 
 - (void)getProductIdWithFeatures:(NSArray<WFProductDetailFeature*>*)features productGroupId:(NSString*)productGroupId callback:(void(^)(NSString* productId))callback;
 
@@ -27,5 +27,8 @@
 - (void)getShareItems:(void(^)(NSArray<WFProductShareItem*> *shareItems)) callback;
 
 - (void)getProductCommentWithProductId:(NSString*)productId page:(NSInteger)page callback:(void(^)(NSArray<WFProductComment*>*))callback;
+
+
+- (void)addProductToCart:(NSString*)productId amount:(NSInteger)amount callback:(void(^)(BOOL))callback;
 
 @end

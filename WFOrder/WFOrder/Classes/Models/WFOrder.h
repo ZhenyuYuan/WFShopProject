@@ -8,10 +8,11 @@
 #import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
-    WFOrderStateUnpayed = 0,
+    WFOrderStateUnpayed = 1,
     WFOrderStateUncheck,
     WFOrderStateUncomment,
-    WFOrderStateRepair
+    WFOrderStateRepair,
+    WFOrderStateDone
 } WFOrderState;
 
 @class WFOrderProduct;
@@ -24,5 +25,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat cost;
 
 @property (nonatomic, assign) WFOrderState orderState;
+
+@property (nonatomic, strong) NSString *orderStateStr;
 
 @end

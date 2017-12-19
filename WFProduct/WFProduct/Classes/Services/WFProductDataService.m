@@ -12,31 +12,38 @@
 #import "WFProductModels.h"
 #import "MJExtension.h"
 #import "WFHelpers.h"
+#import "WFNetwork.h"
+#import "WFUserCenter.h"
 
 @implementation WFProductDataService
 
-- (void)collectProduct:(NSString *)productId callback:(void (^)(void))callback {
-    if (callback) {
-        callback();
-    }
+- (void)collectProduct:(NSString *)productId callback:(void (^)(BOOL))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"collection" objId:nil path:[NSString stringWithFormat:@"add/%@", productId]];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionPost|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback) {
+            callback(obj.code == 1 ? YES : NO);
+        }
+    }];
+    
 }
 
 - (void)getProductIdWithFeatures:(NSArray<WFProductDetailFeature *> *)features productGroupId:(NSString *)productGroupId callback:(void (^)(NSString *))callback {
-    if (callback) {
-        callback(@"2");
-    }
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:nil path:@"id"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:params option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback && obj.code == 1) {
+            callback(obj.data[@"product_id"]);
+        }
+    }];
 }
 
 - (void)getProductWithProductId:(NSString *)productId callback:(void (^)(WFProduct *))callback {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"product" ofType:@"json"];
-    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    WFNetworkResponse *responseEntity = [WFNetworkResponse yy_modelWithJSON:json];
-    WFProduct *product = [WFProduct yy_modelWithJSON:responseEntity.data];
-    dispatch_async(dispatch_get_main_queue(), ^{
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:nil];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
-            callback(product);
+            callback([WFProduct yy_modelWithJSON:obj.data]);
         }
-    });
+    }];
 }
 
 - (void)getProductFeatureWithProductId:(NSString*)productId callback:(void (^)(NSArray<WFProductDetailFeature *> *))callback {
@@ -124,7 +131,6 @@
     }
 }
 
-
 - (void)getProductCommentWithProductId:(NSString *)productId page:(NSInteger)page callback:(void (^)(NSArray<WFProductComment *> *))callback {
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:@"comment"];
     NSDictionary *params = @{@"page": @(page)};
@@ -134,6 +140,15 @@
     }];
 }
 
+- (void)addProductToCart:(NSString *)productId amount:(NSInteger)amount callback:(void (^)(BOOL))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"cart" objId:nil path:[NSString stringWithFormat:@"add/%@", productId]];
+    NSDictionary *params = @{@"amount":@(amount)};
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:params option:WFRequestOptionPost|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback) {
+            callback(obj.code == 1 ? YES : NO);
+        }
+    }];
+}
 
 
 @end

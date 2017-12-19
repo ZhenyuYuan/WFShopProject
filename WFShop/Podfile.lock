@@ -102,6 +102,16 @@ PODS:
     - WFNetwork
     - WFUIComponent
     - YYModel
+  - WFPay (0.1.0):
+    - ADSRouter
+    - BeeHive
+    - Masonry
+    - Pingpp
+    - SDWebImage
+    - WFNetwork
+    - WFServiceProtocols
+    - WFUIComponent
+    - YYModel
   - WFProduct (0.1.0):
     - ADSRouter
     - HCSStarRatingView
@@ -170,6 +180,7 @@ DEPENDENCIES:
   - WFNetwork (from `/Users/andy/code/WFShopProject/WFNetwork`)
   - WFNotFound (from `/Users/andy/code/WFShopProject/WFNotFound`)
   - WFOrder (from `/Users/andy/code/WFShopProject/WFOrder`)
+  - WFPay (from `/Users/andy/code/WFShopProject/WFPay`)
   - WFProduct (from `/Users/andy/code/WFShopProject/WFProduct`)
   - WFQRScanner (from `/Users/andy/code/WFShopProject/WFQRScanner`)
   - WFSearch (from `/Users/andy/code/WFShopProject/WFSearch`)
@@ -201,6 +212,8 @@ EXTERNAL SOURCES:
     :path: /Users/andy/code/WFShopProject/WFNotFound
   WFOrder:
     :path: /Users/andy/code/WFShopProject/WFOrder
+  WFPay:
+    :path: /Users/andy/code/WFShopProject/WFPay
   WFProduct:
     :path: /Users/andy/code/WFShopProject/WFProduct
   WFQRScanner:
@@ -257,6 +270,7 @@ SPEC CHECKSUMS:
   WFNetwork: 770fc185c3fb83ed99445c3189341edd1ddd1042
   WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
   WFOrder: 454b87c099e72afa2f8190ca76769a2b405e540a
+  WFPay: 767589d07228b09736c44112064d3fe6b1b5e906
   WFProduct: 2281a7badf0b90cfe0429354ed8b86360b65eff1
   WFQRScanner: a8b1b1533032166995433275b5f54e1a4fbbb197
   WFSearch: 82168ab6b505e7f230adbc122eadcd3b4af9edae
@@ -269,6 +283,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 752dfa76d05f0c62f6759e2e29d5b01ef7f33217
+PODFILE CHECKSUM: e90aeb9db99c0a3ccac208f12b5bfb5a7a39727b
 
 COCOAPODS: 1.4.0.beta.1

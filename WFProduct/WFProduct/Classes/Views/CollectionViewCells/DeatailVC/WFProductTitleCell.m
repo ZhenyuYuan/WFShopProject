@@ -140,9 +140,10 @@
 #pragma mark - Setter Getter Methods
 
 - (void)setProduct:(WFProduct *)product {
-    _titleLabel.text = product.name;
-    _priceLabel.text = [NSString stringWithFormat:@"￥ %f", product.price];
-    _subtitleLabel.text = product.subTitle;
+    _product = product;
+    _titleLabel.text = _product.name;
+    _priceLabel.text = [NSString stringWithFormat:@"￥ %.2f", _product.price];
+    _subtitleLabel.text = _product.subTitle;
 }
 @end
 

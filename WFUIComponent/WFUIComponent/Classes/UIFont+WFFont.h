@@ -25,6 +25,6 @@
 
 + (instancetype)wf_pfr18;
 
-+ (instancetype)wf_pfr10;
++ (instancetype)wf_pfr20;
 
 @end

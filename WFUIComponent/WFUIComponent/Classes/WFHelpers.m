@@ -27,6 +27,16 @@ void WFShowHud(NSString *msg, UIView *toView, CGFloat duration) {
     [hud hideAnimated:YES afterDelay:duration];
 }
 
+MBProgressHUD* WFShowProgressHud(NSString *msg, UIView *toView, CGFloat duration) {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:toView animated:YES];
+//    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+//    hud.bezelView.backgroundColor = [UIColor blackColor];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.label.text = msg;
+    hud.removeFromSuperViewOnHide = YES;
+    return hud;
+}
+
 NSBundle* WFGetBundle(NSString *bundleName) {
     return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:bundleName ofType:@"bundle"]];
 }

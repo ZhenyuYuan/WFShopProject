@@ -19,6 +19,7 @@
 		A10960BA1F9848C500868C46 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = A10960B91F9848C500868C46 /* category.json */; };
 		A112D3C71FE0EEE6000407A1 /* WFAPIFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A112D3C61FE0EEE6000407A1 /* WFAPIFactoryTest.m */; };
 		A112D3CD1FE12ABB000407A1 /* WFHistorySearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A112D3CC1FE12ABB000407A1 /* WFHistorySearchTest.m */; };
+		A112D41C1FE7BAE8000407A1 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A112D41B1FE7BAE8000407A1 /* PassKit.framework */; };
 		A12837051F9094380076D4BB /* homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = A12837041F9094380076D4BB /* homepage.json */; };
 		A16306431F9F7EE400662B0D /* search_result.json in Resources */ = {isa = PBXBuildFile; fileRef = A16306421F9F7EE400662B0D /* search_result.json */; };
 		A168D1141F8F625800EA132B /* WFAppLaunchService.m in Sources */ = {isa = PBXBuildFile; fileRef = A168D1131F8F625800EA132B /* WFAppLaunchService.m */; };
@@ -75,6 +76,7 @@
 		A10960B91F9848C500868C46 /* category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		A112D3C61FE0EEE6000407A1 /* WFAPIFactoryTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFAPIFactoryTest.m; sourceTree = "<group>"; };
 		A112D3CC1FE12ABB000407A1 /* WFHistorySearchTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WFHistorySearchTest.m; sourceTree = "<group>"; };
+		A112D41B1FE7BAE8000407A1 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		A12837041F9094380076D4BB /* homepage.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = homepage.json; sourceTree = "<group>"; };
 		A16306421F9F7EE400662B0D /* search_result.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search_result.json; sourceTree = "<group>"; };
 		A168D1101F8F61B000EA132B /* WFAppLaunchServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WFAppLaunchServiceProtocol.h; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A112D41C1FE7BAE8000407A1 /* PassKit.framework in Frameworks */,
 				1D7327AA3F9F37CA02EEB54A /* libPods-WFShop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +224,7 @@
 		C77456B7206448AAD2E9CAE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A112D41B1FE7BAE8000407A1 /* PassKit.framework */,
 				E5845A6DD533E5F99980D289 /* libPods-WFShop.a */,
 				0FF26AB2733F015575F80B23 /* libPods-WFShopTests.a */,
 				09DC5D088C9C651D9BC94A75 /* libPods-WFShopUITests.a */,
@@ -457,6 +461,7 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFNotFound/WFNotFound.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFOrder/WFOrder.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFPay/WFPay.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFProduct/WFProduct.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFSearch/WFSearch.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFUIComponent/WFUIComponent.bundle",

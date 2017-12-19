@@ -30,6 +30,7 @@ const CGFloat kMenuHeight = 50.f;
 
 ADS_REQUEST_MAPPING(WFUserOrderRootVC, "wfshop://showOrders")
 ADS_PARAMETER_MAPPING(WFUserOrderRootVC, selectedIdx, "selected_idx")
+ADS_HIDE_BOTTOM_BAR
 ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
     id<WFUserProtocol> userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
     if (![userService isLogined]) {
@@ -69,7 +70,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
 
 - (void)setUpUI {
     self.view.backgroundColor = [UIColor wf_mainBackgroundColor];
-    
+    self.menuHeight = 30.f;
     
     [self setSelectIndex:_selectedIdx];
     
@@ -112,7 +113,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
             vc = [self getOrderListWithType:WFUserOrderListTypeUncomment];
             break;
         case kRepairOrderIdx:
-            vc = [self getOrderListWithType:WFUserOrderListTypeRepqair];
+            vc = [self getOrderListWithType:WFUserOrderListTypeRepair];
             break;
         default:
             break;
@@ -129,7 +130,9 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
 }
 
 - (WFUserOrderListVC*)getOrderListWithType:(WFUserOrderListType)type {
-    return [[WFUserOrderListVC alloc] initWithUserId:@"" type:type];
+    WFUserOrderListVC *vc = [[UIStoryboard storyboardWithName:@"WFOrder" bundle:WFGetBundle(@"WFOrder")] instantiateViewControllerWithIdentifier:@"WFUserOrderListVC"];
+    vc.listType = type;
+    return vc;
 }
 
 - (void)didReceiveMemoryWarning {

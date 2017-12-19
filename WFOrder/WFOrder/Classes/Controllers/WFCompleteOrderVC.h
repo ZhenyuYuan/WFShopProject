@@ -9,4 +9,6 @@
 
 @interface WFCompleteOrderVC : UIViewController
 
+@property (nonatomic, strong) NSString *itemsStr;
+
 @end

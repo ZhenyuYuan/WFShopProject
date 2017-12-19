@@ -52,11 +52,6 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 2;
 }
@@ -74,7 +69,6 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%ld", indexPath.row);
     UICollectionViewCell *cell;
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
@@ -89,6 +83,7 @@
             };
         } else if (indexPath.row == 1) {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:[WFProductTitleCell wf_reuseIdentifier] forIndexPath:indexPath];
+            ((WFProductTitleCell*)cell).product = _product;
         } else if (indexPath.row == 2) {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:[WFSelectProductDetailCell wf_reuseIdentifier] forIndexPath:indexPath];
             ((WFSelectProductDetailCell*)cell).selectedFeatures = _product.stringlifyFeatures;

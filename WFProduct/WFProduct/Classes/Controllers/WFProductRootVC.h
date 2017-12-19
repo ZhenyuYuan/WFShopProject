@@ -10,5 +10,6 @@
 @interface WFProductRootVC : UIViewController
 
 @property (nonatomic, copy) NSString *productId;
+@property (nonatomic, assign) NSInteger amount;
 
 @end

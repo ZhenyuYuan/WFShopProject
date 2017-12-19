@@ -44,7 +44,7 @@
 {
     self.leftTitleLable.text = @"送至";
     self.contentLabel.text = @"地址";
-    self.hintLabel.text = @"由DC商贸配送监管";
+    self.hintLabel.text = @"由WFShop配送监管";
 }
 
 - (void)layoutSubviews

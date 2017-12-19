@@ -23,4 +23,29 @@
     return _state;
 }
 
+
+- (NSString*)orderStateStr {
+    NSString *state = @"未知";
+    switch (_state) {
+        case WFOrderStateDone:
+            state = @"完成";
+            break;
+        case WFOrderStateRepair:
+            state = @"返修中";
+            break;
+        case WFOrderStateUncheck:
+            state = @"未确认收货";
+            break;
+        case WFOrderStateUnpayed:
+            state = @"未支付";
+            break;
+        case WFOrderStateUncomment:
+            state = @"待评价";
+            break;
+        default:
+            break;
+    }
+    return state;
+}
+
 @end

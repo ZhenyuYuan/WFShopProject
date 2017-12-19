@@ -24,6 +24,7 @@ target 'WFShop' do
   pod 'WFSearch', :path => "/Users/andy/code/WFShopProject/WFSearch"
   pod 'WFWebContainer', :path => "/Users/andy/code/WFShopProject/WFWebContainer"
   pod 'WFSetting', :path => "/Users/andy/code/WFShopProject/WFSetting"
+  pod 'WFPay', :path => "/Users/andy/code/WFShopProject/WFPay"
   
   # WFShop basic Modules
   pod 'WFUIComponent', :path => "/Users/andy/code/WFShopProject/WFUIComponent"

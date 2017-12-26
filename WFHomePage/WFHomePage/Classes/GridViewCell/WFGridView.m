@@ -11,6 +11,8 @@
 #import "WFAdTapGestureRecognizer.h"
 #import "ADSRouter.h"
 #import "Masonry.h"
+#import "WFURLDispatcherProtocol.h"
+#import "BeeHive.h"
 
 void _wf_linkTwoView(UIView *prevView, UIView *currentView, UIView *superView, NSString *orientation, CGFloat weight) {
     if ([orientation isEqualToString:@"h"]) {
@@ -83,7 +85,8 @@ void _wf_linkTwoView(UIView *prevView, UIView *currentView, UIView *superView, N
 }
 
 - (void)clicked:(WFAdTapGestureRecognizer*)recognizer {
-    [[ADSRouter sharedRouter] openUrlString:recognizer.url];
+    id<WFURLDispatcherProtocol> urlDispatcher = [[BeeHive shareInstance] createService:@protocol(WFURLDispatcherProtocol)];
+    [urlDispatcher openUrlString:recognizer.url];
 }
 
 @end

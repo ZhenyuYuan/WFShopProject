@@ -59,6 +59,7 @@ PODS:
   - SDWebImage/GIF (4.2.2):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
+  - WebViewJavascriptBridge (6.0.3)
   - WFCart (0.1.0):
     - ADSRouter
     - BeeHive
@@ -74,6 +75,7 @@ PODS:
     - WFServiceProtocols
     - WFUIComponent
     - YYModel
+  - WFDebug (0.1.0)
   - WFHomePage (0.1.0):
     - ADSRouter
     - AFNetworking
@@ -142,6 +144,9 @@ PODS:
   - WFSetting (0.1.0)
   - WFUIComponent (0.1.0):
     - MBProgressHUD
+  - WFURLDispatcher (0.1.0):
+    - ADSRouter
+    - BeeHive
   - WFUser (0.1.0):
     - ADSRouter
     - BeeHive
@@ -149,6 +154,7 @@ PODS:
     - WFNetwork
   - WFWebContainer (0.1.0):
     - ADSRouter
+    - WebViewJavascriptBridge
   - WMPageController (2.3.0)
   - XXNibBridge (2.3.1)
   - YYModel (1.0.4)
@@ -174,8 +180,10 @@ DEPENDENCIES:
   - Reveal-SDK (= 4)
   - SDWebImage
   - SDWebImage/GIF
+  - WebViewJavascriptBridge (~> 6.0)
   - WFCart (from `/Users/andy/code/WFShopProject/WFCart`)
   - WFCatagory (from `/Users/andy/code/WFShopProject/WFCatagory`)
+  - WFDebug (from `/Users/andy/code/WFShopProject/WFDebug`)
   - WFHomePage (from `/Users/andy/code/WFShopProject/WFHomePage`)
   - WFNetwork (from `/Users/andy/code/WFShopProject/WFNetwork`)
   - WFNotFound (from `/Users/andy/code/WFShopProject/WFNotFound`)
@@ -187,6 +195,7 @@ DEPENDENCIES:
   - WFServiceProtocols (from `/Users/andy/code/WFShopProject/WFServiceProtocols`)
   - WFSetting (from `/Users/andy/code/WFShopProject/WFSetting`)
   - WFUIComponent (from `/Users/andy/code/WFShopProject/WFUIComponent`)
+  - WFURLDispatcher (from `/Users/andy/code/WFShopProject/WFURLDispatcher`)
   - WFUser (from `/Users/andy/code/WFShopProject/WFUser`)
   - WFWebContainer (from `/Users/andy/code/WFShopProject/WFWebContainer`)
   - WMPageController (= 2.3.0)
@@ -204,6 +213,8 @@ EXTERNAL SOURCES:
     :path: /Users/andy/code/WFShopProject/WFCart
   WFCatagory:
     :path: /Users/andy/code/WFShopProject/WFCatagory
+  WFDebug:
+    :path: /Users/andy/code/WFShopProject/WFDebug
   WFHomePage:
     :path: /Users/andy/code/WFShopProject/WFHomePage
   WFNetwork:
@@ -226,6 +237,8 @@ EXTERNAL SOURCES:
     :path: /Users/andy/code/WFShopProject/WFSetting
   WFUIComponent:
     :path: /Users/andy/code/WFShopProject/WFUIComponent
+  WFURLDispatcher:
+    :path: /Users/andy/code/WFShopProject/WFURLDispatcher
   WFUser:
     :path: /Users/andy/code/WFShopProject/WFUser
   WFWebContainer:
@@ -264,8 +277,10 @@ SPEC CHECKSUMS:
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
   SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WFCart: 5f7580ac86505c6d963376b5e0b55bfd76a1788e
   WFCatagory: 0e26c20b5198e98fae6a8bab2c4d156723a0b161
+  WFDebug: afdb096f20174cfa602d00834767605bbaa4e539
   WFHomePage: 1081523ac6442940cdab5601a59ca2ed74804970
   WFNetwork: 770fc185c3fb83ed99445c3189341edd1ddd1042
   WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
@@ -277,12 +292,13 @@ SPEC CHECKSUMS:
   WFServiceProtocols: 32c98c2645a185505193296ce901c7f82f1c3566
   WFSetting: 733005a16da8f98d5ad299e93efb118fff873c06
   WFUIComponent: 6a318579675a742bd69705fef2ef7652d6986f63
+  WFURLDispatcher: 2d1cbf9093029e2484de7b184e06d63101bc6573
   WFUser: d29a2999755abfa4b0202bf9562656a342d8ffa3
-  WFWebContainer: 75eb5ad66209c551d2b29566862b4b1e06c13757
+  WFWebContainer: 3c52d613985ed917e3437c993f75e1141caaea37
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e90aeb9db99c0a3ccac208f12b5bfb5a7a39727b
+PODFILE CHECKSUM: 1d52863215996c55c0a41cc29de2c9c05ffca846
 
 COCOAPODS: 1.4.0.beta.1

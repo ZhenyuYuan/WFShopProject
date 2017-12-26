@@ -10,6 +10,8 @@
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
 #import "ADSRouter.h"
+#import "WFURLDispatcherProtocol.h"
+#import "BeeHive.h"
 
 @implementation WFSeparatorCell {
     UIImageView *_background;
@@ -54,7 +56,8 @@
 
 - (void)clicked {
     if (![_data.actionUrl isEqualToString:@""]) {
-        [[ADSRouter sharedRouter] openUrlString:_data.actionUrl];
+        id<WFURLDispatcherProtocol> urlDispatcher = [[BeeHive shareInstance] createService:@protocol(WFURLDispatcherProtocol)];
+        [urlDispatcher openUrlString:_data.actionUrl];
     }
 }
 

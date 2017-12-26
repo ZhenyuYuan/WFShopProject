@@ -11,7 +11,8 @@
 #import "Masonry.h"
 #import "YYModel.h"
 #import "UIImageView+WebCache.h"
-#import "ADSRouter.h"
+#import "BeeHive.h"
+#import "WFURLDispatcherProtocol.h"
 
 
 @interface WFBannerCell () <SDCycleScrollViewDelegate>
@@ -73,7 +74,8 @@
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
-    [[ADSRouter sharedRouter] openUrlString:_banner.images[index].actionUrl];
+    id<WFURLDispatcherProtocol> urlDispatcher = [[BeeHive shareInstance] createService:@protocol(WFURLDispatcherProtocol)];
+    [urlDispatcher openUrlString:_banner.images[index].actionUrl];
 }
 
 @end

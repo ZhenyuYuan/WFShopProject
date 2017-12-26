@@ -223,7 +223,6 @@ ADS_HIDE_BOTTOM_BAR
     WFSearchItem *selectedItem = _setItem[indexPath.row];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     [[ADSRouter sharedRouter] openUrlString:[@"wfshop://product?productId=" stringByAppendingString:selectedItem.itemId]];
-    
 }
 
 
@@ -244,7 +243,6 @@ ADS_HIDE_BOTTOM_BAR
     }else{
         [self.navigationController setNavigationBarHidden:NO animated:YES];
         self.collectionView.frame = CGRectMake(0, WFTopNavH, WFGetScreenWidth(), WFGetScreenHeight() - WFTopNavH);
-//        self.view.backgroundColor = DCBGColor;
     }
 }
 

@@ -20,7 +20,7 @@
 @property (nonatomic, strong) UIBarButtonItem *searchBtn;
 @property (nonatomic, strong) UITextField *searchField;
 
-@property (nonatomic, strong) NSMutableArray *historyItems;
+@property (nonatomic, strong) NSMutableArray<WFHistorySearchItem*> *historyItems;
 
 @property (nonatomic, strong) WFHistorySearchDataService *historySearchDataService;
 
@@ -107,6 +107,12 @@ ADS_HIDE_BOTTOM_BAR
     [footerView setNeedsLayout];
     [footerView layoutIfNeeded];
     return footerView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [_searchField resignFirstResponder];
+    NSString *url = [NSString stringWithFormat:@"wfshop://searchList?query=%@", _historyItems[indexPath.row].query];
+    [[ADSRouter sharedRouter] openUrlString:url];
 }
 
 - (void)exit {

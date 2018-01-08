@@ -459,6 +459,7 @@
 				"${PODS_ROOT}/Pingpp/lib/Channels/Alipay/AlipaySDK.bundle",
 				"${PODS_ROOT}/Pingpp/lib/Pingpp.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFHomePage/WFHomePage.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFNotFound/WFNotFound.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFOrder/WFOrder.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFPay/WFPay.bundle",

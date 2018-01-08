@@ -10,4 +10,6 @@
 
 @interface WFCatagoryVC : UIViewController
 
+@property (nonatomic, copy) NSString *shopId;
+
 @end

@@ -37,6 +37,7 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)setUpUI {
     [self.view addSubview:self.progressBar];
+    self.view.backgroundColor = [UIColor whiteColor];
     [_progressBar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(@(2));
         make.left.right.mas_equalTo(self.view);

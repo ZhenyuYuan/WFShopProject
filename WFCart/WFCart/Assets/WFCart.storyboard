@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GGD-pf-Xxq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="601"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -189,7 +189,7 @@
                             <constraint firstItem="BB9-dk-tcp" firstAttribute="leading" secondItem="Iey-H9-yFd" secondAttribute="leading" constant="8" id="jcu-ga-aIU"/>
                             <constraint firstItem="PJt-6E-ejk" firstAttribute="top" secondItem="BB9-dk-tcp" secondAttribute="bottom" constant="8" id="jnN-X0-eeR"/>
                             <constraint firstItem="PJt-6E-ejk" firstAttribute="top" secondItem="mGv-I5-3bf" secondAttribute="bottom" id="ktd-vZ-6A2"/>
-                            <constraint firstItem="GGD-pf-Xxq" firstAttribute="top" secondItem="Iey-H9-yFd" secondAttribute="top" id="oEe-Xt-cfv"/>
+                            <constraint firstItem="GGD-pf-Xxq" firstAttribute="top" secondItem="9gd-gB-mgd" secondAttribute="bottom" id="oEe-Xt-cfv"/>
                             <constraint firstAttribute="trailing" secondItem="mGv-I5-3bf" secondAttribute="trailing" id="pdL-KB-kpu"/>
                             <constraint firstItem="BB9-dk-tcp" firstAttribute="top" secondItem="GGD-pf-Xxq" secondAttribute="bottom" constant="8" id="qub-Ve-rBh"/>
                             <constraint firstItem="IUa-xc-WXD" firstAttribute="top" secondItem="9gd-gB-mgd" secondAttribute="bottom" constant="100" id="rL4-6d-KUF"/>

@@ -12,4 +12,6 @@
 
 - (void)getHomePageRows:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
 
+- (void)getShopHomePageRowsWithShopId:(NSString*)shopId callback:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
+
 @end

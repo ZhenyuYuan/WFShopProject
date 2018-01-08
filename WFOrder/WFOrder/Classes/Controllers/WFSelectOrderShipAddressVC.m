@@ -34,6 +34,7 @@
 }
 
 - (void)setUpUI {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"收货地址";
     _tableView.delegate = self;
     _tableView.dataSource = self;

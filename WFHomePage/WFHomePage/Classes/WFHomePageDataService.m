@@ -23,6 +23,17 @@
     }];
 }
 
+- (void)getShopHomePageRowsWithShopId:(NSString *)shopId callback:(void (^)(NSArray<WFHomePageRow *> *))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"shop" objId:shopId path:@"homepage"];
+    __weak typeof(self) weakSelf = self;
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        __strong typeof(self) sSelf = weakSelf;
+        if (sSelf && callback) {
+            callback([weakSelf parseRowData:obj.data]);
+        }
+    }];
+}
+
 - (NSArray<WFHomePageRow*>*)parseRowData:(id)response {
     NSDictionary *styleMapping = @{@"carousel_view":@"WFBanner", @"grid_view":@"WFGridViewData",@"separator_view":@"WFSeparatorData"};
     NSMutableArray *rows = [NSMutableArray array];

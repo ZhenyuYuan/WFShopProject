@@ -44,6 +44,7 @@ ADS_HIDE_BOTTOM_BAR
 }
 
 - (void)setUpUI {
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"填写订单";
     _totalFeeLabel.textColor = [UIColor wf_redColor];
     [_checkoutBtn setBackgroundColor:[UIColor wf_mainColor]];

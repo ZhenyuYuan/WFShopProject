@@ -47,6 +47,9 @@ const CGFloat kTableViewRatio = 0.3;
 
 @implementation WFCatagoryVC
 
+ADS_REQUEST_MAPPING(WFCatagoryVC, "wfshop://category")
+ADS_PARAMETER_MAPPING_SIMPLIFY(WFCatagoryVC, shopId)
+ADS_HIDE_BOTTOM_BAR
 
 - (UICollectionView *)collectionView
 {
@@ -70,14 +73,12 @@ const CGFloat kTableViewRatio = 0.3;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-//    if (self.navigationController.navigationBar.barTintColor == RGBA(231, 23, 37, 1.0))return;
-//    self.navigationController.navigationBar.barTintColor = RGBA(231, 23, 37, 1.0);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUpUI   ];
+    [self setUpUI];
     
     [self setUpData];
 }
@@ -91,7 +92,7 @@ const CGFloat kTableViewRatio = 0.3;
     
     [self setUpCollectionView];
     
-    //self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 #pragma mark - initizlize
@@ -105,8 +106,8 @@ const CGFloat kTableViewRatio = 0.3;
     [_tableView registerClass:[WFCategoryCell class] forCellReuseIdentifier:[WFCategoryCell wf_reuseIdentifier]];
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-       // make.top.equalTo(self.topLayoutGuide);
-        make.top.left.bottom.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuide);
+        make.left.bottom.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(kTableViewRatio);
     }];
 }
@@ -129,8 +130,8 @@ const CGFloat kTableViewRatio = 0.3;
     
     [self.view addSubview:_collectionView];
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        ///make.top.equalTo(self.topLayoutGuide);
-        make.top.right.bottom.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuide);
+        make.right.bottom.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(1-kTableViewRatio);
     }];
 }
@@ -153,16 +154,18 @@ const CGFloat kTableViewRatio = 0.3;
 
 #pragma mark - 设置导航条
 - (void)setUpNav {
-    UILabel *searchField = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
-    searchField.text = @"搜索";
-    searchField.textColor = [UIColor wf_placeHolderColor];
-    searchField.textAlignment = NSTextAlignmentLeft;
-    searchField.userInteractionEnabled = YES;
-    [searchField addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchBtnClicked)]];
-    self.navigationItem.titleView = searchField;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qr"] style:UIBarButtonItemStyleDone target:self action:@selector(qrBtnClicked)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClicked)];
+    if (!_shopId || [_shopId isEqualToString:@""]) {
+        UILabel *searchField = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
+        searchField.text = @"搜索";
+        searchField.textColor = [UIColor wf_placeHolderColor];
+        searchField.textAlignment = NSTextAlignmentLeft;
+        searchField.userInteractionEnabled = YES;
+        [searchField addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchBtnClicked)]];
+        self.navigationItem.titleView = searchField;
+        
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qr"] style:UIBarButtonItemStyleDone target:self action:@selector(qrBtnClicked)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClicked)];
+    }
 }
 
 - (void)qrBtnClicked {

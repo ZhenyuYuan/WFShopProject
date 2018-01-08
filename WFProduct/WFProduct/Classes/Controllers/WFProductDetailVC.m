@@ -47,7 +47,8 @@
     self.view.backgroundColor = [UIColor blackColor];
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuide);
+        make.left.right.bottom.mas_equalTo(self.view);
     }];
     
 }

@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WFHomePage/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WFHomePage' => ['WFHomePage/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'WFHomePage' => ['WFHomePage/Assets/**/*.{png,xcassets,xib,storyboard,plist}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

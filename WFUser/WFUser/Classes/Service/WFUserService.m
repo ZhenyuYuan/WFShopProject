@@ -18,9 +18,9 @@
 @implementation WFUserService
 
 + (void)load {
-#ifndef DEBUG
+//#ifndef DEBUG
     [[BeeHive shareInstance] registerService:@protocol(WFUserProtocol) service:self.class];
-#endif
+//#endif
 }
 
 - (BOOL)isLogined {

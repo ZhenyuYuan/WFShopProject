@@ -291,12 +291,16 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 - (UIScrollView*)scrollView {
     if (!_scrollView) {
         _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        _scrollView.frame = self.view.bounds;
+        [self.view addSubview:_scrollView];
+        [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mas_topLayoutGuide);
+            make.left.right.bottom.equalTo(self.view);
+        }];
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.pagingEnabled = YES;
         _scrollView.bounces = NO;
-        [self.view addSubview:_scrollView];
+        
     }
     return _scrollView;
 }

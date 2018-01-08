@@ -17,7 +17,7 @@
 
 + (void)load {
 #ifdef DEBUG
-    [[BeeHive shareInstance] registerService:@protocol(WFUserProtocol) service:self.class];
+  //  [[BeeHive shareInstance] registerService:@protocol(WFUserProtocol) service:self.class];
 #endif
 }
 

@@ -26,6 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.rowHeight = UITableViewAutomaticDimension;

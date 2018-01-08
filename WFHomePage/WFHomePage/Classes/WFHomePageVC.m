@@ -17,6 +17,7 @@
 #import "UIView+WFReuseIdentifier.h"
 #import "UIColor+WFColor.h"
 #import "MJRefresh.h"
+#import "WFHelpers.h"
 
 
 #define WFSCREEN_WIDTH CGRectGetWidth([UIScreen mainScreen].bounds)
@@ -45,16 +46,22 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
-    [self.homePageDataService getHomePageRows:^(NSArray<WFHomePageRow *> *rows) {
-        weakSelf.rows = rows;
-        [weakSelf.tableView.mj_header endRefreshing];
-        [weakSelf.tableView reloadData];
-    }];
+    if (_shopId && ![_shopId isEqualToString:@""]) {
+        [self.homePageDataService getShopHomePageRowsWithShopId:_shopId callback:^(NSArray<WFHomePageRow *> *rows) {
+            weakSelf.rows = rows;
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView reloadData];
+        }];
+    } else {
+        [self.homePageDataService getHomePageRows:^(NSArray<WFHomePageRow *> *rows) {
+            weakSelf.rows = rows;
+            [weakSelf.tableView.mj_header endRefreshing];
+            [weakSelf.tableView reloadData];
+        }];
+    }
 }
 
 - (void)setUpUI {
-//    self.title = @"首页";
-    
     _tableView = [UITableView new];
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,21 +86,23 @@ ADS_HIDE_BOTTOM_BAR
 }
 
 - (void)setUpNavi {
-
+    NSString *placeHolder = @"";
     if (_shopId && ![_shopId isEqualToString:@""]) {
-        return;
+        UIBarButtonItem *barBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"category" inBundle:WFGetBundle(@"WFHomePage") compatibleWithTraitCollection:nil] style:UIBarButtonItemStylePlain target:self action:@selector(categoryClicked)];
+        self.navigationItem.rightBarButtonItem = barBtn;
+        placeHolder = @"搜索店铺内商品";
+    } else {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qr"] style:UIBarButtonItemStyleDone target:self action:@selector(qrBtnClicked)];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClicked)];
+        placeHolder = @"搜索";
     }
     UILabel *searchField = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 44)];
-    searchField.text = @"搜索";
+    searchField.text = placeHolder;
     searchField.textColor = [UIColor wf_placeHolderColor];
     searchField.textAlignment = NSTextAlignmentLeft;
     searchField.userInteractionEnabled = YES;
     [searchField addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchBtnClicked)]];
     self.navigationItem.titleView = searchField;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"qr"] style:UIBarButtonItemStyleDone target:self action:@selector(qrBtnClicked)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStyleDone target:self action:@selector(searchBtnClicked)];
-
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -116,11 +125,6 @@ ADS_HIDE_BOTTOM_BAR
     return WFSCREEN_WIDTH * _rows[indexPath.row].ratio;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)qrBtnClicked {
     NSLog(@"开始跳转:%f", [NSDate date].timeIntervalSince1970);
     [[ADSRouter sharedRouter] openUrlString:@"wfshop://qrscan"];
@@ -128,6 +132,10 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)searchBtnClicked {
     [[ADSRouter sharedRouter] openUrlString:@"wfshop://search"];
+}
+
+- (void)categoryClicked {
+    [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://category?shopId=%@", _shopId]];
 }
 
 - (WFHomePageDataService*)homePageDataService {

@@ -14,6 +14,8 @@
 #import "WFShipAddressSelectVC.h"
 #import "WFProductShareVC.h"
 
+#import "WFShareService.h"
+
 #import "WFUIComponent.h"
 
 #import "WFUserProtocol.h"
@@ -28,6 +30,7 @@
 #import "XWDrawerAnimator.h"
 #import "UIViewController+XWTransition.h"
 
+#import "UIImageView+WebCache.h"
 
 NSString *WFStringlifyProducts(NSArray<WFProduct*> *products, NSArray *amounts) {
     NSMutableArray *res = [NSMutableArray array];
@@ -227,7 +230,16 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 }
 
 - (void)shareBtnClicked {
-    [self setUpAlterViewControllerWith:[WFProductShareVC new] WithDistance:300 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:NO WithFlipEnable:NO];
+    WFShareItem *item = [WFShareItem new];
+    item.shareText = _product.name;
+    item.shareUrl = [NSURL URLWithString:@"http://baiduc.com"];
+    UIImageView *imgView = [UIImageView new];
+    [imgView sd_setImageWithURL:[NSURL URLWithString:_product.coverImgs.firstObject]];
+    item.shareImage = imgView.image;
+    WFProductShareVC *shareVC = [WFProductShareVC new];
+    shareVC.productVC = self;
+    shareVC.shareItem = item;
+    [self setUpAlterViewControllerWith:shareVC WithDistance:300 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:NO WithFlipEnable:NO];
 }
 
 #pragma mark - 转场动画弹出控制器

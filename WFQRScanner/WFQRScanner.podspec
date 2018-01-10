@@ -32,13 +32,14 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'WFQRScanner/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'WFQRScanner' => ['WFQRScanner/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'WFQRScanner' => ['WFQRScanner/Assets/**/*.{png,xcassets,xib,storyboard,plist}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'ADSRouter'
   s.dependency 'MTBBarcodeScanner'
+  s.dependency 'WFUIComponent'
 end

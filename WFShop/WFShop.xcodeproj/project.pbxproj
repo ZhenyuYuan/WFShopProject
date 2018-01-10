@@ -458,16 +458,21 @@
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/Pingpp/lib/Channels/Alipay/AlipaySDK.bundle",
 				"${PODS_ROOT}/Pingpp/lib/Pingpp.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFAd/WFAd.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFDebug/WFDebug.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFHomePage/WFHomePage.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFNotFound/WFNotFound.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFOrder/WFOrder.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFPay/WFPay.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFProduct/WFProduct.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WFQRScanner/WFQRScanner.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFSearch/WFSearch.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFUIComponent/WFUIComponent.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFUser/WFUser.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFWebContainer/WFWebContainer.bundle",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

@@ -10,14 +10,20 @@
 #import "WFShareItemCell.h"
 #import "WFConsts.h"
 #import "WFProductDataService.h"
+#import "WFShareService.h"
+#import "WFProductShareItem.h"
+
+
 @interface WFProductShareVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
-/* collectionView */
+
 @property (strong , nonatomic)UICollectionView *collectionView;
 
 @property (nonatomic, strong) WFProductDataService *productDataService;
 
 @property (strong , nonatomic)NSMutableArray<WFProductShareItem*> *shareItems;
+
+@property (strong, nonatomic) WFShareService *shareService;
 
 @end
 
@@ -55,7 +61,6 @@
 
 - (void)setUpBase
 {
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.collectionView.backgroundColor = self.view.backgroundColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -110,8 +115,16 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"第%zd分享平台",indexPath.row);
     [self dismissViewControllerAnimated:YES completion:nil];
+    _shareService = [WFShareService new];
+    [_shareService shareItem:_shareItem fromVC:_productVC viaPlatform:_shareItems[indexPath.row].platformId callback:^(BOOL success, NSString *msg) {
+        if (success) {
+            WFShowHud(@"成功", _productVC.view, 1);
+        } else {
+            WFShowHud(msg, _productVC.view, 1);
+        }
+        self.shareService = nil;
+    }];
 }
 
 #pragma mark - 弹出弹框

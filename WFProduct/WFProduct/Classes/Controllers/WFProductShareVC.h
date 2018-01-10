@@ -7,6 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class WFShareItem;
 @interface WFProductShareVC : UIViewController
+
+@property (nonatomic, weak) UIViewController *productVC;
+@property (nonatomic, strong) WFShareItem *shareItem;
 
 @end

@@ -25,6 +25,7 @@ target 'WFShop' do
   pod 'WFWebContainer', :path => "/Users/andy/code/WFShopProject/WFWebContainer"
   pod 'WFSetting', :path => "/Users/andy/code/WFShopProject/WFSetting"
   pod 'WFPay', :path => "/Users/andy/code/WFShopProject/WFPay"
+  pod 'WFAd', :path => "/Users/andy/code/WFShopProject/WFAd"
   pod 'WFDebug', :path => "/Users/andy/code/WFShopProject/WFDebug"
   
   # WFShop basic Modules
@@ -58,7 +59,13 @@ target 'WFShop' do
   pod 'MJExtension'
   pod 'Pingpp', '~> 2.2.17'
   pod 'XXNibBridge', '~> 2.3.0'
+  pod 'MTBBarcodeScanner'
   
+  pod 'mob_sharesdk'
+  
+  pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
+  pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+  pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
   
   target 'WFShopTests' do
     inherit! :search_paths

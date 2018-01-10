@@ -107,7 +107,8 @@ ADS_HIDE_BOTTOM_BAR
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
-        make.left.bottom.equalTo(self.view);
+        make.bottom.equalTo(self.mas_bottomLayoutGuide);
+        make.left.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(kTableViewRatio);
     }];
 }
@@ -131,7 +132,8 @@ ADS_HIDE_BOTTOM_BAR
     [self.view addSubview:_collectionView];
     [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_topLayoutGuide);
-        make.right.bottom.equalTo(self.view);
+        make.bottom.equalTo(self.mas_bottomLayoutGuide);
+        make.right.equalTo(self.view);
         make.width.equalTo(self.view).multipliedBy(1-kTableViewRatio);
     }];
 }

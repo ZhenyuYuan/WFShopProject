@@ -9,6 +9,7 @@
 #import "UIImageView+WebCache.h"
 #import "WFUser.h"
 #import "WFHelpers.h"
+#import "WFWechatUser.h"
 @interface WFUserCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
@@ -34,6 +35,16 @@
     // Configure the view for the selected state
 }
 
+- (void)avatarClicked {
+    if (_userAvatarClicked) _userAvatarClicked();
+}
+
+- (void)loginBtnClicked {
+    if (_doLogin && !_user) {
+        _doLogin();
+    }
+}
+
 - (void)setUser:(WFUser *)user {
     _user = user;
     if (_user) {
@@ -44,13 +55,15 @@
         [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
     }
 }
-- (void)avatarClicked {
-    if (_userAvatarClicked) _userAvatarClicked();
-}
 
-- (void)loginBtnClicked {
-    if (_doLogin && !_user) {
-        _doLogin();
+- (void)setWechatUser:(WFWechatUser *)wechatUser {
+    _wechatUser = wechatUser;
+    if (_wechatUser) {
+        [_avatarImgView sd_setImageWithURL:[NSURL URLWithString:_wechatUser.headImgUrl]];
+        [_loginBtn setTitle:_wechatUser.nickName forState:UIControlStateNormal];
+    } else {
+        [_avatarImgView setImage:[UIImage imageNamed:@"avatar" inBundle:WFGetBundle(@"WFUser") compatibleWithTraitCollection:nil]];
+        [_loginBtn setTitle:@"登录" forState:UIControlStateNormal];
     }
 }
 @end

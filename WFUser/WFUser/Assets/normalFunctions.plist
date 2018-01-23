@@ -15,9 +15,9 @@
 			</dict>
 			<dict>
 				<key>url</key>
-				<string>wfshop://crown</string>
+				<string>wfshop://coupon</string>
 				<key>title</key>
-				<string>会员福利</string>
+				<string>优惠券</string>
 				<key>icon</key>
 				<string>crown</string>
 			</dict>

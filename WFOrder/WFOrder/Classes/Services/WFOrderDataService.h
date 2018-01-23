@@ -19,10 +19,12 @@ typedef enum : NSUInteger {
 @class WFOrder, WFOrderShipAddress,WFOrderProduct;
 @interface WFOrderDataService : NSObject
 
-- (void)getOrdersWithOrderType:(WFUserOrderListType)type callback:(void(^)(NSArray<WFOrder*>*orders))callback;
+- (void)getOrdersWithOrderType:(WFUserOrderListType)type page:(NSInteger)page callback:(void(^)(NSArray<WFOrder*>*orders))callback;
 
 - (void)getUserDefaultShipAddress:(void(^)(WFOrderShipAddress *shipAddress))callback;
 
 - (void)createOrder:(NSArray<WFOrderProduct*>*)products callback:(void(^)(WFOrder* order))callback;
+
+- (void)uploadImage:(UIImage*)image name:(NSString*)name callback:(void(^)(NSString *imgUrl))callback;
 
 @end

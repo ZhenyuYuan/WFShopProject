@@ -33,32 +33,8 @@ PODS:
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.15)
-  - mob_sharesdk (4.0.6):
-    - mob_sharesdk/ShareSDK (= 4.0.6)
-    - MOBFoundation
-  - mob_sharesdk/ShareSDK (4.0.6):
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/QQ (4.0.6):
-    - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo (4.0.6):
-    - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - mob_sharesdk/ShareSDKPlatforms/WeChat (4.0.6):
-    - mob_sharesdk/ShareSDK
-    - MOBFoundation
-  - MOBFoundation (3.0.9)
   - MTBBarcodeScanner (5.0.3)
   - OpenShare (0.0.1)
-  - Pingpp (2.2.17):
-    - Pingpp/Alipay (= 2.2.17)
-    - Pingpp/Core (= 2.2.17)
-    - Pingpp/UnionPay (= 2.2.17)
-  - Pingpp/Alipay (2.2.17):
-    - Pingpp/Core
-  - Pingpp/Core (2.2.17)
-  - Pingpp/UnionPay (2.2.17):
-    - Pingpp/Core
   - pop (1.0.10)
   - PPNumberButton (0.7.0)
   - Reachability (3.2)
@@ -75,6 +51,7 @@ PODS:
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - WebViewJavascriptBridge (6.0.3)
+  - WechatOpenSDK (1.8.1)
   - WFAd (0.1.0)
   - WFCart (0.1.0):
     - ADSRouter
@@ -135,7 +112,6 @@ PODS:
     - ADSRouter
     - BeeHive
     - Masonry
-    - Pingpp
     - SDWebImage
     - WFNetwork
     - WFServiceProtocols
@@ -200,13 +176,8 @@ DEPENDENCIES:
   - MBProgressHUD
   - MJExtension
   - MJRefresh
-  - mob_sharesdk
-  - mob_sharesdk/ShareSDKPlatforms/QQ
-  - mob_sharesdk/ShareSDKPlatforms/SinaWeibo
-  - mob_sharesdk/ShareSDKPlatforms/WeChat
   - MTBBarcodeScanner
   - OpenShare
-  - Pingpp (~> 2.2.17)
   - PPNumberButton
   - Reachability
   - Realm
@@ -214,6 +185,7 @@ DEPENDENCIES:
   - SDWebImage
   - SDWebImage/GIF
   - WebViewJavascriptBridge (~> 6.0)
+  - WechatOpenSDK
   - WFAd (from `/Users/andy/code/WFShopProject/WFAd`)
   - WFCart (from `/Users/andy/code/WFShopProject/WFCart`)
   - WFCatagory (from `/Users/andy/code/WFShopProject/WFCatagory`)
@@ -303,11 +275,8 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
-  mob_sharesdk: 0ea92188c32ecd6cacadb9f9ad53d199ccec8e20
-  MOBFoundation: 82b27b95c37d5a6d874d58efa6365b465c8afcbf
   MTBBarcodeScanner: 3ce0f1b0085ef00c726ded663c490a63b29c9aa5
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
-  Pingpp: 166fc31888e8639c8a9a287330ba49dd5c5a250d
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNumberButton: a053cde152b0e683302ce41a4755bfa02e1b3a83
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
@@ -316,6 +285,7 @@ SPEC CHECKSUMS:
   SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
   WFAd: 3e39c97fac1b5b2222474fbd17043845000ef73c
   WFCart: 5f7580ac86505c6d963376b5e0b55bfd76a1788e
   WFCatagory: 0e26c20b5198e98fae6a8bab2c4d156723a0b161
@@ -324,7 +294,7 @@ SPEC CHECKSUMS:
   WFNetwork: 770fc185c3fb83ed99445c3189341edd1ddd1042
   WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
   WFOrder: 454b87c099e72afa2f8190ca76769a2b405e540a
-  WFPay: 767589d07228b09736c44112064d3fe6b1b5e906
+  WFPay: bd47d7ca489f02a360ff4fe514d86b54d47294e9
   WFProduct: 2281a7badf0b90cfe0429354ed8b86360b65eff1
   WFQRScanner: be984f78c40601dfe470a4314b77e0ea12f68d5f
   WFSearch: 82168ab6b505e7f230adbc122eadcd3b4af9edae
@@ -338,6 +308,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ff04f573300b6595d69eedc1fa965ea681e9c19e
+PODFILE CHECKSUM: eb0f23e98c37549431363fe1076be00990c8ac4a
 
 COCOAPODS: 1.4.0.beta.1

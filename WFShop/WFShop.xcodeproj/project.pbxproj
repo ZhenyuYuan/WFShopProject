@@ -456,8 +456,6 @@
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/Pingpp/lib/Channels/Alipay/AlipaySDK.bundle",
-				"${PODS_ROOT}/Pingpp/lib/Pingpp.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFAd/WFAd.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFDebug/WFDebug.bundle",
@@ -471,8 +469,6 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFUIComponent/WFUIComponent.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFUser/WFUser.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFWebContainer/WFWebContainer.bundle",
-				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
-				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -726,13 +722,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				DEVELOPMENT_TEAM = EM6RXXV862;
 				INFOPLIST_FILE = WFShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShop;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.andysheng.wfshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -742,13 +738,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9E9C2ZNYDA;
+				DEVELOPMENT_TEAM = EM6RXXV862;
 				INFOPLIST_FILE = WFShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BUPT.WFShop;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.andysheng.wfshop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

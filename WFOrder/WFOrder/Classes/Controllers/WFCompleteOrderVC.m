@@ -15,12 +15,18 @@
 #import "WFOrderDataService.h"
 #import "YYModel.h"
 #import "WFSelectOrderShipAddressVC.h"
+#import "WFOrderSelectDeliverTypeCell.h"
+#import "WFOrderSelectCouponCell.h"
+#import "WFCouponVC.h"
+#import "WFCoupon.h"
 
 @interface WFCompleteOrderVC () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *totalFeeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *checkoutBtn;
+
+@property (nonatomic, strong) WFCoupon *coupon;
 
 @property (nonatomic, strong) NSArray<WFOrderProduct*> *orderProducts;
 @property (nonatomic, assign) CGFloat totalFee;
@@ -67,12 +73,14 @@ ADS_HIDE_BOTTOM_BAR
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return _shipAddress ? 1 : 0;
+    } else if (section == 1) {
+        return 2;
     } else {
         return _orderProducts.count;
     }
@@ -83,6 +91,13 @@ ADS_HIDE_BOTTOM_BAR
     if (indexPath.section == 0) {
         cell = [_tableView dequeueReusableCellWithIdentifier:[WFOrderAddressCell wf_reuseIdentifier]];
         ((WFOrderAddressCell*)cell).address = _shipAddress;
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            cell = [_tableView dequeueReusableCellWithIdentifier:[WFOrderSelectDeliverTypeCell wf_reuseIdentifier]];
+        } else {
+            cell = [_tableView dequeueReusableCellWithIdentifier:[WFOrderSelectCouponCell wf_reuseIdentifier]];
+            ((WFOrderSelectCouponCell*)cell).coupon = _coupon;
+        }
     } else {
         cell = [_tableView dequeueReusableCellWithIdentifier:[WFOrderItemCell wf_reuseIdentifier]];
         ((WFOrderItemCell*)cell).product = _orderProducts[indexPath.row];
@@ -100,9 +115,35 @@ ADS_HIDE_BOTTOM_BAR
             [weakSelf.tableView reloadData];
         };
         [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 1) {
+        if (indexPath.row == 0) {
+            NSLog(@"选择配送方式");
+        } else {
+            __weak typeof(self) weakSelf = self;
+            WFCouponVC *vc = [WFCouponVC vcWithCouponType:WFCouponTypeOrderAvailable];
+            vc.didSelectCoupon = ^(WFCoupon *coupon) {
+                weakSelf.coupon = coupon;
+                [weakSelf.tableView reloadData];
+            };
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     } else {
         [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://product?productId=%@", _orderProducts[indexPath.row].productId]];
     }
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 2) {
+        return @"商品";
+    }
+    return @"";
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return .1f;
+    }
+    return 10.f;
 }
 
 - (void)checkout {

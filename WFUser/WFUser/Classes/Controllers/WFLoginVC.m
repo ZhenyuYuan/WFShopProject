@@ -32,10 +32,10 @@
 
 @implementation WFLoginVC
 
-ADS_REQUEST_MAPPING(WFLoginVC, "wfshop://login")
-ADS_STORYBOARD_IN_BUNDLE("WFUser", "WFLoginVC", "WFUser")
-ADS_PARAMETER_MAPPING(WFLoginVC, loginType, "type")
-ADS_SHOWSTYLE_PRESENT
+//ADS_REQUEST_MAPPING(WFLoginVC, "wfshop://login")
+//ADS_STORYBOARD_IN_BUNDLE("WFUser", "WFLoginVC", "WFUser")
+//ADS_PARAMETER_MAPPING(WFLoginVC, loginType, "type")
+//ADS_SHOWSTYLE_PRESENT
 
 - (void)viewDidLoad {
     [super viewDidLoad];

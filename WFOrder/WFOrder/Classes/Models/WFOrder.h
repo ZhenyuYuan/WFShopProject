@@ -12,7 +12,8 @@ typedef enum : NSUInteger {
     WFOrderStateUncheck,
     WFOrderStateUncomment,
     WFOrderStateRepair,
-    WFOrderStateDone
+    WFOrderStateDone,
+    WFOrderStateCancel
 } WFOrderState;
 
 @class WFOrderProduct;

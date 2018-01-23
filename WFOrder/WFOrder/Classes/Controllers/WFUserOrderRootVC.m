@@ -17,7 +17,7 @@ const NSInteger kUncheckOrderIdx = 2;
 const NSInteger kUncommentOrderIdx = 3;
 const NSInteger kRepairOrderIdx = 4;
 
-const CGFloat kMenuHeight = 50.f;
+static const CGFloat kMenuHeight = 50.f;
 
 
 @interface WFUserOrderRootVC ()
@@ -32,13 +32,13 @@ ADS_REQUEST_MAPPING(WFUserOrderRootVC, "wfshop://showOrders")
 ADS_PARAMETER_MAPPING(WFUserOrderRootVC, selectedIdx, "selected_idx")
 ADS_HIDE_BOTTOM_BAR
 ADS_BEFORE_JUMP(^(ADSURL *url, BOOL * abort) {
-    id<WFUserProtocol> userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
-    if (![userService isLogined]) {
-        *abort = YES;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
-        });
-    }
+//    id<WFUserProtocol> userService = [[BeeHive shareInstance] createService:@protocol(WFUserProtocol)];
+//    if (![userService isLogined]) {
+//        *abort = YES;
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+//        });
+//    }
 })
 
 - (instancetype)init {

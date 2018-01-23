@@ -232,7 +232,7 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 - (void)shareBtnClicked {
     WFShareItem *item = [WFShareItem new];
     item.shareText = _product.name;
-    item.shareUrl = [NSURL URLWithString:@"http://baiduc.com"];
+    item.shareUrl = [NSURL URLWithString:@"https://wfshop.andysheng.cn/share"];
     UIImageView *imgView = [UIImageView new];
     [imgView sd_setImageWithURL:[NSURL URLWithString:_product.coverImgs.firstObject]];
     item.shareImage = imgView.image;

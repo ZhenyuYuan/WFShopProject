@@ -13,6 +13,8 @@
 #import "UIColor+WFColor.h"
 #import "ADSRouter.h"
 #import "WFNotFoundVC.h"
+#import "WXApi.h"
+#import "ADSRouter.h"
 
 @interface UIWindow (WFShakeMotion)
 @end
@@ -31,7 +33,7 @@
 
 @end
 
-@interface AppDelegate ()
+@interface AppDelegate () <WXApiDelegate>
 
 @end
 
@@ -55,6 +57,8 @@
     }];
     
     
+    [WXApi registerApp:@"wxe7798aead7625419"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor blackColor];
     id<WFAppLaunchServiceProtocol> appLaunchService = [[BeeHive shareInstance] createService:@protocol(WFAppLaunchServiceProtocol)];
@@ -75,6 +79,28 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    [super application:app openURL:url options:options];
+    return [WXApi handleOpenURL:url delegate:self];
+}
 
+-(void) onReq:(BaseReq*)req {
+    
+}
+
+-(void) onResp:(BaseResp*)resp {
+    if ([resp isKindOfClass:[PayResp class]]){
+        PayResp* response=(PayResp*)resp;
+        switch(response.errCode){
+            case WXSuccess:
+                //服务器端查询支付通知或查询API返回的结果再提示成功
+                [[ADSRouter sharedRouter] openUrlString:@"wfshop://wechatPayResult?result=success"];
+                break;
+            default:
+                [[ADSRouter sharedRouter] openUrlString:@"wfshop://wechatPayResult?result=fail"];
+                break;
+        }
+    }
+}
 
 @end

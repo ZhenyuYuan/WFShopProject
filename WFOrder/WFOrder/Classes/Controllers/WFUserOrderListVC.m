@@ -11,7 +11,9 @@
 #import "WFOrder.h"
 #import "WFOrderListCell.h"
 #import "WFOrderListHeader.h"
-//#import "UITableView+ASDataDrivenLayout.h"
+#import "WFOrderFooter.h"
+#import "MJRefresh.h"
+#import "ADSRouter.h"
 
 
 typedef enum : NSUInteger {
@@ -28,8 +30,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) WFPageSate pageSate;
 
 @property (nonatomic, strong) WFOrderDataService *orderDataService;
-
-@property (nonatomic, strong) NSArray<WFOrder*> *orders;
+@property (nonatomic, assign) NSInteger page;
+@property (nonatomic, strong) NSMutableArray<WFOrder*> *orders;
 
 @end
 
@@ -43,6 +45,11 @@ typedef enum : NSUInteger {
     [self loadData];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    _tableView.hidden = !_orders ||  _orders.count == 0;
+}
+
 - (void)setUpUI {
     self.view.backgroundColor = [UIColor wf_mainBackgroundColor];
     
@@ -50,16 +57,43 @@ typedef enum : NSUInteger {
 
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    __weak typeof(self) weakSelf = self;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
+    _tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        [weakSelf loadNextPage];
+    }];
 }
 
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
-    _orderDataService = [WFOrderDataService new];
-    [_orderDataService getOrdersWithOrderType:_listType callback:^(NSArray<WFOrder *> *orders) {
-        weakSelf.orders = orders;
-        [weakSelf.tableView reloadData];
+    _page = 1;
+    _orders = [NSMutableArray array];
+    [self.orderDataService getOrdersWithOrderType:_listType page:_page callback:^(NSArray<WFOrder *> *orders) {
+        [weakSelf addOrders:orders];
     }];
 }
+
+- (void)loadNextPage {
+    __weak typeof(self) weakSelf = self;
+    ++_page;
+    [self.orderDataService getOrdersWithOrderType:_listType page:_page callback:^(NSArray<WFOrder *> *orders) {
+        [weakSelf addOrders:orders];
+    }];
+}
+
+- (void)addOrders:(NSArray<WFOrder *>*) orders {
+    [_orders addObjectsFromArray:orders];
+    [_tableView reloadData];
+    _tableView.hidden = NO;
+    [_tableView.mj_header endRefreshing];
+    [_tableView.mj_footer endRefreshing];
+}
+
+
 
 - (void)setUpDefaultText {
     UILabel *label = [UILabel new];
@@ -72,15 +106,6 @@ typedef enum : NSUInteger {
         make.centerY.equalTo(self.view.mas_centerY);
         make.left.right.mas_equalTo(self.view);
     }];
-}
-
-- (void)setOrders:(NSArray<WFOrder *> *)orders {
-    _orders = orders;
-    if (orders && orders.count != 0) {
-        self.tableView.hidden = NO;
-    } else {
-        self.tableView.hidden = YES;
-    }
 }
 
 - (void)setPageSate:(WFPageSate)pageSate {
@@ -102,13 +127,58 @@ typedef enum : NSUInteger {
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 100.f;
+    if (section == 0) {
+        return .01f;
+    }
+    return 0.f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    WFOrderListFooter *footer = [self footerFactory:section];
+    CGSize size = [footer systemLayoutSizeFittingSize:CGSizeMake(CGRectGetWidth(self.tableView.frame), 1.f) withHorizontalFittingPriority:UILayoutPriorityRequired verticalFittingPriority:UILayoutPriorityFittingSizeLevel];
+    return size.height;
 }
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    WFOrderListHeader *header = [WFGetBundle(@"WFOrder") loadNibNamed:@"WFOrderListHeader" owner:nil options:nil].firstObject;
-    header.order = _orders[section];
-    return header;
+    return [UIView new];
 }
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    WFOrderListFooter *footer = [self footerFactory:section];
+    return footer;
+}
+
+- (WFOrderListFooter*)footerFactory:(NSInteger)section {
+    WFOrder *order = _orders[section];
+    __block WFOrderListFooter *footer;
+    __weak typeof(self) weakSelf = self;
+    if (order.orderState == WFOrderStateUnpayed) {
+        footer = [WFUnpayOrderFooter new];
+        footer.leftBtnClickedBlk = ^{
+            [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://pay?orderId=%@", weakSelf.orders[section].orderId]];
+        };
+    } else if (order.orderState == WFOrderStateUncheck) {
+         footer = [WFUncheckOrderFooter new];
+    } else if (order.orderState == WFOrderStateUncomment) {
+        footer = [WFUncommentOrderFooter new];
+        footer.leftBtnClickedBlk = ^{
+            [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://comment?orderId=%@", weakSelf.orders[section].orderId]];
+        };
+    } else {
+        footer = [WFRepairOrderFooter new];
+        footer.rightBtnClickedBlk = ^{
+            [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://repair?orderId=%@", weakSelf.orders[section].orderId]];
+        };
+    }
+    return footer;
+}
+
+- (WFOrderDataService*)orderDataService {
+    if (!_orderDataService) {
+        _orderDataService = [WFOrderDataService new];
+    }
+    return _orderDataService;
+}
+
 
 @end

@@ -53,6 +53,7 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)setUpBridge {
     _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+    [_bridge setWebViewDelegate:self];
     [WebViewJavascriptBridge enableLogging];
     [_bridge registerHandler:@"getAccessToken" handler:^(id data, WVJBResponseCallback responseCallback) {
         responseCallback(@"accessToken");
@@ -69,6 +70,20 @@ ADS_HIDE_BOTTOM_BAR
     }
 }
 
+- (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+//    NSString *url = error.userInfo[NSURLErrorFailingURLStringErrorKey];
+//    if ([url hasPrefix:@"wfshop"]) {
+//        [[ADSRouter sharedRouter] openUrlString:url];
+//    }
+}
+
+- (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
+//    NSString *url = error.userInfo[NSURLErrorFailingURLStringErrorKey];
+//    if ([url hasPrefix:@"wfshop"]) {
+//        [[ADSRouter sharedRouter] openUrlString:url];
+//    }
+}
+
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     if ([navigationAction.request.URL.scheme isEqualToString:@"wfshop"]) {
         decisionHandler(WKNavigationActionPolicyCancel);
@@ -76,6 +91,10 @@ ADS_HIDE_BOTTOM_BAR
     } else {
         decisionHandler(WKNavigationActionPolicyAllow);
     }
+}
+
+- (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(WKNavigation *)navigation {
+    NSLog(@"1123");
 }
 
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
@@ -88,6 +107,10 @@ ADS_HIDE_BOTTOM_BAR
                                                           completionHandler();
                                                       }]];
     [self presentViewController:alertController animated:YES completion:^{}];
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
+    NSLog(@"finish");
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {

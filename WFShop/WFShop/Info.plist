@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MOBAppSecret</key>
-	<string>c758e50c09ff53571d9b2a0159e43861</string>
-	<key>MOBAppKey</key>
-	<string>239d38a435a8b</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -23,11 +19,23 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
 			<string>cn.andysheng</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wfshop</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>cn.andysheng.wechat</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wxe7798aead7625419</string>
 			</array>
 		</dict>
 	</array>
@@ -48,6 +56,10 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MOBAppKey</key>
+	<string>239d38a435a8b</string>
+	<key>MOBAppSecret</key>
+	<string>c758e50c09ff53571d9b2a0159e43861</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -55,6 +67,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>WFShop需要使用您的相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>WFShop需要访问您的相册</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

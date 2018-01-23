@@ -29,4 +29,16 @@ typedef NS_OPTIONS(NSInteger, WFRequestOption) {
                                  option:(WFRequestOption)option
                                complete:(void(^)(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error))complete;
 
++ (NSURLSessionDataTask*)outRequestWithUrl:(NSString*)url
+                                parameters:(NSDictionary*)parameters
+                                    option:(WFRequestOption)option
+                                  complete:(void(^)(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error))complete;
+
+
++ (NSURLSessionUploadTask *)uploadImageWithUrl:(NSString *)url
+                                         image:(UIImage *)image
+                                          name:(NSString *)name
+                                        option:(WFRequestOption)option
+                                      progress:(void(^)(NSProgress* uploadProgress))progress
+                                      complete:(void (^)(NSURLResponse *response, id responseObject, NSError *error))complete;
 @end

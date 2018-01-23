@@ -14,7 +14,7 @@
 
 @implementation WFOrderDataService
 
-- (void)getOrdersWithOrderType:(WFUserOrderListType)type callback:(void (^)(NSArray<WFOrder *> *))callback {
+- (void)getOrdersWithOrderType:(WFUserOrderListType)type page:(NSInteger)page callback:(void (^)(NSArray<WFOrder *> *))callback {
     NSString *typeStr = @"all";
     switch (type) {
         case WFUserOrderListTypeAll:
@@ -36,7 +36,7 @@
             break;
     }
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:nil path:nil];
-    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":typeStr} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":typeStr,@"page":@(page)} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
             callback([NSArray yy_modelArrayWithClass:[WFOrder class] json:obj.data]);
         }
@@ -59,6 +59,18 @@
             callback([WFOrder yy_modelWithJSON:obj.data]);
         }
     }];
+}
+
+- (void)uploadImage:(UIImage *)image name:(NSString*)name callback:(void (^)(NSString *))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"image" objId:nil path:nil];
+    [WFNetworkExecutor uploadImageWithUrl:apiUrl image:image name:name option:WFRequestOptionPost|WFRequestOptionWithToken progress:^(NSProgress *uploadProgress) {
+        NSLog(@"%f", uploadProgress.fractionCompleted);
+    } complete:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (callback) {
+            callback(responseObject[@"data"]);
+        }
+    }];
+    
 }
 
 @end

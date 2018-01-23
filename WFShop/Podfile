@@ -57,16 +57,18 @@ target 'WFShop' do
   pod 'MJRefresh'
   pod 'CPDataDrivenFlowLayout', :git => 'git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git'
   pod 'MJExtension'
-  pod 'Pingpp', '~> 2.2.17'
+#  pod 'Pingpp', '~> 2.2.17'
   pod 'XXNibBridge', '~> 2.3.0'
   pod 'MTBBarcodeScanner'
   
-  pod 'mob_sharesdk'
+  pod 'WechatOpenSDK'
   
-  pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
-  pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
-  pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
-  
+#  pod 'mob_sharesdk'
+#
+#  pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
+#  pod 'mob_sharesdk/ShareSDKPlatforms/SinaWeibo'
+#  pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
+
   target 'WFShopTests' do
     inherit! :search_paths
     # Pods for testing

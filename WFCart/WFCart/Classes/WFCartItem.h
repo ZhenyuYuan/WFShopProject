@@ -26,6 +26,7 @@
 
 @interface WFCartItem : NSObject
 
+@property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong)  WFCartProduct *product;
 @property (nonatomic, assign) NSInteger amount;
 @property (nonatomic, assign) BOOL isSelected;

@@ -11,6 +11,7 @@
 #import "WFHelpers.h"
 #import "WFNetwork.h"
 #import "WFOrderShipAddress.h"
+#import "WFProduct.h"
 
 @implementation WFOrderDataService
 
@@ -54,7 +55,14 @@
 
 - (void)createOrder:(NSArray<WFOrderProduct *> *)products callback:(void (^)(WFOrder *))callback {
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:nil path:@"create"];
-    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionWithToken|WFRequestOptionPost complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+    NSMutableArray *ids = [NSMutableArray array];
+    NSMutableArray *amounts = [NSMutableArray array];
+    [products enumerateObjectsUsingBlock:^(WFOrderProduct * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [ids addObject:obj.productId];
+        [amounts addObject:@(obj.amount)];
+    }];
+    
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"products":ids, @"amounts":amounts} option:WFRequestOptionWithToken|WFRequestOptionPost complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
             callback([WFOrder yy_modelWithJSON:obj.data]);
         }

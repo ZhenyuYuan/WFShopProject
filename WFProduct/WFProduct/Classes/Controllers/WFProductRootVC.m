@@ -276,14 +276,14 @@ ADS_BEFORE_JUMP(^(ADSURL *url, BOOL *stop){
 }
 
 - (void)addCartBtnClicked {
-    if (![self.userService isLogined]) {
-        [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
-    } else {
+//    if (![self.userService isLogined]) {
+//        [[ADSRouter sharedRouter] openUrlString:@"wfshop://login"];
+//    } else {
         __weak typeof(self) weakSelf = self;
         [_productDataService addProductToCart:_productId amount:_amount callback:^(BOOL success) {
             WFShowHud(success ? @"加入购物车成功" : @"加入购物车失败", weakSelf.view, 1);
         }];
-    }
+ //   }
 }
 
 - (void)buyBtnClicked {

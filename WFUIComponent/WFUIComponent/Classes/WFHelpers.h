@@ -19,7 +19,7 @@ extern NSBundle* WFGetBundle(NSString *bundleName);
 
 extern NSString* WFGetPathForFile(NSString *fileName, NSString *extension, NSString *bundleName);
 
-extern void WFAskSomeThing(NSString *title, NSString *msg, UIViewController *vc, dispatch_block_t yesBlk, dispatch_block_t noBlk);
+extern void WFAskSomething(NSString *title, NSString *msg, UIViewController *vc, dispatch_block_t yesBlk, dispatch_block_t noBlk);
 
 @interface WFHelpers : NSObject
 

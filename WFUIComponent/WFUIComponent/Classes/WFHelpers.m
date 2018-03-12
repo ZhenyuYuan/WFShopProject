@@ -46,7 +46,7 @@ NSString* WFGetPathForFile(NSString *fileName, NSString *extension, NSString *bu
 }
 
 
-void WFAskSomeThing(NSString *title, NSString *msg, UIViewController *vc, dispatch_block_t yesBlk, dispatch_block_t noBlk) {
+void WFAskSomething(NSString *title, NSString *msg, UIViewController *vc, dispatch_block_t yesBlk, dispatch_block_t noBlk) {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"" message:@"是否删除商品" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *yes = [UIAlertAction actionWithTitle:@"是" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         if (yesBlk) yesBlk();

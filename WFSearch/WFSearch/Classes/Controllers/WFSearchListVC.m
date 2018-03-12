@@ -32,6 +32,7 @@
 #import "WFHelpers.h"
 #import "WFConsts.h"
 #import "WFSearchDataService.h"
+#import "WFProductRootVC.h"
 
 
 @interface WFSearchListVC ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -217,6 +218,15 @@ ADS_HIDE_BOTTOM_BAR
     //return 4;
     return 0;
 }
+
+
+//- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    WFSearchItem *selectedItem = _setItem[indexPath.row];
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
+//    WFProductRootVC *vc = [[WFProductRootVC alloc] init];
+//    vc.productId = selectedItem.itemId;
+//    [self.navigationController pushViewController:vc animated:YES];
+//}
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

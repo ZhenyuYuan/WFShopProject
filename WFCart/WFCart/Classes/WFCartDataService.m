@@ -22,6 +22,15 @@
     }];
 }
 
+- (void)modifyCartWithItermId:(NSString *)itermId amount:(NSInteger)amount callback:(void (^)(BOOL))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"cart/modify" objId:itermId path:nil];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"amount":@(amount)} option:WFRequestOptionPost|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback) {
+            callback(YES);
+        }
+    }];
+}
+
 - (CGFloat)calculateTotalAmount:(NSArray<WFCartItemGroup *> *)groups {
     __block CGFloat res = 0;
     [groups enumerateObjectsUsingBlock:^(WFCartItemGroup * _Nonnull group, NSUInteger idx, BOOL * _Nonnull stop) {

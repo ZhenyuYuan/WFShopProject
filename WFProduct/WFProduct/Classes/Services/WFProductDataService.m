@@ -15,6 +15,26 @@
 #import "WFNetwork.h"
 #import "WFUserCenter.h"
 
+@interface ADSModuleMediator : NSObject
+
+
+@property (nonatomic, assign) BOOL enableException;
+
++ (instancetype)shareInstance;
+
++ (void)registerDynamicModule:(Class) moduleClass;
+
+- (id)createService:(Protocol *)proto;
+
+//Registration is recommended to use a static way
+- (void)registerService:(Protocol *)proto service:(Class) serviceClass;
+
++ (void)triggerCustomEvent:(NSInteger)eventType;
+@end
+
+@implementation ADSModuleMediator
+@end
+
 @implementation WFProductDataService
 
 - (void)collectProduct:(NSString *)productId callback:(void (^)(BOOL))callback {
@@ -130,6 +150,18 @@
         callback(productItems);
     }
 }
+
+//- (void)getProductCommentWithProductId:(NSString *)productId page:(NSInteger)page callback:(void (^)(NSArray<WFProductComment *> *))callback {
+//    id<WFAPIFactoryProtocol> apiFactory = [[ shareInstance] createService:@protocol(WFAPIFactoryProtocol)];
+//    NSString *apiUrl = [apiFactory URLWithNameSpace:@"product" objId:productId path:@"comment"];
+//
+//    NSDictionary *params = @{@"page": @(page)};
+//    id<WFNetworkProtocol> networkService = [[ADSModuleMediator shareInstance] createService:@protocol(WFNetworkProtocol)];
+//    [networkService requestWithUrl:apiUrl parameters:params option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+//        NSArray<WFProductComment*> *comments = [NSArray yy_modelArrayWithClass:[WFProductComment class] json:obj.data];
+//        callback(comments);
+//    }];
+//}
 
 - (void)getProductCommentWithProductId:(NSString *)productId page:(NSInteger)page callback:(void (^)(NSArray<WFProductComment *> *))callback {
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:@"comment"];

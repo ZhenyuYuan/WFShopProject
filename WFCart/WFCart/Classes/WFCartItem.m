@@ -28,7 +28,10 @@
 @end
 
 @implementation WFCartItem
-
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"itemId" : @"id"
+             };
+}
 @end
 
 @implementation WFCartItemGroup

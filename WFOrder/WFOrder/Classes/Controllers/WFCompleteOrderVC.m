@@ -148,7 +148,7 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)checkout {
     MBProgressHUD *hud = WFShowProgressHud(@"正在创建订单...", self.view, 1);
-    [self.orderService createOrder:nil callback:^(WFOrder *order) {
+    [self.orderService createOrder:_orderProducts callback:^(WFOrder *order) {
         [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://pay?orderId=%@", order.orderId]];
         [hud hideAnimated:YES];
     }];

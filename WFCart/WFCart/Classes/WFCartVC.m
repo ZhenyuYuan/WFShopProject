@@ -18,6 +18,7 @@
 #import "BeeHive.h"
 #import "WFUserProtocol.h"
 #import "YYModel.h"
+#import "MJRefresh.h"
 
 NSString *WFStringlifyCartProducts(NSArray<WFCartItem*> *items) {
     NSMutableArray *res = [NSMutableArray array];
@@ -69,7 +70,7 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setEverthingHidden:![self.userService isLogined]];
+    //[self setEverthingHidden:![self.userService isLogined]];
 }
 
 - (void)setEverthingHidden:(BOOL)hidden {
@@ -86,6 +87,7 @@ ADS_HIDE_BOTTOM_BAR
     [_cartDataService getCartDataWithUserId:@"" callback:^(NSArray<WFCartItemGroup *> *cartGroups) {
         weakSelf.cartItemGroups = [cartGroups mutableCopy];
         [weakSelf.tableView reloadData];
+        [weakSelf.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -95,6 +97,10 @@ ADS_HIDE_BOTTOM_BAR
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    __weak typeof(self) weakSelf = self;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
     
     _hintLabel.font = [UIFont wf_pfr14];
     _totalAmountLabel.font = [UIFont wf_pfr13];
@@ -163,14 +169,22 @@ ADS_HIDE_BOTTOM_BAR
     };
     cell.didChangeAmount = ^{
         [weakSelf updateTotalAmount];
+        WFCartItem *item = weakSelf.cartItemGroups[indexPath.section].cartItems[indexPath.row];
+        [weakSelf.cartDataService modifyCartWithItermId:item.itemId amount:item.amount callback:^(BOOL success) {
+            
+        }];
     };
     cell.didWantToDel = ^{
-        WFAskSomeThing(@"", @"是否删除该商品", weakSelf, ^{
+        WFCartItem *item = weakSelf.cartItemGroups[indexPath.section].cartItems[indexPath.row];
+        WFAskSomething(@"", @"是否删除该商品", weakSelf, ^{
             [weakSelf.cartItemGroups[indexPath.section].cartItems removeObjectAtIndex:indexPath.row];
             if (weakSelf.cartItemGroups[indexPath.section].cartItems.count == 0) {
                 [weakSelf.cartItemGroups removeObjectAtIndex:indexPath.section];
             }
             [weakSelf updateTotalAmount];
+            [weakSelf.cartDataService modifyCartWithItermId:item.itemId amount:0 callback:^(BOOL success) {
+                WFShowHud(@"删除成功", weakSelf.view, 1);
+            }];
             [weakSelf.tableView reloadData];
         }, nil);
     };

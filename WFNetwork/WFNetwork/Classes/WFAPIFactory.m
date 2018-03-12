@@ -9,6 +9,7 @@
 #import "WFNetworkConsts.h"
 
 static NSString * const WFBaseURL = @"https://wfshop.andysheng.cn/";
+static NSString * const WFBaseURL2 = @"http://admin.swczyc.com/hyapi/ymmall/";
 
 NSString *WFDelAndAddSlash(NSString *url) {
     NSMutableString *res = [NSMutableString stringWithString:url];
@@ -37,3 +38,21 @@ NSString *WFDelAndAddSlash(NSString *url) {
 
 
 @end
+
+@implementation WFAPIFactory2
+
++ (NSString *)URLWithNameSpace:(NSString *)nameSpace objId:(NSString *)objId path:(NSString *)path {
+    NSMutableString *url = [NSMutableString stringWithString:WFDelAndAddSlash(WFBaseURL2)];
+    [url appendString:WFDelAndAddSlash(nameSpace)];
+    if (objId && ![objId isEqualToString:@""]) {
+        [url appendString:WFDelAndAddSlash(objId)];
+    }
+    if (path && ![path isEqualToString:@""]) {
+        [url appendString:WFDelAndAddSlash(path)];
+    }
+    return [url copy];
+}
+
+
+@end
+

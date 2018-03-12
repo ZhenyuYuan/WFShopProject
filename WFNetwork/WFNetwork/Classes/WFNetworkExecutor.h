@@ -67,3 +67,27 @@ typedef NS_OPTIONS(NSInteger, WFRequestOption) {
                                       progress:(void(^)(NSProgress* uploadProgress))progress
                                       complete:(void (^)(NSURLResponse *response, id responseObject, NSError *error))complete;
 @end
+
+@interface WFNetworkResponseObj2 : NSObject
+
+@property (nonatomic, assign) BOOL success;
+@property (nonatomic, strong) id obj;
+
+@end
+
+@protocol WFNetworkProtocol2 <NSObject>
+
+- (NSURLSessionDataTask*)requestWithUrl:(NSString*)url
+                             parameters:(NSDictionary*)parameters
+                                 option:(WFRequestOption)option
+                               complete:(void(^)(NSURLResponse *response, WFNetworkResponseObj2 *obj, NSError *error))complete;
+@end
+
+@interface WFNetworkExecutor2 : NSObject
+
++ (NSURLSessionDataTask*)requestWithUrl:(NSString*)url
+                             parameters:(NSDictionary*)parameters
+                                 option:(WFRequestOption)option
+                               complete:(void(^)(NSURLResponse *response, WFNetworkResponseObj2 *obj, NSError *error))complete;
+
+@end

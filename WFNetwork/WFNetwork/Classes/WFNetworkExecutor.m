@@ -105,3 +105,45 @@
     return uploadTask;
 }
 @end
+
+
+@implementation WFNetworkResponseObj2
+@end
+@implementation WFNetworkExecutor2
+
++ (NSURLSessionDataTask*)requestWithUrl:(NSString *)url
+                             parameters:(NSDictionary *)parameters
+                                 option:(WFRequestOption)option
+                               complete:(void (^)(NSURLResponse *, WFNetworkResponseObj2 *, NSError *))complete {
+    AFHTTPSessionManager  *manager = [AFHTTPSessionManager sharedHttpSessionManager];
+    NSMutableDictionary *params = [parameters mutableCopy];
+    if (!params) {
+        params = [NSMutableDictionary dictionary];
+    }
+    if (option & WFRequestOptionWithToken) {
+        //        [params setValue:@"" forKey:WFByrTokenKey];
+    }
+    if (option & WFRequestOptionGet) {
+        NSURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:url parameters:params error:nil];
+        NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (complete) {
+                complete(response, [WFNetworkResponseObj2 yy_modelWithJSON:responseObject], error);
+            }
+        }];
+        [task resume];
+        return task;
+    } else if (option & WFRequestOptionPost) {
+        NSURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:url parameters:params error:nil];
+        NSURLSessionDataTask *task = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+            if (complete) {
+                complete(response, [WFNetworkResponseObj2 yy_modelWithJSON:responseObject], error);
+            }
+        }];
+        [task resume];
+        return task;
+    } else {
+        return nil;
+    }
+}
+
+@end

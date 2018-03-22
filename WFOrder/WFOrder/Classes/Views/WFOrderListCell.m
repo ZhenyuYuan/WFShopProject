@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *costLabel;
 
 @end
 
@@ -42,6 +43,7 @@
     [_imgView sd_setImageWithURL:[NSURL URLWithString:_product.coverImg]];
     _nameLabel.text = _product.name;
     _numberLabel.text = [NSString stringWithFormat:@"%ld件", _product.amount];
+    _costLabel.text = [NSString stringWithFormat:@"￥%.2f", _product.price];
 }
 
 @end

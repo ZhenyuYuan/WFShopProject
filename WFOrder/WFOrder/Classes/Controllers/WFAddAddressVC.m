@@ -9,8 +9,9 @@
 #import "WFOrderAddressService.h"
 #import "WFUIComponent.h"
 #import "WFOrderShipAddress.h"
+#import "PSCityPickerView.h"
 
-@interface WFAddAddressVC ()
+@interface WFAddAddressVC () <PSCityPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
@@ -23,7 +24,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *cityInput;
 @property (weak, nonatomic) IBOutlet UITextField *detailInput;
 
+@property (nonatomic, strong) PSCityPickerView *cityPickerView;
+
 @property (nonatomic, strong) WFOrderAddressService *addressService;
+
+@property (nonatomic, copy) NSString *province;
+@property (nonatomic, copy) NSString *city;
 
 @end
 
@@ -35,15 +41,17 @@
 }
 
 - (void)setUpUI {
-    
+    PSCityPickerView *pickerView = [PSCityPickerView new];
+    pickerView.cityPickerDelegate = self;
+    _cityInput.inputView = pickerView;
 }
 
 - (IBAction)okBtnClicked:(id)sender {
     WFOrderShipAddress *address = [WFOrderShipAddress new];
     address.receiverName = _nameInput.text;
     address.receiverPhone = _phoneInput.text;
-    address.province = _provinceInput.text;
-    address.city = _cityInput.text;
+    address.province = _province;
+    address.city = _city;
     address.detail = _detailInput.text;
     __weak typeof(self) weakSelf = self;
     [self.addressService addAddress:address callback:^(BOOL success) {
@@ -54,6 +62,20 @@
             });
         }
     }];
+}
+
+- (void)cityPickerView:(PSCityPickerView *)picker
+    finishPickProvince:(NSString *)province
+                  city:(NSString *)city
+              district:(NSString *)district {
+    WFOrderShipAddress *address = [WFOrderShipAddress new];
+    address.city = city;
+    address.province = province;
+    
+    _city = city;
+    _province = province;
+    
+    _cityInput.text = [NSString stringWithFormat:@"%@/%@/%@", province, city, district];
 }
 
 - (WFOrderAddressService*)addressService {

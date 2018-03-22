@@ -86,11 +86,13 @@ typedef enum : NSUInteger {
 }
 
 - (void)addOrders:(NSArray<WFOrder *>*) orders {
-    [_orders addObjectsFromArray:orders];
-    [_tableView reloadData];
-    _tableView.hidden = NO;
     [_tableView.mj_header endRefreshing];
     [_tableView.mj_footer endRefreshing];
+    [_orders addObjectsFromArray:orders];
+    [_tableView reloadData];
+    if (_orders.count != 0)
+        _tableView.hidden = NO;
+
 }
 
 
@@ -157,12 +159,35 @@ typedef enum : NSUInteger {
         footer.leftBtnClickedBlk = ^{
             [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://pay?orderId=%@", weakSelf.orders[section].orderId]];
         };
+        footer.rightBtnClickedBlk = ^{
+            WFAskSomething(@"", @"请确认取消订单", weakSelf, ^{
+                [weakSelf.orderDataService deleteOrder:weakSelf.orders[section].orderId callback:^(BOOL success) {
+                    WFShowHud(@"取消成功", weakSelf.view, 1);
+                    [weakSelf loadData];
+                }];
+            }, nil);
+        };
     } else if (order.orderState == WFOrderStateUncheck) {
-         footer = [WFUncheckOrderFooter new];
+        __weak typeof(self) weakSelf = self;
+        footer = [WFUncheckOrderFooter new];
+        footer.leftBtnClickedBlk = ^{
+            WFAskSomething(@"", @"请确认已经收到货品", weakSelf, ^{
+                [weakSelf.orderDataService confirmOrder:weakSelf.orders[section].orderId callback:^(BOOL success) {
+                    WFShowHud(@"确认成功", weakSelf.view, 1);
+                    [weakSelf loadData];
+                }];
+            }, nil);
+        };
     } else if (order.orderState == WFOrderStateUncomment) {
         footer = [WFUncommentOrderFooter new];
         footer.leftBtnClickedBlk = ^{
             [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://comment?orderId=%@", weakSelf.orders[section].orderId]];
+        };
+        footer.rightBtnClickedBlk = ^{
+            [weakSelf.orderDataService deleteOrder:weakSelf.orders[section].orderId callback:^(BOOL success) {
+                WFShowHud(@"删除成功", weakSelf.view, 1);
+                [weakSelf loadData];
+            }];
         };
     } else {
         footer = [WFRepairOrderFooter new];
@@ -170,6 +195,7 @@ typedef enum : NSUInteger {
             [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://repair?orderId=%@", weakSelf.orders[section].orderId]];
         };
     }
+    footer.detailLabel.text = [NSString stringWithFormat:@"共%ld件商品 实付款: ￥%.2f", _orders[section].productCount, _orders[section].cost];
     return footer;
 }
 

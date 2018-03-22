@@ -15,6 +15,8 @@
 #import "WFNotFoundVC.h"
 #import "WXApi.h"
 #import "ADSRouter.h"
+#import "QTouchposeApplication.h"
+
 
 @interface UIWindow (WFShakeMotion)
 @end
@@ -76,6 +78,12 @@
     });
     self.window.tintColor = [UIColor wf_mainColor];
     [self.window makeKeyAndVisible];
+    
+    QTouchposeApplication *touchposeApplication = (QTouchposeApplication *)application;
+    touchposeApplication.alwaysShowTouches = YES;
+    touchposeApplication.showTouchesWhenKeyboardShown = YES;
+    
+    
     return YES;
 }
 

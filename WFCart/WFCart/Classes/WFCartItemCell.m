@@ -87,7 +87,7 @@
 }
 
 - (void)showProduct {
-    [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://product:product_id=%@", _cartItem.product.productId]];
+    [[ADSRouter sharedRouter] openUrlString:[NSString stringWithFormat:@"wfshop://product?productId=%@", _cartItem.product.productId]];
 }
 
 - (void)updateRadioBtn:(BOOL)checked {

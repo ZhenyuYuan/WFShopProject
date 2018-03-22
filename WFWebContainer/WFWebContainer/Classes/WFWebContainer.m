@@ -13,12 +13,16 @@
 #import "WFProgressBar.h"
 #import "WFUIComponent.h"
 #import "WebViewJavascriptBridge.h"
+#import "WFUserCenter.h"
+#import "WFWechatUser.h"
 
 @interface WFWebContainer () <WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, strong) WKWebView *webView;
 @property (nonatomic, strong) WebViewJavascriptBridge *bridge;
 @property (nonatomic, strong) WFProgressBar *progressBar;
+
+@property (nonatomic, strong) WFWechatUser *user;
 
 @end
 
@@ -55,8 +59,19 @@ ADS_HIDE_BOTTOM_BAR
     _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
     [_bridge setWebViewDelegate:self];
     [WebViewJavascriptBridge enableLogging];
+    [_bridge registerHandler:@"getUserInfo" handler:^(id data, WVJBResponseCallback responseCallback) {
+        [[WFUserCenter sharedCenter] getCurrentUser:^(WFWechatUser *user) {
+            responseCallback(@{@"openid":user.openId,
+                               @"nickName":user.nickName,
+                               @"sex":user.sex == 1 ? @"男":@"女",
+                               @"province":user.province,
+                               @"country":user.country,
+                               @"headImgUrl":user.headImgUrl
+                               });
+        }];
+    }];
     [_bridge registerHandler:@"getAccessToken" handler:^(id data, WVJBResponseCallback responseCallback) {
-        responseCallback(@"accessToken");
+        responseCallback(@"测试");
     }];
 }
 

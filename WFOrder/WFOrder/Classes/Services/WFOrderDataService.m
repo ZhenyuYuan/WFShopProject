@@ -16,28 +16,28 @@
 @implementation WFOrderDataService
 
 - (void)getOrdersWithOrderType:(WFUserOrderListType)type page:(NSInteger)page callback:(void (^)(NSArray<WFOrder *> *))callback {
-    NSString *typeStr = @"all";
-    switch (type) {
-        case WFUserOrderListTypeAll:
-            typeStr = @"all";
-            break;
-        case WFUserOrderListTypeUnpay:
-            typeStr = @"unpay";
-            break;
-        case WFUserOrderListTypeUncheck:
-            typeStr = @"uncheck";
-            break;
-        case WFUserOrderListTypeUncomment:
-            typeStr = @"uncomment";
-            break;
-        case WFUserOrderListTypeRepair:
-            typeStr = @"repair";
-            break;
-        default:
-            break;
-    }
+//    NSString *typeStr = @"all";
+//    switch (type) {
+//        case WFUserOrderListTypeAll:
+//            typeStr = @"all";
+//            break;
+//        case WFUserOrderListTypeUnpay:
+//            typeStr = @"unpay";
+//            break;
+//        case WFUserOrderListTypeUncheck:
+//            typeStr = @"uncheck";
+//            break;
+//        case WFUserOrderListTypeUncomment:
+//            typeStr = @"uncomment";
+//            break;
+//        case WFUserOrderListTypeRepair:
+//            typeStr = @"repair";
+//            break;
+//        default:
+//            break;
+//    }
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:nil path:nil];
-    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":typeStr,@"page":@(page)} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":@(type),@"page":@(page)} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
             callback([NSArray yy_modelArrayWithClass:[WFOrder class] json:obj.data]);
         }
@@ -80,5 +80,28 @@
     }];
     
 }
+- (void)confirmOrder:(NSString *)orderId callback:(void (^)(BOOL))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:orderId path:@"confirm"];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionPost complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback) {
+            callback(YES);
+        }
+    }];
+}
 
+- (void)deleteOrder:(NSString *)orderId callback:(void (^)(BOOL))callback {
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:orderId path:@"delete"];
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionPost complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        if (callback) {
+            callback(YES);
+        }
+    }];
+}
+
+- (void)commentOrder:(NSString *)orderId callback:(void (^)(BOOL))callback {
+    NSString *apiurl = [WFAPIFactory URLWithNameSpace:@"order" objId:orderId path:@"comment"];
+    [WFNetworkExecutor requestWithUrl:apiurl parameters:@{} option:WFRequestOptionPost|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        callback(YES);
+    }];
+}
 @end

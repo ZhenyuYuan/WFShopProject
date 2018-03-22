@@ -70,7 +70,7 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    //[self setEverthingHidden:![self.userService isLogined]];
+    [self setEverthingHidden:![self.userService isLogined]];
 }
 
 - (void)setEverthingHidden:(BOOL)hidden {

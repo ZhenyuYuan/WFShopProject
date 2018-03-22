@@ -62,6 +62,7 @@ target 'WFShop' do
   pod 'MTBBarcodeScanner'
   
   pod 'WechatOpenSDK'
+  pod 'PSCityPickerView'
   
 #  pod 'mob_sharesdk'
 #

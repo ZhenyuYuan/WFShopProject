@@ -31,9 +31,9 @@
     [_goInShopBtn setImage:[UIImage imageNamed:@"shop" inBundle:WFGetBundle(@"WFProduct") compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [_goInShopBtn addTarget:self action:@selector(goInBtnClicked) forControlEvents:UIControlEventTouchUpInside];
     
-    [DCSpeedy dc_chageControlCircularWith:_contactBtn AndSetCornerRadius:5 SetBorderWidth:1 SetBorderColor:[UIColor wf_borderGrayColor] canMasksToBounds:YES];
-    [_contactBtn setImage:[UIImage imageNamed:@"service" inBundle:WFGetBundle(@"WFProduct") compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-    [_contactBtn addTarget:self action:@selector(contactBtnClicked) forControlEvents:UIControlEventTouchUpInside];
+//    [DCSpeedy dc_chageControlCircularWith:_contactBtn AndSetCornerRadius:5 SetBorderWidth:1 SetBorderColor:[UIColor wf_borderGrayColor] canMasksToBounds:YES];
+//    [_contactBtn setImage:[UIImage imageNamed:@"service" inBundle:WFGetBundle(@"WFProduct") compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+//    [_contactBtn addTarget:self action:@selector(contactBtnClicked) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)setShop:(WFProductShop *)shop {

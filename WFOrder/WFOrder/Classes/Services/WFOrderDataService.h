@@ -27,4 +27,10 @@ typedef enum : NSUInteger {
 
 - (void)uploadImage:(UIImage*)image name:(NSString*)name callback:(void(^)(NSString *imgUrl))callback;
 
+- (void)confirmOrder:(NSString*)orderId callback:(void(^)(BOOL success))callback;
+
+- (void)deleteOrder:(NSString*)orderId callback:(void(^)(BOOL success))callback;
+
+- (void)commentOrder:(NSString*)orderId callback:(void(^)(BOOL success))callback;
+
 @end

@@ -37,6 +37,7 @@ PODS:
   - OpenShare (0.0.1)
   - pop (1.0.10)
   - PPNumberButton (0.7.0)
+  - PSCityPickerView (1.0.0)
   - Reachability (3.2)
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
@@ -179,6 +180,7 @@ DEPENDENCIES:
   - MTBBarcodeScanner
   - OpenShare
   - PPNumberButton
+  - PSCityPickerView
   - Reachability
   - Realm
   - Reveal-SDK (= 4)
@@ -279,6 +281,7 @@ SPEC CHECKSUMS:
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   PPNumberButton: a053cde152b0e683302ce41a4755bfa02e1b3a83
+  PSCityPickerView: 88ecae3def30a127152d75a87df22ff3d1e6e770
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
@@ -308,6 +311,6 @@ SPEC CHECKSUMS:
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: eb0f23e98c37549431363fe1076be00990c8ac4a
+PODFILE CHECKSUM: 61eeb6df3485a330d7b1cf6877ac06047ca95b15
 
 COCOAPODS: 1.4.0.beta.1

@@ -46,7 +46,7 @@
 
 #pragma mark - UI
 - (void)setUpUI {
-    self.backgroundColor = [UIColor wf_mainBackgroundColor];
+    //self.backgroundColor = [UIColor wf_mainBackgroundColor];
     _imageView = [[UIImageView alloc] init];
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.contentView addSubview:_imageView];

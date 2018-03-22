@@ -27,6 +27,7 @@
 		A1870BAB1FBC6B0300F86CDF /* user_ship_address.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BAA1FBC6B0300F86CDF /* user_ship_address.json */; };
 		A1870BB11FBD59B100F86CDF /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BB01FBD59B100F86CDF /* product.json */; };
 		A1870BFE1FC42C5300F86CDF /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = A1870BFD1FC42C5200F86CDF /* order.json */; };
+		A19FE076205A14810008D323 /* QTouchposeApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A19FE075205A14800008D323 /* QTouchposeApplication.m */; };
 		A1B6F4ED1F8FA57C00CC44D0 /* AppLaunchModule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B6F4EC1F8FA57C00CC44D0 /* AppLaunchModule.xcassets */; };
 		A1C970911FC6B1770047718A /* cart.json in Resources */ = {isa = PBXBuildFile; fileRef = A1C970901FC6B1770047718A /* cart.json */; };
 		B0693E9F64D2090AE4FB680C /* libPods-WFShopTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF26AB2733F015575F80B23 /* libPods-WFShopTests.a */; };
@@ -86,6 +87,8 @@
 		A1870BAA1FBC6B0300F86CDF /* user_ship_address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_ship_address.json; sourceTree = "<group>"; };
 		A1870BB01FBD59B100F86CDF /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
 		A1870BFD1FC42C5200F86CDF /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
+		A19FE074205A14800008D323 /* QTouchposeApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTouchposeApplication.h; sourceTree = "<group>"; };
+		A19FE075205A14800008D323 /* QTouchposeApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTouchposeApplication.m; sourceTree = "<group>"; };
 		A1B6F4EC1F8FA57C00CC44D0 /* AppLaunchModule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppLaunchModule.xcassets; sourceTree = "<group>"; };
 		A1C970901FC6B1770047718A /* cart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cart.json; sourceTree = "<group>"; };
 		E5845A6DD533E5F99980D289 /* libPods-WFShop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WFShop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 				A168D10C1F8F60AD00EA132B /* AppLaunchModule */,
 				A10191D51F8E0D82008E9C2F /* AppDelegate.h */,
 				A10191D61F8E0D82008E9C2F /* AppDelegate.m */,
+				A19FE074205A14800008D323 /* QTouchposeApplication.h */,
+				A19FE075205A14800008D323 /* QTouchposeApplication.m */,
 				A10191D81F8E0D82008E9C2F /* ViewController.h */,
 				A10191D91F8E0D82008E9C2F /* ViewController.m */,
 				A10191DB1F8E0D82008E9C2F /* Main.storyboard */,
@@ -456,6 +461,7 @@
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle",
 				"${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/PSCityPickerView/PSCityPickerViewDemo/PSCityPickerView/city.plist",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFAd/WFAd.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFCart/WFCart.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/WFDebug/WFDebug.bundle",
@@ -556,6 +562,7 @@
 				A10191E51F8E0D82008E9C2F /* main.m in Sources */,
 				A10191D71F8E0D82008E9C2F /* AppDelegate.m in Sources */,
 				A168D1141F8F625800EA132B /* WFAppLaunchService.m in Sources */,
+				A19FE076205A14810008D323 /* QTouchposeApplication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

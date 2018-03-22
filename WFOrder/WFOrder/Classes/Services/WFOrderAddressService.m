@@ -22,7 +22,7 @@
 }
 
 - (void)delAddress:(WFOrderShipAddress *)address callback:(void (^)(BOOL))callback {
-    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"user" objId:nil path:@"shipaddress/delete"];
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"user/shipaddress/delete" objId:address.addressId path:nil];
     [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionPost complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
             callback(obj.code == 1);
@@ -32,7 +32,12 @@
 
 - (void)addAddress:(WFOrderShipAddress *)address callback:(void (^)(BOOL))callback {
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"user" objId:nil path:@"shipaddress/add"];
-    NSDictionary *params = @{};
+    NSDictionary *params = @{@"receiver_name":address.receiverName,
+                             @"receiver_phone":address.receiverPhone,
+                             @"province":address.province,
+                             @"city":address.city,
+                             @"detail":address.detail
+                             };
     [WFNetworkExecutor requestWithUrl:apiUrl parameters:params option:WFRequestOptionPost|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
         if (callback) {
             callback(obj.code == 1);

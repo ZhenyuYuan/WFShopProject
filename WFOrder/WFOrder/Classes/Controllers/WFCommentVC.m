@@ -55,6 +55,9 @@ ADS_PARAMETER_MAPPING(WFCommentVC, orderId, "orderId")
     [_badBtn addTarget:self action:@selector(selectLevel:) forControlEvents:UIControlEventTouchUpInside];
     [_anonymousBtn addTarget:self action:@selector(needAnonymous) forControlEvents:UIControlEventTouchUpInside];
     
+    [_commentBtn addTarget:self action:@selector(submit) forControlEvents:UIControlEventTouchUpInside];
+    [_cancelBtn addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
+    
     [_cancelBtn setTitleColor:[UIColor wf_lightGrayColor] forState:UIControlStateNormal];
     [_commentBtn setTitleColor:[UIColor wf_mainColor] forState:UIControlStateNormal];
     [DCSpeedy dc_chageControlCircularWith:_cancelBtn AndSetCornerRadius:5 SetBorderWidth:1 SetBorderColor:[UIColor wf_lightGrayColor] canMasksToBounds:YES];
@@ -76,6 +79,8 @@ ADS_PARAMETER_MAPPING(WFCommentVC, orderId, "orderId")
     
     [btn setTitleColor:[UIColor wf_mainColor] forState:UIControlStateNormal];
     [btn setImage:[btn.imageView.image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    
+    
 }
 
 - (void)needAnonymous {
@@ -97,13 +102,34 @@ ADS_PARAMETER_MAPPING(WFCommentVC, orderId, "orderId")
     [self presentViewController:pickVC animated:YES completion:nil];
 }
 
+- (void)submit {
+    MBProgressHUD *hud = WFShowProgressHud(@"提交中", self.view, 1);
+    hud.removeFromSuperViewOnHide = YES;
+    __weak typeof(self) weakSelf = self;
+    [self.orderService commentOrder:_orderId callback:^(BOOL success) {
+        if (success) {
+            [hud hideAnimated:YES];
+            WFShowHud(@"评价成功", weakSelf.view, 1);
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [weakSelf.navigationController popViewControllerAnimated:YES];
+            });
+           
+            
+        }
+    }];
+}
+
+- (void)cancel {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
     MBProgressHUD *hud = WFShowProgressHud(@"上传中", picker.view, 1);
     __weak typeof(self) weakSelf = self;
     [self.orderService uploadImage:image name:@"1.jpg" callback:^(NSString *imgUrl) {
         [weakSelf.imgUrls addObject:imgUrl];
         [weakSelf updateImgs];
-        hud.hidden = YES;
+        //hud.hidden = YES;
         [picker dismissViewControllerAnimated:YES completion:nil];
     }];
 }

@@ -11,6 +11,7 @@
 #import "WFOrderAddressService.h"
 #import "WFAddAddressVC.h"
 #import "WFOrderShipAddress.h"
+#import "MJRefresh.h"
 
 @interface WFSelectOrderShipAddressVC () <UITableViewDelegate, UITableViewDataSource>
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) NSArray<WFOrderShipAddress*> *addressArr;
 
 @property (nonatomic, strong) WFOrderAddressService *addressService;
+
 
 @end
 
@@ -41,12 +43,18 @@
     _tableView.tableFooterView = [UIView new];
     UIBarButtonItem *addBtn = [[UIBarButtonItem alloc] initWithTitle:@"新建" style:UIBarButtonItemStylePlain target:self action:@selector(addNewAddress)];
     self.navigationItem.rightBarButtonItem = addBtn;
+    
+    __weak typeof(self) weakSelf = self;
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadData];
+    }];
 }
 
 - (void)loadData {
     _addressArr = nil;
     __weak typeof(self) weakSelf = self;
     [self.addressService getAddress:^(NSArray<WFOrderShipAddress *> *addressArr) {
+        [weakSelf.tableView.mj_header endRefreshing];
         weakSelf.addressArr = addressArr;
         [weakSelf.tableView reloadData];
         [weakSelf.addressArr enumerateObjectsUsingBlock:^(WFOrderShipAddress * _Nonnull address, NSUInteger idx, BOOL * _Nonnull stop) {

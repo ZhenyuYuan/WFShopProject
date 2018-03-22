@@ -117,7 +117,7 @@ ADS_HIDE_BOTTOM_BAR
         [self.navigationController pushViewController:vc animated:YES];
     } else if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            NSLog(@"选择配送方式");
+            
         } else {
             __weak typeof(self) weakSelf = self;
             WFCouponVC *vc = [WFCouponVC vcWithCouponType:WFCouponTypeOrderAvailable];

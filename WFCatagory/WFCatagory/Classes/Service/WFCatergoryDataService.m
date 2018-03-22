@@ -8,19 +8,32 @@
 #import "WFCatergoryDataService.h"
 #import "WFCategoryItem.h"
 #import "YYModel.h"
+#import "WFNetwork.h"
+
 @implementation WFCatergoryDataService
 
 
 - (void)getCategoryData:(void (^)(NSArray<WFCategoryItem *> *))callback {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"category" ofType:@"json"];
-    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSArray *categoryItems = [self parseCategoryData:[NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:NULL]];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
+    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"category" objId:nil path:nil];
+    __weak typeof(self) weakSelf = self;
+    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+        NSArray *categoryItems = [NSArray yy_modelArrayWithClass:[WFCategoryItem class] json:obj.data];
         if (callback) {
             callback(categoryItems);
         }
-    });
+    }];
+    
+    
+    
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"category" ofType:@"json"];
+//    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+//    NSArray *categoryItems = [self parseCategoryData:[NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:NULL]];
+//    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        if (callback) {
+//            callback(categoryItems);
+//        }
+//    });
 }
 
 - (NSArray*)parseCategoryData:(id)jsonData {

@@ -25,7 +25,7 @@
         [self.contentView addSubview:_imgView];
         [_imgView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(self.contentView);
-            _ratio = make.height.equalTo(self.contentView.mas_width).multipliedBy(1);
+            //_ratio = make.height.equalTo(self.contentView.mas_width).multipliedBy(1);
         }];
     }
     return self;
@@ -43,9 +43,9 @@
 
 - (void)setIntroImg:(WFProductIntroImg *)introImg {
     [_imgView sd_setImageWithURL:[NSURL URLWithString:introImg.url]];
-    [_ratio uninstall];
-    _ratio.multipliedBy(introImg.ratio);
-    [_ratio install];
+//    [_ratio uninstall];
+//    _ratio.multipliedBy(introImg.ratio);
+//    [_ratio install];
 }
 
 @end

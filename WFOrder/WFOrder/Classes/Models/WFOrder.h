@@ -20,7 +20,7 @@ typedef enum : NSUInteger {
 @interface WFOrder : NSObject
 
 @property (nonatomic, copy) NSString *orderId;
-@property (nonatomic, assign) NSInteger prodcutCount;
+@property (nonatomic, assign) NSInteger productCount;
 @property (nonatomic, strong) NSArray<WFOrderProduct*> *products;
 @property (nonatomic, assign) NSInteger state;
 @property (nonatomic, assign) CGFloat cost;

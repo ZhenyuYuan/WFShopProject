@@ -10,8 +10,10 @@
 
 @interface WFHomePageDataService : NSObject
 
-- (void)getHomePageRows:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
+//- (void)getHomePageRows:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
+//
+//- (void)getShopHomePageRowsWithShopId:(NSString*)shopId callback:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
 
-- (void)getShopHomePageRowsWithShopId:(NSString*)shopId callback:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
+- (void)getHomePageData:(void(^)(NSArray<WFHomePageRow*> *rows))callback;
 
 @end

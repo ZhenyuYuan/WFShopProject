@@ -18,5 +18,24 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WFUser/Classes/**/*"
+  "source_files": "WFUser/Classes/**/*",
+  "resource_bundles": {
+    "WFUser": [
+      "WFUser/Assets/**/*.{png,xcassets,xib,storyboard,plist}"
+    ]
+  },
+  "dependencies": {
+    "ADSRouter": [
+
+    ],
+    "BeeHive": [
+
+    ],
+    "WFNetwork": [
+
+    ],
+    "MJExtension": [
+
+    ]
+  }
 }

@@ -46,19 +46,24 @@ ADS_HIDE_BOTTOM_BAR
 
 - (void)loadData {
     __weak typeof(self) weakSelf = self;
-    if (_shopId && ![_shopId isEqualToString:@""]) {
-        [self.homePageDataService getShopHomePageRowsWithShopId:_shopId callback:^(NSArray<WFHomePageRow *> *rows) {
-            weakSelf.rows = rows;
-            [weakSelf.tableView.mj_header endRefreshing];
-            [weakSelf.tableView reloadData];
-        }];
-    } else {
-        [self.homePageDataService getHomePageRows:^(NSArray<WFHomePageRow *> *rows) {
-            weakSelf.rows = rows;
-            [weakSelf.tableView.mj_header endRefreshing];
-            [weakSelf.tableView reloadData];
-        }];
-    }
+//    if (_shopId && ![_shopId isEqualToString:@""]) {
+////        [self.homePageDataService getShopHomePageRowsWithShopId:_shopId callback:^(NSArray<WFHomePageRow *> *rows) {
+////            weakSelf.rows = rows;
+////            [weakSelf.tableView.mj_header endRefreshing];
+////            [weakSelf.tableView reloadData];
+////        }];
+//    } else {
+////        [self.homePageDataService getHomePageRows:^(NSArray<WFHomePageRow *> *rows) {
+////            weakSelf.rows = rows;
+////            [weakSelf.tableView.mj_header endRefreshing];
+////            [weakSelf.tableView reloadData];
+////        }];
+          [self.homePageDataService getHomePageData:^(NSArray<WFHomePageRow *> *rows) {
+              weakSelf.rows = rows;
+              [weakSelf.tableView.mj_header endRefreshing];
+              [weakSelf.tableView reloadData];
+          }];
+//    }
 }
 
 - (void)setUpUI {

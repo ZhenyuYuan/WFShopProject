@@ -37,7 +37,7 @@
     }
     UITabBarItem *homeTab = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"home"] selectedImage:[UIImage imageNamed:@"home-fill"]];
     homepageVC.tabBarItem = homeTab;
-    
+
     // category
     UITabBarItem *catagoryTab = [[UITabBarItem alloc] initWithTitle:@"分类" image:[UIImage imageNamed:@"catagory"] selectedImage:[UIImage imageNamed:@"catagory-fill"]];
     UIViewController *catagoryVC = [categoryService categoryVC];
@@ -64,6 +64,7 @@
     
     UITabBarController *rootVC = [UITabBarController new];
     rootVC.viewControllers = @[homepageVC, catagoryVC, cartVC, userVC];
+//    rootVC.viewControllers = @[catagoryVC, cartVC, userVC];
     return rootVC;
 }
 

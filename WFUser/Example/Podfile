@@ -6,6 +6,17 @@ target 'WFUser_Example' do
   target 'WFUser_Tests' do
     inherit! :search_paths
 
+  pod 'ADSRouter', :path => "/Users/yzy/Developer/本科毕设/ADSRouter"
+  pod 'WFNetwork', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFNetwork"
+  pod 'WFUIComponent', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFUIComponent"
+  pod 'ASDataDrivenLayout', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/ASDataDrivenLayout"
+  pod 'WFUIComponent', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFUIComponent" 
+  pod 'MJRefresh'
+  pod 'Realm'
+  pod 'WechatOpenSDK'
+  pod 'PSCityPickerView'
+  pod 'SDWebImage'
+  pod 'SDWebImage/GIF'
     pod 'Specta'
   pod 'Expecta'
   pod 'FBSnapshotTestCase'

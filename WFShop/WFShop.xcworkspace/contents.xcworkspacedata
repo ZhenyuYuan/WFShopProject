@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WFShop.xcodeproj">
+      location = "group:/Users/yzy/Developer/本科毕设/WFShopProject/WFShop/WFShop.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WFShop.xcodeproj">
    </FileRef>
 </Workspace>

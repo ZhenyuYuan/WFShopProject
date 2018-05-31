@@ -1,19 +1,19 @@
 PODS:
   - ADSRouter (0.1.0)
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - ASDataDrivenLayout (0.1.0)
   - BeeHive (1.5.1)
@@ -30,29 +30,29 @@ PODS:
     - pop
     - SDWebImage
   - Masonry (1.1.0)
-  - MBProgressHUD (1.0.0)
+  - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
-  - MJRefresh (3.1.15)
-  - MTBBarcodeScanner (5.0.3)
+  - MJRefresh (3.1.15.3)
+  - MTBBarcodeScanner (5.0.5)
   - OpenShare (0.0.1)
   - pop (1.0.10)
-  - PPNumberButton (0.7.0)
+  - PPNumberButton (0.8.0)
   - PSCityPickerView (1.0.0)
   - Reachability (3.2)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
+  - Realm (3.5.0):
+    - Realm/Headers (= 3.5.0)
+  - Realm/Headers (3.5.0)
   - Reveal-SDK (4)
-  - SDCycleScrollView (1.74):
+  - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.2.2):
-    - SDWebImage/Core (= 4.2.2)
-  - SDWebImage/Core (4.2.2)
-  - SDWebImage/GIF (4.2.2):
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SDWebImage/GIF (4.3.3):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
   - WebViewJavascriptBridge (6.0.3)
-  - WechatOpenSDK (1.8.1)
+  - WechatOpenSDK (1.8.2)
   - WFAd (0.1.0)
   - WFCart (0.1.0):
     - ADSRouter
@@ -165,9 +165,9 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - ADSRouter (from `/Users/andy/code/ADSRouter`)
+  - ADSRouter (from `/Users/yzy/Developer/本科毕设/ADSRouter`)
   - AFNetworking
-  - ASDataDrivenLayout (from `/Users/andy/code/ASDataDrivenLayout`)
+  - ASDataDrivenLayout (from `/Users/yzy/Developer/本科毕设/WFShopProject/ASDataDrivenLayout`)
   - BeeHive (= 1.5.1)
   - CPDataDrivenFlowLayout (from `git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git`)
   - FMDB
@@ -188,73 +188,73 @@ DEPENDENCIES:
   - SDWebImage/GIF
   - WebViewJavascriptBridge (~> 6.0)
   - WechatOpenSDK
-  - WFAd (from `/Users/andy/code/WFShopProject/WFAd`)
-  - WFCart (from `/Users/andy/code/WFShopProject/WFCart`)
-  - WFCatagory (from `/Users/andy/code/WFShopProject/WFCatagory`)
-  - WFDebug (from `/Users/andy/code/WFShopProject/WFDebug`)
-  - WFHomePage (from `/Users/andy/code/WFShopProject/WFHomePage`)
-  - WFNetwork (from `/Users/andy/code/WFShopProject/WFNetwork`)
-  - WFNotFound (from `/Users/andy/code/WFShopProject/WFNotFound`)
-  - WFOrder (from `/Users/andy/code/WFShopProject/WFOrder`)
-  - WFPay (from `/Users/andy/code/WFShopProject/WFPay`)
-  - WFProduct (from `/Users/andy/code/WFShopProject/WFProduct`)
-  - WFQRScanner (from `/Users/andy/code/WFShopProject/WFQRScanner`)
-  - WFSearch (from `/Users/andy/code/WFShopProject/WFSearch`)
-  - WFServiceProtocols (from `/Users/andy/code/WFShopProject/WFServiceProtocols`)
-  - WFSetting (from `/Users/andy/code/WFShopProject/WFSetting`)
-  - WFUIComponent (from `/Users/andy/code/WFShopProject/WFUIComponent`)
-  - WFURLDispatcher (from `/Users/andy/code/WFShopProject/WFURLDispatcher`)
-  - WFUser (from `/Users/andy/code/WFShopProject/WFUser`)
-  - WFWebContainer (from `/Users/andy/code/WFShopProject/WFWebContainer`)
+  - WFAd (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFAd`)
+  - WFCart (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFCart`)
+  - WFCatagory (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFCatagory`)
+  - WFDebug (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFDebug`)
+  - WFHomePage (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFHomePage`)
+  - WFNetwork (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFNetwork`)
+  - WFNotFound (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFNotFound`)
+  - WFOrder (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFOrder`)
+  - WFPay (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFPay`)
+  - WFProduct (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFProduct`)
+  - WFQRScanner (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFQRScanner`)
+  - WFSearch (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFSearch`)
+  - WFServiceProtocols (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFServiceProtocols`)
+  - WFSetting (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFSetting`)
+  - WFUIComponent (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFUIComponent`)
+  - WFURLDispatcher (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFURLDispatcher`)
+  - WFUser (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFUser`)
+  - WFWebContainer (from `/Users/yzy/Developer/本科毕设/WFShopProject/WFWebContainer`)
   - WMPageController (= 2.3.0)
   - XXNibBridge (~> 2.3.0)
-  - YYModel (from `/Users/andy/code/YYModel`)
+  - YYModel (from `/Users/yzy/Developer/本科毕设/YYModel`)
 
 EXTERNAL SOURCES:
   ADSRouter:
-    :path: /Users/andy/code/ADSRouter
+    :path: /Users/yzy/Developer/本科毕设/ADSRouter
   ASDataDrivenLayout:
-    :path: /Users/andy/code/ASDataDrivenLayout
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/ASDataDrivenLayout
   CPDataDrivenFlowLayout:
     :git: git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git
   WFAd:
-    :path: /Users/andy/code/WFShopProject/WFAd
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFAd
   WFCart:
-    :path: /Users/andy/code/WFShopProject/WFCart
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFCart
   WFCatagory:
-    :path: /Users/andy/code/WFShopProject/WFCatagory
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFCatagory
   WFDebug:
-    :path: /Users/andy/code/WFShopProject/WFDebug
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFDebug
   WFHomePage:
-    :path: /Users/andy/code/WFShopProject/WFHomePage
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFHomePage
   WFNetwork:
-    :path: /Users/andy/code/WFShopProject/WFNetwork
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFNetwork
   WFNotFound:
-    :path: /Users/andy/code/WFShopProject/WFNotFound
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFNotFound
   WFOrder:
-    :path: /Users/andy/code/WFShopProject/WFOrder
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFOrder
   WFPay:
-    :path: /Users/andy/code/WFShopProject/WFPay
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFPay
   WFProduct:
-    :path: /Users/andy/code/WFShopProject/WFProduct
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFProduct
   WFQRScanner:
-    :path: /Users/andy/code/WFShopProject/WFQRScanner
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFQRScanner
   WFSearch:
-    :path: /Users/andy/code/WFShopProject/WFSearch
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFSearch
   WFServiceProtocols:
-    :path: /Users/andy/code/WFShopProject/WFServiceProtocols
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFServiceProtocols
   WFSetting:
-    :path: /Users/andy/code/WFShopProject/WFSetting
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFSetting
   WFUIComponent:
-    :path: /Users/andy/code/WFShopProject/WFUIComponent
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFUIComponent
   WFURLDispatcher:
-    :path: /Users/andy/code/WFShopProject/WFURLDispatcher
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFURLDispatcher
   WFUser:
-    :path: /Users/andy/code/WFShopProject/WFUser
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFUser
   WFWebContainer:
-    :path: /Users/andy/code/WFShopProject/WFWebContainer
+    :path: /Users/yzy/Developer/本科毕设/WFShopProject/WFWebContainer
   YYModel:
-    :path: /Users/andy/code/YYModel
+    :path: /Users/yzy/Developer/本科毕设/YYModel
 
 CHECKOUT OPTIONS:
   CPDataDrivenFlowLayout:
@@ -262,9 +262,9 @@ CHECKOUT OPTIONS:
     :git: git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git
 
 SPEC CHECKSUMS:
-  ADSRouter: f7b7d7d81a42dbe335948cdd762748a866be3317
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  ASDataDrivenLayout: 98e91576390b50c3e698f47c0eb9f093d1625049
+  ADSRouter: 6f81d859a5b9ef9e1a7260c998221ba35460c9b9
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  ASDataDrivenLayout: 44e93f5523bf8d3e60b455f4e31052be9f45ec31
   BeeHive: b135a33b3519814ec5d117318d205e10c997450f
   CPDataDrivenFlowLayout: 59f046eeec88703f484a4b3eb173f8df783f4792
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
@@ -274,43 +274,43 @@ SPEC CHECKSUMS:
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   IDMPhotoBrowser: 4bb459b1faffc228e92bccdf7c54ad6d6b7e8c37
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
-  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
-  MTBBarcodeScanner: 3ce0f1b0085ef00c726ded663c490a63b29c9aa5
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  MTBBarcodeScanner: 3ac7b553d6bf740e7dc281d9a547962f7aea7abc
   OpenShare: a560580dbb729d5c0c3cc1ee84cd6aa4a07e94c6
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  PPNumberButton: a053cde152b0e683302ce41a4755bfa02e1b3a83
+  PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   PSCityPickerView: 88ecae3def30a127152d75a87df22ff3d1e6e770
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  Realm: 0378021c424e4e2bd6a0e63b27881e929d9b9ad1
   Reveal-SDK: 178c927f1a3230648d3a92b96f6e730a35b2750a
-  SDCycleScrollView: f821215226f6146a35470721a9d6e83ec5cfb04b
-  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
-  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
-  WFAd: 3e39c97fac1b5b2222474fbd17043845000ef73c
-  WFCart: 5f7580ac86505c6d963376b5e0b55bfd76a1788e
-  WFCatagory: 0e26c20b5198e98fae6a8bab2c4d156723a0b161
-  WFDebug: e1b636cdcd3ec96267b58a7aef28f04e801ebde3
-  WFHomePage: afdd73b30038cff9d6df90bd4c5315c92eb9a1af
-  WFNetwork: 770fc185c3fb83ed99445c3189341edd1ddd1042
-  WFNotFound: d6d2a826d54d8c6745a263bd41237288697bc95f
-  WFOrder: 454b87c099e72afa2f8190ca76769a2b405e540a
-  WFPay: bd47d7ca489f02a360ff4fe514d86b54d47294e9
-  WFProduct: 2281a7badf0b90cfe0429354ed8b86360b65eff1
-  WFQRScanner: be984f78c40601dfe470a4314b77e0ea12f68d5f
-  WFSearch: 82168ab6b505e7f230adbc122eadcd3b4af9edae
-  WFServiceProtocols: 32c98c2645a185505193296ce901c7f82f1c3566
-  WFSetting: 733005a16da8f98d5ad299e93efb118fff873c06
-  WFUIComponent: 6a318579675a742bd69705fef2ef7652d6986f63
-  WFURLDispatcher: 2d1cbf9093029e2484de7b184e06d63101bc6573
-  WFUser: d29a2999755abfa4b0202bf9562656a342d8ffa3
-  WFWebContainer: 3c52d613985ed917e3437c993f75e1141caaea37
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  WFAd: bef93d3c28dae4661290c00c4036fd6a9a42e51a
+  WFCart: e184af5e37607e3e61ba58966fe3914b061187e4
+  WFCatagory: 0d22ac71b10489b92a2d3aca79d8157ee8d61c9d
+  WFDebug: f86454a2516491e17aa5821cd60265385e995c35
+  WFHomePage: c54ce67cd10c030054acc6c2a484327d53e87485
+  WFNetwork: cf5451955acde167b15112b03020ff581468a778
+  WFNotFound: 7fd4b668ba5b0c1b6be104357ef535fbd6bd03ad
+  WFOrder: 8ba4a4de3c4f756ac79c663a919249f60e329f3d
+  WFPay: 0dc0c6768ad4d2395fa1a4d9b89db547d37bee1c
+  WFProduct: 26bf8a609e8ed949dca830eebdabfcc2a00e56da
+  WFQRScanner: 9de25f633d4c112e27557f2f4c737340d6fee9ba
+  WFSearch: d909e8b303060932ffe38172260490ff764cae33
+  WFServiceProtocols: d6d57cd52de213e86a55a2292b333a34120121fb
+  WFSetting: e28b2a479dfe39f1778ab5497f961d99b166fd74
+  WFUIComponent: a87e5de421d03b0ced6ae5793200ad97bd0a449d
+  WFURLDispatcher: cfae30846013be7c608b8222f16807f68f468b73
+  WFUser: a37bee61c79b3c76452827e027b513cf7af436ce
+  WFWebContainer: 011dd9ab766e9b40d170dd08a2df0aa135e8212f
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
   XXNibBridge: addb780e6db076eb2c61716aa60b176a6799b80f
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYModel: eb86cab3f5071337137ed680c72c1de4fc378356
 
-PODFILE CHECKSUM: 61eeb6df3485a330d7b1cf6877ac06047ca95b15
+PODFILE CHECKSUM: 47fdcfaca5bb53185850d852afdd60f53a3d692d
 
-COCOAPODS: 1.4.0.beta.1
+COCOAPODS: 1.4.0

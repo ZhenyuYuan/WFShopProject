@@ -31,7 +31,7 @@
 }
 
 - (BOOL)isUserLogined {
-  //  return YES;
+//    return YES;
     return self.loginService.currentUserAuthorizeObj;
 }
 

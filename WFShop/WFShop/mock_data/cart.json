@@ -4,26 +4,26 @@
         {
             "shop":{
                 "id":1,
-                "shop_name":"网服旗舰店",
+                "shop_name":"舜王城中药材",
             },
             "cart_items":[
                 {
                     "product" : {
                         "id":1,
-                        "cover_img":"http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
-                        "detail":"红色 16G",
-                        "name":"小米5",
-                        "price":12.0,
+                        "cover_img":"http://123.57.157.171/upload/image/201612/9c6d3cda-7cf3-47a7-a934-cabd1ef47562-large.jpg",
+                        "detail":"1kg",
+                        "name":"佩兰",
+                        "price":8.0,
                     },
                     "amount" : 1
                 },
                 {
                     "product" : {
                         "id":2,
-                        "cover_img":"http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg",
-                        "detail":"黑色 64G",
-                        "name":"iPhone X",
-                        "price":12.0,
+                        "cover_img":"http://www.swczyc.com/upload/image/201704/8c07b497-88ea-46ab-b348-cab9616a83a5-large.jpg",
+                        "detail":"1kg",
+                        "name":"珍珠透骨草",
+                        "price":20.0,
                     },
                     "amount" : 1
                 },
@@ -32,26 +32,26 @@
         {
             "shop":{
                 "id":1,
-                "shop_name":"网服旗舰店2号",
+                "shop_name":"舜王城中药材2号",
             },
             "cart_items":[
                 {
                     "product" : {
                         "id":1,
-                        "cover_img":"http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
-                        "detail":"红色 16G",
-                        "name":"小米5",
-                        "price":12.0,
+                        "cover_img":"http://www.swczyc.com/upload/image/201704/0e520dc1-ac66-49fa-92e5-77f716b851fc-large.jpg",
+                        "detail":"专用中药袋 圆片小统片 1kg",
+                        "name":"黄芪",
+                        "price":17.0,
                     },
-                    "amount" : 1
+                    "amount" : 2
                 },
                 {
                     "product" : {
                         "id":2,
-                        "cover_img":"http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg",
-                        "detail":"黑色 64G",
-                        "name":"iPhone X",
-                        "price":12.0,
+                        "cover_img":"http://www.swczyc.com/upload/image/201710/b9e5e488-365d-4845-aa02-9ad4ea738487-large.jpg",
+                        "detail":"盒装 100g",
+                        "name":"三七",
+                        "price":35.0,
                     },
                     "amount" : 1
                 },

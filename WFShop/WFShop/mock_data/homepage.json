@@ -1,6 +1,6 @@
 {
     "code": 1,
-    "data": {
+   
         "rows": [
             {
                 "style_id": "carousel_view",
@@ -152,5 +152,5 @@
                 }
             },
         ]
-    }
+    
 }

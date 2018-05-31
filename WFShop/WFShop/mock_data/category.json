@@ -1,1248 +1,1127 @@
 {
     "code":1,
     "data":[{
-            "name":"手机数码",
+            "name":"全草类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"佩兰",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"佩兰、省头草",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/be3a22ef-b536-4e87-9de2-4a4f50439f7e-large.jpg",
+                                    },
+                                    {
+                                    "name":"精品选装佩兰",
+                                    "img_url":"http://123.57.157.171/upload/image/201612/89dd549f-85b3-44ba-bfe1-f3e134774842-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"珍珠透骨草",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"珍珠透骨草",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/1b846cbe-6603-486b-aa2b-0c546287b7da-large.jpg"
+                                    },
+                                    ]
+                        },
+                        {
+                        "name":"伸筋草",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"伸筋草 成胜",
+                                    "img_url":"http://www.swczyc.com/upload/image/201706/a6dea521-4cf9-46cf-bb5b-857cb1cfb3f9-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"伸筋草 保申",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/426e96df-5be6-416d-8949-e61e6f54f57c-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
-                                    },
-                                    {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                                    "name":"伸筋草 石松",
+                                    "img_url":"http://www.swczyc.com/upload/image/201708/e15e57a0-2784-4d5f-ad7c-ff35155ab74a-large.jpg"
                                     }
                                     ]
                         },
                         {
-                        "name":"服饰配件",
+                        "name":"益母草",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                                    "name":"益母草 坤草",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/fa3e9d3b-d9df-4205-849c-3658c0912375-medium.jpg"
                                     },
                                     {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                                    "name":"益母草 山东",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/de17717c-9cf3-4a82-bcc1-5b571927a2c4-large.jpg"
                                     }
                                     ]
                         },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
-                                    }
-                                    ]
-                        }
                         ]
             },{
-            "name":"电脑办公",
+            "name":"根及根茎类",
             "img_url":"",
             "children":[
                         {
-                        "name":"家具内衣",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
-                                    },
-                                    {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
                                     }
                                     ]
                         },{
-                        "name":"服饰配件",
+                        "name":"三七",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
                                     },
                                     {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
                                     }
                                     ]
                         },{
-                        "name":"男装",
+                        "name":"何首乌",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"男鞋",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                   ]
             },{
-            "name":"电视影视",
+            "name":"花类",
             "img_url":"",
             "children":[
                         {
-                        "name":"大家电",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"平板电视",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat10000049.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
                                     },
                                     {
-                                    "name":"冰箱",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat10000054.png",
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
                                     },
                                     {
-                                    "name":"挂饰空调",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat10000062.png",
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"数码通讯",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"手机",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat10000070.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"笔记本电脑",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat10000092.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"单反相机",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat10000145.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"厨卫生活",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"电风扇",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat10000234.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"空气净化器",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promotion_image/promoImg/201504/20150430/cat10000230x.png"
-                                    },
-                                    {
-                                    "name":"微波炉",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat10000203.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"日用百货",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"啤酒",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat16035542.png"
-                                    },
-                                    {
-                                    "name":"品牌纸尿裤",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat21755542.png"
-                                    },
-                                    {
-                                    "name":"床品件套",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat10005460.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"空调冰系",
+            "name":"果实种子类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"厨卫电视",
+            "name":"叶类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"生活电器",
+            "name":"皮类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"食品饮酒",
+            "name":"藤木类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"美妆个护",
+            "name":"菌藻类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"母婴玩具",
+            "name":"动物类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"服饰鞋帽",
+            "name":"矿物类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
-                                    },
-                                    {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
-                                    },
-                                    {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"服饰配件",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
-                                    },
-                                    {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
-                                    },
-                                    {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
-                                    },
-                                    {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"男鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
-                                    },
-                                    {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
-                                    },
-                                    {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
-                                    },
-                                    {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
-                                    },
-                                    {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
-                                    }
-                                    ]
-                        },
-                        {
-                        "name":"女鞋",
-                        "img_url":"",
-                        "children":[
-                                    {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
-                                    },
-                                    {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
-                                    },
-                                    {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
-                                    },
-                                    {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }
                         ]
             },{
-            "name":"运动户外",
+            "name":"其他类",
             "img_url":"",
             "children":[
                         {
-                        "name":"男装",
+                        "name":"黄芪",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"马甲/背心",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png",
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"家具内衣",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"男娃",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985592.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"睡袍",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat18776491.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"男士内裤",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat15985595.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"家居服",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat18776489.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
+                                    }
+                                    ]
+                        }
+                        ]
+            },{
+            "name":"参茸类",
+            "img_url":"",
+            "children":[
+                        {
+                        "name":"黄芪",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
                                     },
                                     {
-                                    "name":"保暖内衣",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promotion_image/promoImg/201508/20150812/cat18776492.png"
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
                                     },
                                     {
-                                    "name":"抹胸",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211613210484.png"
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"服饰配件",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"墨镜",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211623370815.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"围巾",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985605.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"丝巾",
-                                    "img_url":"http://img13.gomein.net.cn/image/prodimg/gicon/cat15985602.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"帽子",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985601.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
+                                    }
+                                    ]
+                        }
+                        ]
+            },{
+            "name":"花茶类",
+            "img_url":"",
+            "children":[
+                        {
+                        "name":"黄芪",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"男鞋",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985633.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"布鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985695.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"板鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat15985644.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"帆布鞋",
-                                    "img_url":"http://img10.gomein.net.cn/image/prodimg/gicon/cat15985636.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
+                                    }
+                                    ]
+                        }
+                        ]
+            },{
+            "name":"香料类",
+            "img_url":"",
+            "children":[
+                        {
+                        "name":"黄芪",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
                                     },
                                     {
-                                    "name":"凉鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211629070285.png"
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
                                     }
                                     ]
                         },
                         {
-                        "name":"女鞋",
+                        "name":"川牛膝",
                         "img_url":"",
                         "children":[
                                     {
-                                    "name":"女鞋",
-                                    "img_url":"http://img14.gomein.net.cn/image/prodimg/gicon/cat15985629.png"
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
                                     },
                                     {
-                                    "name":"高跟鞋",
-                                    "img_url":"http://img11.gomein.net.cn/image/prodimg/gicon/cat18776486.png"
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
                                     },
                                     {
-                                    "name":"松糕鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776487.png"
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
                                     },
                                     {
-                                    "name":"休闲鞋",
-                                    "img_url":"http://img12.gomein.net.cn/image/prodimg/gicon/cat18776488.png"
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
+                                    }
+                                    ]
+                        }
+                        ]
+            },{
+            "name":"保健品",
+            "img_url":"",
+            "children":[
+                        {
+                        "name":"黄芪",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
+                                    }
+                                    ]
+                        },
+                        {
+                        "name":"川牛膝",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
+                                    }
+                                    ]
+                        }
+                        ]
+            },{
+            "name":"活动专区",
+            "img_url":"",
+            "children":[
+                        {
+                        "name":"黄芪",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"黄芪 甘肃",
+                                    "img_url":"http://www.swczyc.com/upload/image/201703/57626c44-a8a7-4254-be0d-52809b1beb9c-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 东顺",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/4d3ac667-9028-4ef8-9a69-91437d65c03a-large.jpg"
+                                    },
+                                    {
+                                    "name":"黄芪 志军",
+                                    "img_url":"http://123.57.157.171/upload/image/201611/1855ae90-8de0-406b-ab33-daa8973f7c5e-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"三七",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"超细粉三七粉",
+                                    "img_url":"http://www.swczyc.com/upload/image/201710/d9aa65b5-2ff4-4029-aea2-5a61787bc018-large.jpg"
+                                    },
+                                    {
+                                    "name":"三七 18头",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/57c3940d-555e-4227-85b0-f042327227ad-large.jpg"
+                                    }
+                                    ]
+                        },{
+                        "name":"何首乌",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"何首乌 云南",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                                    },
+                                    {
+                                    "name":"何首乌 四川",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/b40c425c-9cfa-4d68-97ba-88e936411e49-large.jpg",
+                                    }
+                                    ]
+                        },
+                        {
+                        "name":"川牛膝",
+                        "img_url":"",
+                        "children":[
+                                    {
+                                    "name":"川牛膝 振兴",
+                                    "img_url":"http://www.swczyc.com/upload/image/201705/b9c04b4f-4072-4024-8f05-433a24f7112e-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 秋祥",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/d99b31bc-d477-4e13-b135-e71f887c1334-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 康源",
+                                    "img_url":"http://www.swczyc.com/upload/image/201701/c2902047-f20c-4a39-b799-bdf089ac6d00-large.jpg"
+                                    },
+                                    {
+                                    "name":"川牛膝 军荣",
+                                    "img_url":"http://www.swczyc.com/upload/image/201704/77e5d784-4308-429a-b64d-d7bd362aa3f9-large.jpg"
                                     }
                                     ]
                         }

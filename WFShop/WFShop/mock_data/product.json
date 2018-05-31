@@ -2,41 +2,38 @@
     "code":1,
     "data":{
         "id":1,
-        "product_group_id":2,
-        "name":"华为 HUAWEI Mate9 Pro （LON-AL00）6GB+128GB 琥珀金",
-        "sub_title":"“人像摄影大师”新一代徕卡双镜头 一体化前置指纹 5.1英寸显示屏 麒麟960芯片",
-        "price":5299,
-        "ship_fee":12,
+        "product_group_id":3,
+        "name":"佩兰 省头草 舜王城中药材 统货",
+        "sub_title":"产地山东 编号: 2017041833143  赠送积分：8  网站促销活动，活动期间免运费",
+        "price":8.00,
+        "ship_fee":0.00,
         "img_urls":[
-            "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg",
-            "http://gfs10.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+            "http://123.57.157.171/upload/image/201612/89dd549f-85b3-44ba-bfe1-f3e134774842-large.jpg",
+            "http://www.swczyc.com/upload/image/201704/be3a22ef-b536-4e87-9de2-4a4f50439f7e-large.jpg",
+            "http://www.swczyc.com/upload/image/201704/80310e1a-97bf-4e89-a3a5-dfc267ffc44a-large.jpg"
         ],
         "product_info":[
             {
-                "info_name":"内存",
-                "info_value":"16G"
-            },
-            {
-                "info_name":"颜色",
-                "info_value":"琥珀金"
+                "info_name":"规格等级",
+                "info_value":"统货"
             },
         ],
         "intro_imgs":[
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
+                "img_url": "https://img.alicdn.com/imgextra/i2/1777394705/TB1DJLsmgLD8KJjSszeXXaGRpXa_!!0-item_pic.jpg_430x430q90.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+                "img_url": "https://img.alicdn.com/imgextra/i3/1777394705/TB2Q6HLmcbI8KJjy1zdXXbe1VXa_!!1777394705.jpg_430x430q90.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1bTYTBjJQ1RCvBVdK_800.jpg"
+                "img_url": "https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/7acb0a46f21fbe0928f701c660600c338644adb3.jpg"
             },
             {
                 "ratio":1,
-                "img_url": "http://gfs12.gomein.net.cn/T1WS_TBKVg1RCvBVdK_800.jpg"
+                "img_url": "https://gdp.alicdn.com/imgextra/i1/1043638728/TB2anwEm0rJ8KJjSspaXXXuKpXa_!!1043638728.jpg"
             }
         ],
         "product_features":[
@@ -46,123 +43,35 @@
             },
             {
                 "feature_id":2,
-                "option_id":6
-            },
-            {
-                "feature_id":3,
-                "option_id":10
-            },
-            {
-                "feature_id":4,
-                "option_id":14
+                "option_id":2
             }
         ],
         "features":[
             {
                 "id":1,
-                "feature_name" : "机身颜色",
+                "feature_name" : "规格等级",
                 "options" : [
                     {
                         "id":"1",
-                        "option_name":"高亮黑"
-                    },
-                    {
-                        "id":"2",
-                        "option_name":"金色"
-                    },
-                    {
-                        "id":"3",
-                        "option_name":"银色"
-                    },
-                    {
-                        "id":"4",
-                        "option_name":"磨砂黑"
-                    },
-                    {
-                        "id":"5",
-                        "option_name":"玫瑰金"
-                    },
-                     {
-                     "id":"5",
-                     "option_name":"土豪金"
-                     }
-                ]
-            },
-            {
-                "id":2,
-                "feature_name" : "网络类型",
-                "options" : [
-                    {
-                        "id":"6",
-                        "option_name":"全网通"
-                    },
-                    {
-                        "id":"7",
-                        "option_name":"移动、联通双王"
-                    },
-                    {
-                        "id":"8",
-                        "option_name":"电信4G"
-                    },
-                    {
-                        "id":"9",
-                        "option_name":"合约机"
-                     },
-                     {
-                         "id":"9",
-                         "option_name":"移动合约机"
-                     }
-                ]
-            },
-            {
-                "id":3,
-                "feature_name" : "容量大小",
-                "options" : [
-                    {
-                        "id":"10",
-                        "option_name":"16G"
-                    },
-                    {
-                        "id":"11",
-                        "option_name":"64G"
-                    },
-                    {
-                        "id":"12",
-                        "option_name":"128G"
-                    },
-                    {
-                        "id":"13",
-                        "option_name":"256G"
+                        "option_name":"统货"
                     }
                 ]
             },
             {
-                "id":4,
-                "feature_name" : "套餐类型",
+                "id":2,
+                "feature_name" : "购买数量",
                 "options" : [
                     {
-                        "id":"14",
-                        "option_name":"官方标配"
+                        "id":"2",
+                        "option_name":"1kg"
                     },
                     {
-                        "id":"15",
-                        "option_name":"套餐一"
+                        "id":"3",
+                        "option_name":"5kg"
                     },
                     {
-                        "id":"16",
-                        "option_name":"套餐二"
-                    },
-                    {
-                        "id":"17",
-                        "option_name":"套餐三"
-                    },
-                    {
-                        "id":"18",
-                        "option_name":"套餐四"
-                    },
-                    {
-                        "id":"19",
-                        "option_name":"套餐五"
+                        "id":"4",
+                        "option_name":"10kg"
                     }
                 ]
             },
@@ -170,9 +79,9 @@
         "comment_count":1,
         "shop" : {
             "id" : 1,
-            "shop_name":"Nike旗舰店",
-            "sub_title":"nike官方旗舰店",
-            "cover_img":"http://img14.gomein.net.cn/image/prodimg/promimg/topics/201607/201607211606480715.png"
+            "shop_name":"舜王城中药材",
+            "sub_title":"舜王城中药材官方旗舰店",
+            "cover_img":"http://www.swczyc.com/upload/image/logo.jpg"
         }
     }
 }

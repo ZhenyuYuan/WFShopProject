@@ -18,5 +18,31 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WFCatagory/Classes/**/*"
+  "source_files": "WFCatagory/Classes/**/*",
+  "dependencies": {
+    "SDWebImage": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "WFServiceProtocols": [
+
+    ],
+    "ADSRouter": [
+
+    ],
+    "BeeHive": [
+
+    ],
+    "YYModel": [
+
+    ],
+    "WFUIComponent": [
+
+    ],
+    "WFNetwork": [
+
+    ]
+  }
 }

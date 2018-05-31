@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>WFShop</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,7 +24,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>cn.andysheng</string>
+			<string>cn.yuanzhenyu96</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wfshop</string>
@@ -32,7 +34,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>cn.andysheng.wechat</string>
+			<string>cn.yuanzhenyu96.wechat</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wxe7798aead7625419</string>
@@ -66,9 +68,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>WFShop需要使用您的相机</string>
+	<string>ZYShop需要使用您的相机</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>WFShop需要访问您的相册</string>
+	<string>ZYShop需要访问您的相册</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -77,6 +83,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<false/>
+	<key>UIStatusBarHidden</key>
+	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -89,6 +89,7 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
     [super application:app openURL:url options:options];
+    NSLog(@"微信登录回调");
     return [WXApi handleOpenURL:url delegate:self];
 }
 

@@ -14,16 +14,19 @@
 @implementation WFWechatLoginService
 
 - (void)getWechatUserWithCode:(NSString *)code callback:(void (^)(WFWechatAuthorizeObj *))callback {
+    NSLog(@"获取微信用户信息");
     NSDictionary *params = @{
                              @"appid":@"wxe7798aead7625419",
                              @"secret":@"d8dfb107972ae477b58f9a600c989541",
                              @"code":code,
                              @"grant_type":@"authorization_code"
                              };
-    [WFNetworkExecutor outRequestWithUrl:@"https://api.weixin.qq.com/sns/oauth2/access_token" parameters:params option:WFRequestOptionGet complete:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+    [WFNetworkExecutor outRequestWithUrl:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code" parameters:params option:WFRequestOptionGet complete:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         WFWechatAuthorizeObj *wechatUser = [WFWechatAuthorizeObj yy_modelWithJSON:responseObject];
         if (callback) {
             callback(wechatUser);
+            NSLog(@"用户信息");
+              NSLog(@"%@",wechatUser);
         }
     }];
 }

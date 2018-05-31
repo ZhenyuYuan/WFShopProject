@@ -4,37 +4,67 @@
         "id":1,
         "product_count":2,
         "products":[{
-                "id": 1,
-                "name":"小米",
-                "cover_img":"",
-                "amount":2
-            }
+                    "id": 1,
+                    "name":"佩兰",
+                    "cover_img":"http://123.57.157.171/upload/image/201612/9c6d3cda-7cf3-47a7-a934-cabd1ef47562-large.jpg",
+                    "amount":2
+                    },
+                    {
+                    "id": 2,
+                    "name":"珍珠透骨草",
+                    "cover_img":"http://www.swczyc.com/upload/image/201704/8c07b497-88ea-46ab-b348-cab9616a83a5-large.jpg",
+                    "amount":1
+                    }
         ],
-        "cost":123.0,
+        "cost":16.0,
         "state":0
     },{
         "id":2,
         "product_count":2,
         "products":[{
-                "id": 1,
-                "name":"小米",
-                "cover_img":"",
+                    "id": 1,
+                "name":"黄芪",
+                "cover_img":"http://www.swczyc.com/upload/image/201704/0e520dc1-ac66-49fa-92e5-77f716b851fc-large.jpg",
                 "amount":2
-            }
+                     }
         ],
-        "cost":123.0,
-        "state":0
+        "cost":34.0,
+        "state":1
     },{
         "id":3,
         "product_count":2,
         "products":[{
                 "id": 1,
-                "name":"小米",
-                "cover_img":"",
-                "amount":2
+                "name":"三七",
+                "cover_img":"http://www.swczyc.com/upload/image/201710/b9e5e488-365d-4845-aa02-9ad4ea738487-large.jpg",
+                "amount":1
             }
         ],
-        "cost":123.0,
-        "state":0
+        "cost":35.0,
+        "state":2
+    },{
+        "id":4,
+        "product_count":2,
+        "products":[{
+                "id": 1,
+                "name":"伸筋草",
+                "cover_img":"http://www.swczyc.com/upload/image/201706/a6dea521-4cf9-46cf-bb5b-857cb1cfb3f9-large.jpg",
+                "amount":1
+            }
+        ],
+        "cost":10.0,
+        "state":3
+    },{
+        "id":5,
+        "product_count":2,
+        "products":[{
+                "id": 1,
+                "name":"何首乌",
+                "cover_img":"http://www.swczyc.com/upload/image/201704/873266cf-dd12-4c0b-a89b-7840ecf6cf6e-large.jpg",
+                "amount":1
+                }
+        ],
+        "cost":25.0,
+        "state":2
     }]
 }

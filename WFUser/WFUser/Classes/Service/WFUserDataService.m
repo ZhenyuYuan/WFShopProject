@@ -17,7 +17,7 @@
 
 - (void)getFunctions:(void (^)(NSArray<WFUserNormalFunctionGroup *> *funcGroups))callback {
     NSString *filePath = [WFGetBundle(@"WFUser") pathForResource:@"normalFunctions" ofType:@"plist"];
-    NSArray<WFUserNormalFunctionGroup*> *funcGroups = [NSArray yy_modelArrayWithClass:[WFUserNormalFunctionGroup class] file:filePath];
+    NSArray<WFUserNormalFunctionGroup*> *funcGroups = [NSArray yy_modelArrayWithClass:[WFUserNormalFunctionGroup class] json:filePath];
     if (callback) {
         callback(funcGroups);
     }

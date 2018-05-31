@@ -58,12 +58,27 @@
 }
 
 - (void)getProductWithProductId:(NSString *)productId callback:(void (^)(WFProduct *))callback {
-    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:nil];
-    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+//    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"product" objId:productId path:nil];
+//    [WFNetworkExecutor requestWithUrl:apiUrl parameters:nil option:WFRequestOptionGet complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+//        if (callback) {
+//            callback([WFProduct yy_modelWithJSON:obj.data]);
+//        }
+//    }];
+//
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"product" ofType:@"json"];
+    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    WFProduct *product = [self parseProduct:json];
+    dispatch_async(dispatch_get_main_queue(), ^{
         if (callback) {
-            callback([WFProduct yy_modelWithJSON:obj.data]);
+            callback(product);
         }
-    }];
+    });
+}
+- (WFProduct*)parseProduct:(id)response {
+    WFNetworkResponse *responseEntity = [WFNetworkResponse yy_modelWithJSON:response];
+    WFProduct *product;
+    product = [WFProduct yy_modelWithJSON:responseEntity.data];
+    return product;
 }
 
 - (void)getProductFeatureWithProductId:(NSString*)productId callback:(void (^)(NSArray<WFProductDetailFeature *> *))callback {

@@ -10,32 +10,32 @@ target 'WFShop' do
   
   # WFShop Main Modules
   
-  pod 'WFServiceProtocols', :path => "/Users/andy/code/WFShopProject/WFServiceProtocols"
-  pod 'WFHomePage', :path => "/Users/andy/code/WFShopProject/WFHomePage"
-  pod 'WFCatagory', :path => "/Users/andy/code/WFShopProject/WFCatagory"
-  pod 'WFCart', :path => "/Users/andy/code/WFShopProject/WFCart"
-  pod 'WFUser', :path => "/Users/andy/code/WFShopProject/WFUser"
+  pod 'WFServiceProtocols', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFServiceProtocols"
+  pod 'WFHomePage', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFHomePage"
+  pod 'WFCatagory', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFCatagory"
+  pod 'WFCart', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFCart"
+  pod 'WFUser', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFUser"
   
   # WFShop sub Modules
-  pod 'WFOrder', :path => "/Users/andy/code/WFShopProject/WFOrder"
-  pod 'WFProduct', :path => "/Users/andy/code/WFShopProject/WFProduct"
-  pod 'WFQRScanner', :path => "/Users/andy/code/WFShopProject/WFQRScanner"
-  pod 'WFNotFound', :path => "/Users/andy/code/WFShopProject/WFNotFound"
-  pod 'WFSearch', :path => "/Users/andy/code/WFShopProject/WFSearch"
-  pod 'WFWebContainer', :path => "/Users/andy/code/WFShopProject/WFWebContainer"
-  pod 'WFSetting', :path => "/Users/andy/code/WFShopProject/WFSetting"
-  pod 'WFPay', :path => "/Users/andy/code/WFShopProject/WFPay"
-  pod 'WFAd', :path => "/Users/andy/code/WFShopProject/WFAd"
-  pod 'WFDebug', :path => "/Users/andy/code/WFShopProject/WFDebug"
+  pod 'WFOrder', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFOrder"
+  pod 'WFProduct', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFProduct"
+  pod 'WFQRScanner', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFQRScanner"
+  pod 'WFNotFound', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFNotFound"
+  pod 'WFSearch', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFSearch"
+  pod 'WFWebContainer', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFWebContainer"
+  pod 'WFSetting', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFSetting"
+  pod 'WFPay', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFPay"
+  pod 'WFAd', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFAd"
+  pod 'WFDebug', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFDebug"
   
   # WFShop basic Modules
-  pod 'WFURLDispatcher', :path => "/Users/andy/code/WFShopProject/WFURLDispatcher"
-  pod 'WFUIComponent', :path => "/Users/andy/code/WFShopProject/WFUIComponent"
-  pod 'WFNetwork', :path => "/Users/andy/code/WFShopProject/WFNetwork"
+  pod 'WFURLDispatcher', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFURLDispatcher"
+  pod 'WFUIComponent', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFUIComponent"
+  pod 'WFNetwork', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/WFNetwork"
   
   # third party library
-  pod 'ADSRouter', :path => "/Users/andy/code/ADSRouter"
-  pod 'ASDataDrivenLayout', :path => "/Users/andy/code/ASDataDrivenLayout"
+  pod 'ADSRouter', :path => "/Users/yzy/Developer/本科毕设/ADSRouter"
+  pod 'ASDataDrivenLayout', :path => "/Users/yzy/Developer/本科毕设/WFShopProject/ASDataDrivenLayout"
   pod 'BeeHive', '1.5.1'
   pod 'Reveal-SDK', '4', :configurations => ['Debug']
   pod 'MBProgressHUD'
@@ -52,7 +52,7 @@ target 'WFShop' do
   pod 'WebViewJavascriptBridge', '~> 6.0'
   # pod 'TextFieldEffects'
   pod 'Masonry'
-  pod 'YYModel', :path => "/Users/andy/code/YYModel"
+  pod 'YYModel', :path => "/Users/yzy/Developer/本科毕设/YYModel"
   pod 'PPNumberButton'
   pod 'MJRefresh'
   pod 'CPDataDrivenFlowLayout', :git => 'git@github.com:andy-sheng/UICollectionView-CPDataDrivenFlowLayout.git'

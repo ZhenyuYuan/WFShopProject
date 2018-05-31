@@ -36,13 +36,31 @@
 //        default:
 //            break;
 //    }
-    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:nil path:nil];
-    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":@(type),@"page":@(page)} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
-        if (callback) {
-            callback([NSArray yy_modelArrayWithClass:[WFOrder class] json:obj.data]);
-        }
-    }];
+//    NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"order" objId:nil path:nil];
+//    [WFNetworkExecutor requestWithUrl:apiUrl parameters:@{@"type":@(type),@"page":@(page)} option:WFRequestOptionGet|WFRequestOptionWithToken complete:^(NSURLResponse *response, WFNetworkResponseObj *obj, NSError *error) {
+//        if (callback) {
+//            callback([NSArray yy_modelArrayWithClass:[WFOrder class] json:obj.data]);
+//        }
+//    }];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"order" ofType:@"json"];
+    NSString *json = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSArray<WFOrder*> *orderItems = [self parseOrderData:[NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:NULL]];
+        callback(orderItems);
+        
+    });
 }
+
+- (NSArray*)parseOrderData:(id)jsonData {
+    NSMutableArray *orderItems = [NSMutableArray array];
+    for (id order in jsonData[@"data"]) {
+        [orderItems addObject:[WFOrder yy_modelWithJSON:order]];
+    }
+    return orderItems.copy;
+}
+
 
 - (void)getUserDefaultShipAddress:(void (^)(WFOrderShipAddress *))callback {
     NSString *apiUrl = [WFAPIFactory URLWithNameSpace:@"user" objId:nil path:@"/shipaddress/default"];
